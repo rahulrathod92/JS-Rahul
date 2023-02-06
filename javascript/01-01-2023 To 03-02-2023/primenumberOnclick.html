@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>primeNumberOnclick</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="title has-text-centered m-5 is-underlined ">Check Prime Number Program</h1>
+    </div>
+    <div class="box container">
+        <div class="field">
+            <label class="label">Enter Value</label>
+            <div class="control">
+                <input class="input" type="text" id="EnterValue" value="" placeholder="check prime number">
+            </div>
+        </div>
+
+
+
+        <button class="button is-primary" onclick="submit()">Submit</button>
+        <div>
+            <label for="" class="title is-5">Answer</label>
+            <div>
+                <input type="text" name="" id="answer" class="input">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        //let stringValue = "";
+        function submit() {
+            let number = parseInt(document.getElementById("EnterValue").value);
+            
+
+            for (i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    var answer = (`${number} is not a prime`);
+                    break;
+                } else {
+                    var answer = (`${number} is a prime`);
+                }
+            }
+            document.getElementById("answer").value = answer;
+        }
+    </script>
+
+</body>
+
+</html>

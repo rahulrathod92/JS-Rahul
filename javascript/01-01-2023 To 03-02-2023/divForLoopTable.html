@@ -1,0 +1,68 @@
+<!-- dynamic table and odd sum and even sum -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Dynamic Functionality Create</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <h1 class="title is-2 has-text-centered">Dynamic Table</h1>
+        <input id="inputN" type="text" class="input is-large" placeholder="Enter the value" ><br><br>
+        <div class="control has-text-centered">
+            <button onclick="drawTable()" class="button is-primary"> Draw Table</button>
+        </div>
+       
+        <div class="container" id="displayDiv">
+        </div>
+        <p class="m-5 title" id="displaySum"></p>
+        <p class="m-5 title" id="displayOddSum"></p>
+        <p class="m-5 title" id="displayEvenSum"></p>
+      
+        <textarea class="textarea is-primary is-large" id="displayDivisionCode" size="10"></textarea>
+    </div>
+    <script>
+        function drawTable() {
+            let n = parseInt(document.getElementById("inputN").value);
+            let sum = 0, evenSum = 0, oddSum = 0;
+            let strDiv = '<table class="table is-bordered is-fullwidth  m-5">\n<div class="columns is-multiline mt-5">';
+            for (let i = 1; i <= n; i++) {
+
+                strDiv = strDiv + "\n<div class='column'>" + i + "\n</div>"
+                let classStr = "";
+                let oddStr = " ";
+                let evenStr = " ";
+                if (i == n / 2) {
+                    classStr = "class='is-selected'";
+                }
+                sum = sum + i;
+
+
+                if (i % 2 == 0) {
+                    evenStr = "class= 'is-selectd' ";
+                    evenSum = evenSum + i;
+                }
+                else {
+                    oddStr = "class= 'is-selected' ";
+                    oddSum = oddSum + i;
+                }
+            }
+            // console.log(strTable);
+            strDiv = strDiv + "\n</div>\n</table>";
+           
+            document.getElementById("displayDiv").innerHTML = strDiv;
+            document.getElementById("displaySum").innerHTML = "<i> ALL Sum:->" + " " + sum + "</i>";
+            document.getElementById("displayOddSum").innerHTML = "<i> Odd Sum:->" + " " + oddSum + "</i>";
+            document.getElementById("displayEvenSum").innerHTML = "<i> Even Sum:->" + " " + evenSum + "</i>";
+            var fullHTMLCode = "<html>\n <head></head>\n  <body>" + strDiv + "\n </ body>\n</ html>";
+            document.getElementById("displayDivisionCode").value = fullHTMLCode;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add numer javascript program</title>
+</head>
+<style>
+    div {
+        display: inline;
+    }
+</style>
+
+<body>
+    <h1>Add two number</h1>
+    <div>
+        <label for="txtnum1">first value</label>
+        <input type="text" id="txtnum1" class="input">
+    </div>
+
+    <div>
+        <label for="txtnum2">secound value</label>
+        <input type="text" id="txtnum2" class="input">
+    </div><br><br>
+    <div>
+        <button type="button" id="add" onclick="add()" class="input">+</button>
+        <button type="button" id="sub" onclick="sub()" class="input">-</button>
+        <button type="button" id="mul" onclick="mul()" class="input">*</button>
+        <button type="button" id="dv" onclick="dv()" class="input">/</button>
+    </div>
+    <h2 id="total">total</h2>
+
+    <script>
+        function add() {
+            var txtnum1 = document.getElementById("txtnum1").value;
+            var txtnum2 = document.getElementById("txtnum2").value;
+            var total = parseInt(txtnum1) + parseInt(txtnum2);
+            document.getElementById("total").innerHTML = total;
+        }
+        function sub() {
+            var txtnum1 = document.getElementById("txtnum1").value;
+            var txtnum2 = document.getElementById("txtnum2").value;
+            var total = parseInt(txtnum1) - parseInt(txtnum2);
+            document.getElementById("total").innerHTML = total;
+        }
+        function mul() {
+            var txtnum1 = document.getElementById("txtnum1").value;
+            var txtnum2 = document.getElementById("txtnum2").value;
+            var total = parseInt(txtnum1) * parseInt(txtnum2);
+            document.getElementById("total").innerHTML = total;
+        }
+        function dv() {
+            var txtnum1 = document.getElementById("txtnum1").value;
+            var txtnum2 = document.getElementById("txtnum2").value;
+            var total = parseInt(txtnum1) / parseInt(txtnum2);
+            document.getElementById("total").innerHTML = total;
+        }
+    </script>
+</body>
+
+</html>
