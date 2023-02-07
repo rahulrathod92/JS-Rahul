@@ -73,25 +73,32 @@
             //console.log(`${n} ,${num} ,${i},${strTable}`)
         }
         function toggle() {
+            var toggled = false;
             var num = parseInt(document.getElementById("entervalue").value);
             var n = parseInt(document.getElementById("userselect").value);
-          
+
             if (n > num) {
                 alert("worng value")
             }
             let strTable = '<table class="table  is-bordered"><tr><th>Number</th></tr>';
             for (i = 1; i <= num; i++) {
 
-                if (i == n) {
+                if (!toggled && i == n) {
+                    toggled = true;
+                    console.log(toggled)
                     strTable = strTable + "<tr class='is-selected'> <td>" + i + "</td></tr>";
-                } else {
-                    strTable = strTable + "<tr><td>" + i + "</td></tr>";
-                    console.log(i)
+
+
+                }
+                else {
+                    toggled = false;
+                    console.log(toggled)
+                    strTable = strTable + "<tr> <td>" + i + "</td></tr>";
                 }
             }
             strTable = strTable + "</table>";
             document.getElementById("showtable").innerHTML = strTable;
-            
+
         }
     </script>
 </body>

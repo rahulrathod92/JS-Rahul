@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>finace bank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="container m-0 p-0 is-fluid ">
+    <nav class="navbar is-transparent is-black px-5">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <i class=" fa fa-2x fa-sharp fa-solid fa-building-columns">
+          </i>
+        </a>
+
+        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            Home
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="#">
+              Account Info
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">
+                User Profile
+              </a>
+              <a class="navbar-item" href="#">
+                Personal Loan
+              </a>
+              <a class="navbar-item" href="#">
+                Business Loan
+              </a>
+              <a class="navbar-item" href="#">
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ........................ -->
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control ">
+                <a class="bd-tw-button button is-primary is-outlined">
+                  <span>
+                    Register
+                  </span>
+                </a>
+              </p>
+              <!-- .......... -->
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-button button is-primary is-outlined" href="login.html">
+                  Login
+                </a>
+
+              </div>
+              <!-- .......... -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav><br>
+    <div>
+      <h2 class="title is-2 has has-text-centered is-underlined has-text-weight-normal">NEW REGISTRATION </h2>
+    </div>
+    <!-- registrantion form start -->
+
+    <div class="columns is-mobil">
+
+      <div class= "column is-half is-offset-one-quarter mt-5">
+
+        <p>Please specify the type of account you want to open.</p><br>
+        <div class=" select is-rounded">
+          <select>
+            <option>*Please Select*</option>
+            <option>Saving Account</option>
+            <option>Current Account</option>
+          </select>
+        </div>
+        <br><br>
+        <div class="field">
+          <label class="label">Name</label>
+          <p class="control">
+            <input class="input input is-link" type="text" placeholder="Full Name" required="">
+          </p>
+        </div>
+        <label for="" class="label">Phone Number</label>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field has-addons">
+                <p class="control">
+                  <a class="button is-static">
+                    +91
+                  </a>
+                </p>
+
+                <p class="control is-expanded">
+                  <input class="input is-link" type="tel" placeholder="Your phone number">
+                </p>
+              </div>
+              <p class="help">Do not enter the first zero</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Date of Birth</label>
+          <p class="control">
+            <input class="Number input is-link" type="date" placeholder="Enter the birth date" required="">
+          </p>
+        </div>
+        <label for="" class="label">Gender</label>
+        <div class="control mt-1">
+          <label class="radio">
+            <input type="radio" name="rsvp">
+            Male
+          </label>
+          <label class="radio">
+            <input type="radio" name="rsvp">
+            Female
+          </label>
+          <label class="radio">
+            <input type="radio" name="rsvp">
+            Other
+          </label>
+        </div>
+
+        <div class="field mt-1">
+          <label class="label">Residential Address</label>
+          <p class="control">
+            <input class="Number input is-link" type="text" placeholder="house no / house name" required="">
+          </p><br>
+          <p class="control">
+            <input class="Number input is-link" type="text" placeholder="landmark and area" required="">
+          </p>
+
+          <div class="columns mt-2 ">
+            <div class="column">
+              <div class="control has-icons-left">
+                <div class="select">
+                  <select>
+                    <option selected>City</option>
+                    <option>Ahmedabad</option>
+                    <option>mahesana</option>
+                    <option value="">surat</option>
+                    <option value="">rajkot</option>
+                  </select>
+                </div>
+                <span class="icon is-left">
+                  <i class="fas fa-city"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column">
+              <div class="control has-icons-left">
+                <div class="select">
+                  <select>
+                    <option selected>state</option>
+                    <option>Gujarat</option>
+                    <option>Rajsthan</option>
+                  </select>
+                </div>
+                <span class="icon is-left">
+                  <i class="fas fa-infinity"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column">
+              <div class="control has-icons-left">
+                <div class="select">
+                  <select>
+                    <option selected>Country</option>
+                    <option>India</option>
+                  </select>
+                </div>
+                <span class="icon is-left">
+                  <i class="fas fa-globe"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="" class="label mt-1">Upload Document</label>
+            <P class="is-size-7 has-text-weight-bold">Addarcard
+              Pancard
+              Lightbill
+            </P>
+          </div>
+          <div class="file has-name ">
+            <label class="file-label">
+              <input class="file-input" type="file" name="resume">
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                  Choose a file…
+                </span>
+              </span>
+              <span class="file-name">
+                Screen Shot 2023-02-07 at 15.54.25.png
+              </span>
+            </label>
+          </div>
+
+          <div class="field">
+            <label class="label">Username</label>
+            <p class="control has-icons-left has-icons-right">
+              <input class="input is-link" type="text" placeholder="Text input" value="abc">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fa-check"></i>
+              </span>
+            </p>
+            <p class="help is-success">This username is available</p>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <p class="control has-icons-left has-icons-right">
+              <input class="input is-danger" type="text" placeholder="ex123@example.com">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fa fa-warning"></i>
+              </span>
+            </p>
+            <p class="help is-danger">This email is invalid</p>
+          </div>
+
+
+
+          <div class="field">
+            <label class="label">Purpose</label>
+            <p class="control">
+              <textarea class="textarea" placeholder="write to Purpose"></textarea>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <label class="checkbox">
+                <input type="checkbox"> I agree to the
+                <a href="#">terms and conditions</a>
+              </label>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <label class="radio">
+                <input type="radio" name="question"> Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question"> No
+              </label>
+            </p>
+          </div>
+          <div class="field is-grouped">
+            <p class="control">
+              <button class="button is-primary">Submit</button>
+            </p>
+            <p class="control">
+              <button class="button is-link">Cancel</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+        <!-- footer start -->
+        <footer class="footer has-background-link-light">
+          <div class="container">
+              <div class="columns is-mobile is-multiline">
+                  <div class="column is-half-mobile  is-one-quarter-desktop">
+                      <h6 class="title is-5">Quick Links</h6>
+                      <ul>
+                          <li><a href="#home">Home</a></li>
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#services">Services</a></li>
+                          <li><a href="#contact">contact</a></li>
+                          <li><a href="#team">team</a></li>
+                      </ul>
+                  </div>
+                  <div class="column is-half-mobile is-one-quarter-desktop">
+                      <h6 class="title is-5">Information</h6>
+                      <ul>
+                          <li><a href="#">finacebank</a></li>
+                      </ul>
+                  </div>
+                  <div class="column is-half-mobile is-one-quarter-desktop">
+                      <h6 class="title is-5">Follow Patner</h6>
+                      <ul>
+                          <li><a href=""><i class="fa-sharp fa-solid fa-piggy-bank"></i>Piggy Bank</a></li>
+                          <li><a href=""><i class="fab fa-instagram"></i>Instagram</a></li>
+                          <li><a href=""><i class="fab fa-twitter"></i>Twitter</a></li>
+                          <li><a href=""><i class="fab fa-linkedin"></i>linkedin</a></li>
+                      </ul>
+                  </div>
+                  <div class="column is-half-mobile is-one-quarter-desktop">
+                      <h6 class="title is-5">Location:</h6>
+                      <address>
+                          <strong>FinaceBank</strong><br>
+                          Ghodasar kenal<br>
+                           Ahmedabad Gujarat<br>380001.
+                          <br> <i class="fas fa-phone"></i>
+                          <a href="tel:+123456789">+079 2282888</a><br>
+                          <i class="fas fa-envelope"> </i>
+                          <a href="email">info@finacebank.com</a>
+                      </address>
+                  </div>
+              </div>
+
+          </div>
+
+          <br>
+          <p class=" title is-6 has-text-centered">
+              &copy;2023 FinaceBank.All rights reserved
+          </p>
+      </footer>
+      <!-- footer end -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+
+      });
+    </script>
+
+</body>
+</body>
+
+</html>
