@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="Image" onclick="turnOnOff()" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+
+    <p>
+        Click on the bulb to turn it ON and OFF
+    </p>
+
+
+    <script>
+        function turnOnOff() {
+            var image = document.getElementById('Image');
+            if (image.src.match("ONbulb"))
+                image.src =
+                    "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+            else
+                image.src =
+                    "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+        }
+    </script>
+
+
+
+</body>
+
+</html>

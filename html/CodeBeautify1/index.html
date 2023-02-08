@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>codebeautify_homepage</title>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar ">
+            <div class="navbar-brand">
+                <a class="navbar-item py-1" href="/"><img src="img/slogo.webp" alt="CodeBeautify Logo" aria-label="Logo"
+                        srcset="" width="217" height="44"></a>
+                <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+                    <span class="icon" style="color: #333;">
+                        <i class="fab fa-github"></i>
+                    </span>
+                </a>
+                <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+                    <span class="icon" style="color: #55acee;">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </a>
+                <div class="navbar-burger burger" data-target="navMenuExample1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navMenuExample1" class="navbar-menu ">
+
+                <div class="navbar-end is-size-6	">
+                    <a class="navbar-item " href="#" target="_blank">
+                        JSON Formatter
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        XML Formatter
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        SEO Inspector
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        Calculator
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        JSON Beautifier
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        Recent Links
+                    </a>
+                    <a class="navbar-item" href="#" target="_blank">
+                        Sitemap
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <div class="navbar-link">
+                            Favs
+                        </div>
+                        <div id="moreDropdown" class="navbar-dropdown ">
+                            <a class="navbar-item " href="#">
+                                <div class="level is-mobile">
+                                    <div class="level-left">
+                                        <div class="level-item">
+                                            <p>
+                                                JavaScript Tester
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control">
+                                <a id="" class="button">
+                                    <span>Login</span>
+                                </a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr class="my-0">
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>
+</html>

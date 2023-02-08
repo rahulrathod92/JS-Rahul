@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text"  id="tablevalue" value="5" >
+        <button onclick="drawtable()">drawtable</button>
+
+        <input type="text" name="" id="userselect" value="3">
+        <button onclick="toggle()">Toggle</button>
+    </div>
+        <p id="drawtable"></p>
+        <script>
+            function drawtable() {
+                let n = parseInt(document.getElementById("tablevalue").value);
+                let strTable = '<table id="mytable" class="table table is-bordered"><tr><th>Number</th><tr>';
+                for (i = 1; i <= n; i++) {
+                    strTable = strTable + "<tr><td>" + i + "</td></tr>";
+                    console.log(i)
+
+                }
+                strTable = strTable + "\n</table>";
+                document.getElementById("drawtable").innerHTML = strTable;
+            }
+
+            function toggle() {
+                var m = parseInt(document.getElementById("userselect").value);
+            // console.log(m)
+            var n = parseInt(document.getElementById("tablevalue").value);
+            if (m > n) {
+                alert("PLease Enter Correct Value")
+                return;
+            }
+            var strTable = '<table class="table is-bordered is-fullwidth" id><tr><th>Number</th></tr>';
+            for (i = 1; i <= n; i++) {
+                if (i == m) {
+                    strTable = strTable + "<tr class='is-selected'><td>" + i + "</td></tr>";
+                }
+                else {
+                    strTable = strTable + "<tr><td>" + i + "</td></tr>";
+                }
+            }
+            strTable = strTable + "</table>";
+            document.getElementById("drawtable").innerHTML = strTable;
+        }
+
+
+        </script>
+</body>
+
+</html>

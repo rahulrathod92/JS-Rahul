@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bulma project</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar has-background-link-light" role="navigation" aria-lable="main navigation">
+        <div class=" container">
+            <div class="navbar-brand">
+                <a href="index.html" class="navbar-item is-size-3">CodeBeautify</a>
+                <button class="button navbar-burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">Home</a>
+                    <a href="index.html" class="navbar-item">About</a>
+                    <a href="index.html" class="navbar-item">Services</a>
+                    <a href="index.html" class="navbar-item">team</a>
+                    <a href="index.html" class="navbar-item">Contact</a>
+
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="sign.html">
+                                <strong> Sign up</strong>
+                            </a>
+                            <a class="button is-light" href="#login">
+                                Log in
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav><br>
+    <!-- start login form -->
+    <section id="sign">
+
+        <div class="container field has-addons has-addons-centered p-5 m-5">
+
+            <form action="" class="box has has-background-link-light">
+                <div class="field ">
+                    <p class="control has-icons-left has-icons-right">
+                      <input class="input" type="email" placeholder="Email" required>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input class="input" type="password" placeholder="Password" >
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <a class="button is-success" href="#">
+                        Login
+                      </a>
+                      <a class="button is-success" href="sign.html">
+                        SignUp
+                      </a>
+                    </p>
+                  </div>
+                  
+            </form>
+        </div>
+    </section><br>
+    <!-- end login form -->
+
+ <div class="p-5 m-5">
+    <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="img/bill.jpg" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>Bill Gates</strong> <small>@billgates</small> <small>31m</small>
+                <br>
+                “Success is a lousy teacher. It seduces smart people into thinking they can’t lose.”
+              </p>
+            </div>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" aria-label="reply">
+                  <span class="icon is-small">
+                    <i class="fas fa-reply" aria-hidden="true"></i>
+                  </span>
+                </a>
+                <a class="level-item" aria-label="retweet">
+                  <span class="icon is-small">
+                    <i class="fas fa-retweet" aria-hidden="true"></i>
+                  </span>
+                </a>
+                <a class="level-item" aria-label="like">
+                  <span class="icon is-small">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </article>
+      </div>
+ </div>
+   
+  
+    <!--footer start -->
+    <footer class="footer has-background-link-light">
+        <div class="container">
+            <div class="columns is-mobile is-multiline">
+                <div class="column is-half-mobile  is-one-quarter-desktop">
+                    <h6 class="title is-5">Quick Links</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">About</a></li>
+                        <li><a href="index.html">Services</a></li>
+                        <li><a href="index.html">contact</a></li>
+                        <li><a href="index.html">team</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Information</h6>
+                    <ul>
+                        <li><a href="https://codebeautify.org/">codebeautify</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Follow Us</h6>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i>Facebook</a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i>Twitter</a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i>linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Our Location:</h6>
+                    <address>
+                        <strong>CodeBeautify</strong><br>
+                        Crystal Ct,Milpitas<br>
+                        California,95035.
+                        <br> <i class="fas fa-phone"></i>
+                        <a href="tel:+123456789">+1(530)429-2023</a><br>
+                        <i class="fas fa-envelope"> </i>
+                        <a href="email">info@codebeautify.com</a>
+                    </address>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="column m-3">
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Tweets</p>
+                    <p class="title">5,456</p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Following</p>
+                    <p class="title">500k</p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Followers</p>
+                    <p class="title">985K</p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Likes</p>
+                    <p class="title">789M</p>
+                  </div>
+                </div>
+              </nav>
+        </div><br>
+        <p class=" title is-6 has-text-centered">
+            &copy;2023 CodeBeautify.All rights reserved
+        </p>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="displayMessage" >Hello</p>
+
+    <input id="a" type="text" class="input is-large" oninput="updateText()"/>
+    <br/>
+    <br/>
+    <button class="button is-primary" onclick="process()"> Process </button><br>
+    <button id="dellButton">dell</button>
+    <div id="resultFromText"></div>
+    <script>
+        function process(){
+            let eleDisplayMessage = document.getElementById("displayMessage");
+            let eleA = document.getElementById("a");
+            let eleDellButton = document.getElementById("dellButton");
+
+            let aValue = eleA.value;
+
+
+           eleDisplayMessage.innerHTML = aValue;
+           eleDisplayMessage.classList.add("title");
+
+           eleDellButton.classList.add("button","is-primary");
+           
+        }
+      
+        function updateText(){
+            let eleA = document.getElementById("a");
+            let eleResultFromText = document.getElementById("resultFromText");
+
+            eleResultFromText.innerHTML = a.value;
+
+            displayDate();
+
+        }
+
+        function displayDate(){
+        console.log(new Date());
+
+        }
+
+    </script>
+</body>
+
+</html>

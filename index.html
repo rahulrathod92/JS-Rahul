@@ -6,59 +6,205 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-    <title>index JavaScript program</title>
+    <link rel="stylesheet" href="style.css">
+    <title>The Rahul Programs</title>
 </head>
 
 <body>
     <div>
-        <h1 class="has-text-centered title">JavaScript program index</h1>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="img/logo2.jpg" width="112" height="30">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Daily_Exercise
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Subject
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                HTML/Css
+                            </a>
+                            <a class="navbar-item">
+                                JavaScript
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Front-End-Developer
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Variable
+                            </a>
+                            <a class="navbar-item">
+                                If condtion
+                            </a>
+                            <a class="navbar-item">
+                                forLoop
+                            </a>
+                            <a class="navbar-item">
+                                array
+                            </a>
+
+
+                            <a class="navbar-item">
+                                string manipulation
+                            </a>
+                            <a class="navbar-item">
+                                object oriented programming
+                            </a>
+                            <a class="navbar-item">
+                                document object model
+                            </a>
+                            <a class="navbar-item">
+                                Ajax
+                            </a>
+                            <a class="navbar-item">
+                                json
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">
+                                Log in
+                            </a>
+                            <a class="button is-light" href="https://github.com/rahulrathod92/rahullearning "
+                                target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+    <!-- ************************************************************************ -->
+
+    <br>
+    <div>
+        <h1 class="has-text-centered title has-background-primary-light	has-text-primary-dark is-clickable">THE RAHUL
+            PROGRAMMES</h1>
     </div>
     <div class="table is-hoverable table-container p-5">
 
+        <table class="table is-bordered">
+            <h1 class="title is-5">Project Name</h1>
+            <tr class="has-background-grey-light ">
+                <th>Number</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="html/CodeBeautify1/index.html" target="_blank">CodeBeautify_Sir_Task</a></td> 
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="html/bank_finance/index.html" target="_blank">bank_finance</a></td> 
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="html/codebeautify/index.html" target="_blank">codebeautify</a></td> 
+            </tr>
+        </table>
 
         <table class="table is-bordered  is-fullwidth ">
-
-            <tr class="is-selected">
+            <tr class="has-background-grey-light ">
+                <th>Date</th>
+                <th>08-02-2023</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr class="is-selected ">
                 <th>Number</th>
                 <th>Language</th>
                 <th>Program name</th>
-                <th>date</th>
                 <th>Time</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>JavaScript</td>
-                <td><a href="javascript/08-02-2023/drawtable.html" target="_blank">DrowTable_01</a></td>
-                <td>08/02/2023</td>
+                <td><a href="javascript/february/08-02-2023/drawtable.html" target="_blank">DrowTable</a></td>
+
                 <td>30.00 minutes</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>JavaScript</td>
-                <td><a href="javascript/08-02-2023/sum between.html" target="_blank">Sum_Between_02</a></td>
-                <td>08/02/2023</td>
+                <td><a href="javascript/february/08-02-2023/sum between.html" target="_blank">Sum_Between</a></td>
+
                 <td>30.00 minutes</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>JavaScript</td>
-                <td><a href="javascript/08-02-2023/swap.html" target="_blank">Swap_03</a></td>
-                <td>08/02/2023</td>
+                <td><a href="javascript/february/08-02-2023/swap.html" target="_blank">Swap</a></td>
                 <td>30.00 minutes</td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>JavaScript</td>
-                <td><a href="javascript/08-02-2023/sum.html" target="_blank">Sum_04</a></td>
-                <td>08/02/2023</td>
+                <td><a href="javascript/february/08-02-2023/sum.html" target="_blank">Sum</a></td>
                 <td>30.00 minutes</td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>JavaScript</td>
-                <td><a href="javascript/08-02-2023/toggle.html" target="_blank">toggle_05</a></td>
-                <td>08/02/2023</td>
+                <td><a href="javascript/february/08-02-2023/toggle.html" target="_blank">toggle</a></td>
                 <td>30.00 minutes</td>
             </tr>
 
@@ -66,178 +212,200 @@
 
         </table>
         <table class="table is-bordered  is-fullwidth ">
-
+            <tr class="has-background-grey-light ">
+                <th>Date</th>
+                <th>07-02-2023</th>
+                <th></th>
+                <th></th>
+            </tr>
             <tr class="is-selected">
                 <th>Number</th>
                 <th>Language</th>
                 <th>Program name</th>
-                <th>date</th>
+
                 <th>Time</th>
             </tr>
+            
             <tr>
                 <td>1</td>
-                <td>html</td>
-                <td><a href="html/bank_finance/index.html" target="_blank">bank_finance</a></td>
-                <td>07/02/2023</td>
-                <td>30.00 minutes</td>
+                <td>JavaScript</td>
+                <td><a href="JavaScript/february/07-02-2023/textcolorchange.html"
+                        target="_blank">Text_color_change_onclick</a>
+                </td>
+                <td>10.00 minutes</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>JavaScript</td>
-                <td><a href="JavaScript/07-02-2023/textcolorchange.html" target="_blank">Text_color_change_onclick</a>
-                </td>
-                <td>07/02/2023</td>
+                <td><a href="JavaScript/february/07-02-2023/drawtable.html" target="_blank">Draw Table onclick</a></td>
                 <td>10.00 minutes</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>JavaScript</td>
-                <td><a href="JavaScript/07-02-2023/drawtable.html" target="_blank">Draw Table onclick</a></td>
-                <td>07/02/2023</td>
+                <td><a href="JavaScript/february/07-02-2023/practiceo1.html" target="_blank">Table toggle practice
+                        program</a>
+                </td>
                 <td>10.00 minutes</td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>JavaScript</td>
-                <td><a href="JavaScript/07-02-2023/practiceo1.html" target="_blank">Table toggle practice program</a>
-                </td>
-                <td>07/02/2023</td>
+                <td><a href="JavaScript/february/07-02-2023/swap.html" target="_blank">swap program</a></td>
                 <td>10.00 minutes</td>
             </tr>
-            <tr>
-                <td>5</td>
-                <td>JavaScript</td>
-                <td><a href="JavaScript/07-02-2023/swap.html" target="_blank">swap program</a></td>
-                <td>07/02/2023</td>
-                <td>10.00 minutes</td>
-            </tr>
-
         </table>
 
 
         <table class="table is-bordered  is-fullwidth ">
             <thead>
+                <tr class="has-background-grey-light ">
+                    <th>Date</th>
+                    <th>06-02-2023</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr class="is-selected">
                     <th>Number</th>
                     <th>Language</th>
                     <th>Program name</th>
-                    <th>date</th>
+                    <th>Time</th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/06-02-2023/replecetableclass.html" target="_blank">static table <br> replace
+                    <td><a href="JavaScript/february/06-02-2023/replecetableclass.html" target="_blank">static table
+                            <br> replace
                             button color</a></td>
-                    <td>06/02/2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/06-02-2023/dynamic replece btn.html" target="_blank">replece dynamic
+                    <td><a href="JavaScript/february/06-02-2023/dynamic replece btn.html" target="_blank">replece
+                            dynamic
                             <br>button change color</a></td>
-                    <td>06/02/2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/06-02-2023/PracticeTask01.html" target="_blank">dynamic table Delete
+                    <td><a href="JavaScript/february/06-02-2023/PracticeTask01.html" target="_blank">dynamic table
+                            Delete
                             Button</a></td>
-                    <td>06/02/2023</td>
+                    <td>00.00 minutes</td>
+
                 </tr>
             </thead>
         </table>
 
         <table class="table is-bordered  is-fullwidth ">
             <thead>
+                <tr class="has-background-grey-light ">
+                    <th>Date</th>
+                    <th>04-02-2023</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr class="is-selected">
                     <th>Number</th>
                     <th>Language</th>
                     <th>Program name</th>
-                    <th>date</th>
+                    <th>Time</th>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/04-02-2023/PracticeTask01.html"
+                    <td><a href="JavaScript/february/04-02-2023/PracticeTask01.html"
                             target="_blank">Sum/divided/multiple/substraction</a></td>
-                    <td>04/02/2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
             </thead>
         </table>
 
         <table class="table is-bordered  is-fullwidth ">
             <thead>
+                <tr class="has-background-grey-light ">
+                    <th>Date</th>
+                    <th>01-01-2023 To 03-02-2023</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr class="is-selected">
                     <th>Number</th>
                     <th>Language</th>
                     <th>Program name</th>
-                    <th>date</th>
+                    <th>Time</th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
                     <td>1</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/TableTask2.html" target="_blank">Table draw
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/TableTask2.html" target="_blank">Table draw
                             dynamic<br> with
                             button<br>(add,toggle,untoggle)</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/TableTask.html" target="_blank">Table Draw dynamic
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/TableTask.html" target="_blank">Table Draw
+                            dynamic
                         </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/dynamicTable2.html" target="_blank">dynamicTable
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/dynamicTable2.html"
+                            target="_blank">dynamicTable
                             <br>with ODD EVEN
                             sum</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/One to N sum.html" target="_blank">One to N sum</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/One to N sum.html" target="_blank">One to N
+                            sum</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/dynamic-table.html"
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/dynamic-table.html"
                             target="_blank">dynamic-table</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/divForLoopTable.html" target="_blank">Div
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/divForLoopTable.html" target="_blank">Div
                             divForLoopTable</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/Swap_program.html" target="_blank">Swap_program
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/Swap_program.html"
+                            target="_blank">Swap_program
                         </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/sum.html" target="_blank">Sum </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/sum.html" target="_blank">Sum </a></td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/divstatictTable.html"
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/divstatictTable.html"
                             target="_blank">divstatictTable</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
 
 
@@ -245,92 +413,103 @@
                 <tr>
                     <td>10</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/addnumber.html" target="_blank">AddNumber</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/addnumber.html"
+                            target="_blank">AddNumber</a></td>
+                    <td>00.00 minutes</td>
                 </tr>
                 </tr>
                 <tr>
                     <td>11</td>
                     <td>html</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/staticTable.html" target="_blank">staticTable </a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/staticTable.html"
+                            target="_blank">staticTable </a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>12</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/dynamicTableSum.html"
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/dynamicTableSum.html"
                             target="_blank">dynamicTableSum</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>13</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/ex.html" target="_blank">Button change On click</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/ex.html" target="_blank">Button change On
+                            click</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>14</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/fibonacci.html" target="_blank">fibonacci</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/fibonacci.html"
+                            target="_blank">fibonacci</a></td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>15</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/fibonacci2.html" target="_blank">fibonacci2</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/fibonacci2.html"
+                            target="_blank">fibonacci2</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>16</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/fordebugging.html" target="_blank">fordebugging</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/fordebugging.html"
+                            target="_blank">fordebugging</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
 
 
                 <tr>
                     <td>17</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/oddeven1.html" target="_blank">oddeven1</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/oddeven1.html" target="_blank">oddeven1</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>18</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/button.html" target="_blank">Button </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/button.html" target="_blank">Button </a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>19</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/palindrome.html" target="_blank">palindrome</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/palindrome.html"
+                            target="_blank">palindrome</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>20</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/palindromeOnclick.html"
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/palindromeOnclick.html"
                             target="_blank">palindromeOnclick</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>21</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/secpeturn.html" target="_blank">Dynamic star
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/secpeturn.html" target="_blank">Dynamic
+                            star
                             pettern </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
 
                 <td>22</td>
                 <td>JavaScript</td>
-                <td><a href="JavaScript/01-01-2023 To 03-02-2023/static-table.html" target="_blank">static-table</a>
+                <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/static-table.html"
+                        target="_blank">static-table</a>
                 </td>
-                <td>01-01-2023 To 03-02-2023</td>
+                <td>00.00 minutes</td>
 
 
 
@@ -338,154 +517,172 @@
                 <tr>
                     <td>23</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/TablePeturnDynamic.html" target="_blank">Table
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/TablePeturnDynamic.html"
+                            target="_blank">Table
                             Pettern Dynamic
                         </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>24</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/TablePeturnprogram.html" target="_blank">Table
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/TablePeturnprogram.html"
+                            target="_blank">Table
                             pettern Program
                         </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>25</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/addnumber.html" target="_blank">AddNumber</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/addnumber.html"
+                            target="_blank">AddNumber</a></td>
+                    <td>00.00 minutes</td>
                 </tr>
 
 
                 <tr>
                     <td>26</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/tableTask3.html" target="_blank">dynamic table </a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/tableTask3.html" target="_blank">dynamic
+                            table </a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>27</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/forloop1.html" target="_blank">forloop1</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/forloop1.html" target="_blank">forloop1</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>28</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/full_Pyramid.html" target="_blank">full_Pyramid</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/full_Pyramid.html"
+                            target="_blank">full_Pyramid</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>29</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/simplePeturn.html"
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/simplePeturn.html"
                             target="_blank">simplePettern</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>30</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/star15.html" target="_blank">Star pettern</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/star15.html" target="_blank">Star
+                            pettern</a></td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>31</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/star16.html" target="_blank">Star pettern 2</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/star16.html" target="_blank">Star pettern
+                            2</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>32</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/star_A.html" target="_blank">Star with A and B</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/star_A.html" target="_blank">Star with A
+                            and B</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>33</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/starNumber.html" target="_blank">star with
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/starNumber.html" target="_blank">star with
                             number</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                 <tr>
                     <td>34</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/triangle.html" target="_blank">triangle </a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/triangle.html" target="_blank">triangle
+                        </a></td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>35</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/downTriangle.html" target="_blank">downTriangle</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/downTriangle.html"
+                            target="_blank">downTriangle</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>36</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/add2num.html" target="_blank">Add2num</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/add2num.html" target="_blank">Add2num</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>37</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/subtraction.html" target="_blank">subtraction </a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/subtraction.html"
+                            target="_blank">subtraction </a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>38</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/multiple.html" target="_blank">multiple</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/multiple.html" target="_blank">multiple</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>39</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/divided.html" target="_blank">divided</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/divided.html" target="_blank">divided</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
 
                 <tr>
                     <td>40</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/OnOff.html" target="_blank">OnOFF</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/OnOff.html" target="_blank">OnOFF</a></td>
+                    <td>00.00 minutes</td>
                 </tr>
 
                 <tr>
                     <td>41</td>
                     <td>JavaScript</td>
                     <td><a href="JavaScript/01-01-2023 To 03-02-2023/onoff2.html" target="_blank">onoff2</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
 
                 <tr>
                     <td>42</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/swapp2.html" target="_blank">swapp2</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/swapp2.html" target="_blank">swapp2</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
 
                 <tr>
                     <td>43</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/SwapTask01.html" target="_blank">SwapTask01</a>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/SwapTask01.html"
+                            target="_blank">SwapTask01</a>
                     </td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td>00.00 minutes</td>
                 </tr>
                 <tr>
                     <td>44</td>
                     <td>JavaScript</td>
-                    <td><a href="JavaScript/01-01-2023 To 03-02-2023/work.html" target="_blank">work file</a></td>
-                    <td>01-01-2023 To 03-02-2023</td>
+                    <td><a href="JavaScript/january/01-01-2023 To 03-02-2023/work.html" target="_blank">work file</a>
+                    </td>
+                    <td>00.00 minutes</td>
                 </tr>
             </tfoot>
         </table>
