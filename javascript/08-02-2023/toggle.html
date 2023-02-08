@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="title has-text-centered">DRAW TABLE</h1>
+        <div class="box column is-half is-offset-one-quarter">
+            <div>
+                <input type="text" class="input" id="tablevalue" value="5">
+                <input type="text" class="input mt-2" id="tabletogglevalue" value="3" placeholder="toggle">
+            </div>
+            <div class="buttons mt-2">
+                <button class="button is-warning" onclick="draw()">Draw</button>
+                <button class="button is-warning" onclick="addLine()">AddLine</button>
+                <button class="button is-warning" onclick="delLine()">DeleteLine</button>
+                <button class="button is-warning" onclick="toggle()">Toggle</button>
+                <button class="button is-warning" onclick="color()">Color</button>
+                <button class="button is-warning" onclick="deleteTable()">DeleteTable</button>
+
+            </div>
+            <div>
+                <p id="showtable"></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var rowNumbers=0;
+    function draw(){
+        rowNumbers = parseInt(document.getElementById("tablevalue").value);
+        let eleShowTable = document.getElementById("showtable");
+        console.log(rowNumbers);
+        let tableString = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+
+        for(i=1;i<=rowNumbers;i++){
+           tableString = tableString + "<tr><td>"+i+"</td><tr>" ;   
+        }
+
+        tableString = tableString + "</table>";
+        eleShowTable.innerHTML = tableString;
+    }
+    var statusOfToggle = false;
+    function toggle(){
+        console.log("before toggle:->"+statusOfToggle);
+        let selectedRow = parseInt(document.getElementById("tabletogglevalue").value);
+        let eleShowTable = document.getElementById("showtable");
+        console.log("selectedRow:->"+selectedRow);
+
+        let tableString = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+
+        for(i=1;i<=rowNumbers;i++){
+             if(i==selectedRow && statusOfToggle == false){
+                tableString = tableString + "<tr class='is-selected'><td>"+i+"</td><tr>" ;   
+             }else{
+                tableString = tableString + "<tr><td>"+i+"</td><tr>" ;   
+             }
+             
+        }
+
+        tableString = tableString + "</table>";
+        eleShowTable.innerHTML = tableString;
+
+        if(statusOfToggle==true){
+           statusOfToggle =false; 
+        }
+        else{
+            statusOfToggle =true;
+        }
+        console.log("after toggle:->"+statusOfToggle);
+    }
+
+    function addLine(){
+        rowNumbers = rowNumbers + 1 ;
+        let eleShowTable = document.getElementById("showtable");
+        let selectedRow = parseInt(document.getElementById("tabletogglevalue").value);
+        console.log(rowNumbers);
+        let tableString = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+
+        for(i=1;i<=rowNumbers;i++){
+            if(i==selectedRow && statusOfToggle == true){
+                tableString = tableString + "<tr class='is-selected'><td>"+i+"</td><tr>" ;   
+             }else{
+                tableString = tableString + "<tr><td>"+i+"</td><tr>" ;   
+             }
+        }
+
+        tableString = tableString + "</table>";
+        eleShowTable.innerHTML = tableString;
+
+    }
+
+    function delLine(){
+        rowNumbers = rowNumbers -1;
+        let eleShowTable = document.getElementById("showtable");
+        let selectedRow = parseInt(document.getElementById("tabletogglevalue").value);
+        console.log(rowNumbers);
+        let tableString = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+
+        for(i=1;i<=rowNumbers;i++){
+            if(i==selectedRow && statusOfToggle == true){
+                tableString = tableString + "<tr class='is-selected'><td>"+i+"</td><tr>" ;   
+             }else{
+                tableString = tableString + "<tr><td>"+i+"</td><tr>" ;   
+             }
+        }
+
+        tableString = tableString + "</table>";
+        eleShowTable.innerHTML = tableString;
+
+    }
+
+    function deleteTable(){
+        document.getElementById("showtable").innerHTML="";
+    }
+</script>
+
+</html>    

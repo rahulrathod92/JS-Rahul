@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="title has-text-centered">DRAW TABLE</h1>
+        <div class="box has-background-black column is-half is-offset-one-quarter">
+            <div>
+                <input type="text" class="input" id="tablevalue" value="5">
+                <input type="text" class="input mt-2" id="tabletogglevalue" value="3" placeholder="toggle">
+            </div>
+            <div class="buttons mt-2">
+                <button class="button is-warning" onclick="draw()">Draw</button>
+                <button class="button is-warning" onclick="add()">AddLine</button>
+                <button class="button is-warning" onclick="del()">DeleteLine</button>
+                <button class="button is-warning" onclick="toggle()">Toggle</button>
+                <button class="button is-warning" onclick="color()">Color</button>
+
+            </div>
+            <div>
+                <p id="showtable"> </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function draw() {
+            let num = parseInt(document.getElementById("tablevalue").value);
+            console.log(num)
+
+            let strtable = "<table id='colorchange' class = 'table is-bordered '><tr><th>Number</th></tr>";
+            console.log(strtable)
+            for (i = 1; i <= num; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table<>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+
+        function add() {
+            let n = i;
+            let strtable = "<table class = 'table is-bordered'><tr><th>Number</th></tr>";
+            console.log(strtable)
+            for (i = 1; i <= n; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+
+            }
+            strtable = strtable + "</table<>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function del() {
+
+            let n = i - 1;
+            let strtable = "<table class = 'table is-bordered'><tr><th>Number</th></tr>";
+            console.log(strtable)
+            for (i = 1; i <= n - 1; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table<>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function toggle() {
+            let num = parseInt(document.getElementById("tablevalue").value);
+            let toggle = parseInt(document.getElementById("tabletogglevalue").value);
+
+            let strtable = "<table class = 'table is-bordered'><tr><th>Number</th></tr>";
+            for (i = 1; i <= num; i++) {
+                if (i == toggle) {
+                    strtable = strtable + "<tr class='is-selected'><td>" + i + "</td></tr>";
+                } else {
+                    strtable = strtable + "<tr><td>" + i + "</td></tr>";
+                }
+            }
+
+            strtable = strtable + "</table<>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function color() {
+            let color = document.getElementById("colorchange").style.color = "blue";
+           
+            console.log(color)
+
+        }
+        
+    </script>
+</body>
+
+</html>
