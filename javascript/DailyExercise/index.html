@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="/img/logo.jpg" width="112" height="30">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/index.html" >
+                        Home
+                    </a>
+
+                    <a class="navbar-item">
+                        Daily_Exercise
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Subject
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                HTML/Css
+                            </a>
+                            <a class="navbar-item">
+                                JavaScript
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Front-End-Developer
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Variable
+                            </a>
+                            <a class="navbar-item">
+                                If condtion
+                            </a>
+                            <a class="navbar-item">
+                                forLoop
+                            </a>
+                            <a class="navbar-item">
+                                array
+                            </a>
+
+
+                            <a class="navbar-item">
+                                string manipulation
+                            </a>
+                            <a class="navbar-item">
+                                object oriented programming
+                            </a>
+                            <a class="navbar-item">
+                                document object model
+                            </a>
+                            <a class="navbar-item">
+                                Ajax
+                            </a>
+                            <a class="navbar-item">
+                                json
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light">
+                                Log in
+                            </a>
+                            <a class="button is-light" href="https://github.com/rahulrathod92/rahullearning "
+                                target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+
+        });
+    </script>
+    <!-- ************************************************************************ -->
+
+    <br>
+    <div>
+        <h1 class="has-text-centered title has-background-primary-light	has-text-primary-dark is-clickable">THE RAHUL
+            PROGRAMMES</h1>
+    </div>
+    
+
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a class="icon" href="//github.com/jenil/bulmaswatch" target="_blank"
+                        onclick="ga('send', 'event', 'footer', 'click', 'github');">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    &nbsp;
+                    <a class="icon" href="//twitter.com/geekGogari" target="_blank"
+                        onclick="ga('send', 'event', 'footer', 'click', 'twitter');">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </p>
+                <p>
+                    <strong>JavaScript programmes</strong> by
+                    <a href="https://jgog.in" target="_blank">Rahul Rathod</a>.
+                    <br> Based on
+                    <a href="https://bulma.io" target="_blank"
+                        onclick="ga('send', 'event', 'footer', 'click', 'bulma');">Bulma</a>. Icons from
+                    <a href="https://fontawesome.com/" target="_blank"
+                        onclick="ga('send', 'event', 'footer', 'click', 'font-awesome');">Font Awesome</a>. Web Fonts
+                    from
+                    <a href="https://fonts.google.com/" target="_blank"
+                        onclick="ga('send', 'event', 'footer', 'click', 'google');">Google</a>.
+                    <br>supported by
+                    <a href="https://codebeautify.org/" target="_blank">CodeBeautify</a>.
+                </p>
+               
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
