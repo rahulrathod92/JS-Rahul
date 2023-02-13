@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>table</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="tablevalue" value="5">
+        <input type="text" name="" id="tablevalue" value="3">
+        <button onclick="draw()">drawtable</button>
+        <button onclick="addline()">add line</button>
+        <button onclick="toggle()">toggle</button>
+        <p id="showtable"></p>
+    </div>
+    <script>
+        function draw() {
+            let tablevalue = parseInt(document.getElementById("tablevalue").value);
+            let strtable = "<table class='table is-bordered' ><tr><th>number</th><tr>";
+            for (i = 1; i <= tablevalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</tr></td>";
+            }
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function addline(){
+            tablevalue = i;
+            let strtable = "<table class='table is-bordered' ><tr><th>number</th><tr>";
+            for (i = 1; i <= tablevalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</tr></td>";
+            }
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+
+        function toggle(){
+            let tablevalue = parseInt(document.getElementById("tablevalue").value);
+            let = parseInt(document.getElementById("tablevalue").value);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>star pettern</title>
+</head>
+
+<body>
+    <p id="star" class="p-5"></p>
+    <script>
+        let n = 5;
+        let string = "";
+        for (let i = 1; i <= n; i++) {
+            // printing spaces
+            for (j = 1; j <= n -i; j++) {
+
+              string = string +  "&nbsp;&nbsp";
+
+            }
+            // printing stars
+            for (k = 0; k < 2 * i - 1; k++) {
+                string = string + "* ";
+            }
+            string = string + "<br />";
+        }
+        document.getElementById("star").innerHTML =string;
+    </script>
+</body>
+
+</html>
