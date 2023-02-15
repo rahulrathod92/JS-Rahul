@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>RangeDivided</title>
+</head>
+
+<body>
+    <div>
+        <div class="box container">
+            <h1 class="title has-text-centered"> Range Divided</h1>
+            <div class="column is-half is-offset-one-quarter field has-addons">
+                <input class="input" type="text" id="value1" value="3">
+                <input class="input" type="text" id="value2" value="10">
+            </div>
+            <div class="column is-half is-offset-one-quarter field has-addons">
+                <input class="input" type="text" id="range">
+            </div>
+            <div class="column is-half is-offset-one-quarter field has-addons">
+                <input class="input" type="text" id="rangedivide" value="3">
+            </div>
+            <div class="buttons is-centered">
+                <button class="button is-primary" onclick="cal()">calculate</button>
+            </div>
+            <div class="column is-half is-offset-one-quarter field has-addons">
+                <input class="input" type="text" id="rangdisplay" placeholder="rangedisplay">
+                <input class="input" type="text" id="totalans" placeholder="sum ans">
+            </div>
+        </div>
+        <script>
+            function cal() {
+                let a = parseInt(document.getElementById("value1").value);
+                let b = parseInt(document.getElementById("value2").value);
+                let number = parseInt(document.getElementById("rangedivide").value);
+                var result = "";
+                var rangshow = 0;
+                let sum =0;
+                for (i = a; i <= b; i++) {
+                    if (i % number == 0) {
+                        console.log(i)
+                        rangshow = rangshow + i + "+";
+                        sum = sum +i;
+                    } 
+                    if (i != b) {
+                        result = result + i + "+";
+
+                        // console.log(total)
+                    } else {
+                        result = result + i;
+                    }
+
+
+                }
+                document.getElementById("range").value = result;
+                document.getElementById("rangdisplay").value = rangshow;
+                document.getElementById("totalans").value = sum;
+            }
+
+        </script>
+</body>
+
+</html>

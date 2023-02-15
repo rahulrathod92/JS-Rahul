@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>drawtable</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="tablevalue" value="5">
+        <input type="text" name="" id="togglevalue" value="3">
+    </div>
+    <br>
+    <div>
+        <button onclick="draw()">draw</button>
+        <button onclick="addline()">addline</button>
+        <button onclick="deleteline()">deleteline</button>
+        <button onclick="toggle()">toggle</button>
+    </div>
+    <br>
+    <div>
+        <p id="showtable"></p>
+    </div>
+    <script>
+        function draw() {
+            let rowvalue = parseInt(document.getElementById("tablevalue").value);
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= rowvalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function addline() {
+            rowvalue = i;
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= rowvalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function deleteline() {
+            rowvalue = rowvalue - 1;
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= rowvalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function toggle(){
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>ascending and descending exam</title>
+</head>
+
+<body>
+    <div class="box container">
+        <div class="column is-half is-offset-one-quarter field has-addons">
+            <input class="input" type="text" id="value1" value="1">
+            <input class="input" type="text" id="value2" value="2">
+            <input class="input" type="text" id="value3" value="3">
+            <input class="input" type="text" id="value4" value="nan">
+        </div>
+        <div class="buttons is-centered">
+            <button class="button is-primary" onclick="desc()">descending</button>
+            <button class="button is-link" onclick="asce()">ascending</button>
+        </div>
+        <div class="column is-half is-offset-one-quarter field has-addons">
+            <label for="">descending</label>
+            <input class="input" type="text" name="" id="ansA" value="">
+            <label for="">ascending</label>
+            <input class="input" type="text" name="" id="ansB" value="">
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        function desc() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let c = parseInt(document.getElementById("value3").value);
+            let d = parseInt(document.getElementById("value4").value);
+
+            // console.log(a,b,c,d)
+
+            if (a < b) {
+                document.getElementById("ansA").value = b;
+
+                // console.log(a)
+                if (b < c) {
+                    //  console.log(c, b, a);
+                    document.getElementById("ansA").value = c;
+
+                } else if (a < c) {
+                    // console.log(b, c, a);
+                    document.getElementById("ansA").value = b;
+                } else {
+                    // console.log(b, a, c);
+                }
+            } else if (c < a) {
+                if (b < c) {
+                    // console.log(a, c, b);
+                    document.getElementById("ansA").value = a;
+                } else {
+                    // console.log(a, b, c);
+                    document.getElementById("ansA").value = a;
+                }
+            } else {
+                //console.log(c, a, b);
+                document.getElementById("ansA").value = c;
+            }
+        }
+        function asce() {
+          
+        }
+    </script>
+</body>
+
+</html>
