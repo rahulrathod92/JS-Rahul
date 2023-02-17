@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Basic formula</title>
+</head>
+
+<body>
+    <div class="container mt-6">
+        <div class=" field has-addons box container column is-half is-offset-one-quarter">
+            <input class="input" type="text" name="" id="value1" value="">
+            <input class="input" type="text" name="" id="value2" value="">
+
+        </div>
+        <div class=" has-text-centered">
+            <button class="button is-primary" onclick="calculate()">calculate</button>
+        </div>
+        <div class=" field has-addons box container column is-half is-offset-one-quarter">
+            <ul>
+                <li id="ans1">Ans 1:-</li>
+                <li id="ans2">Ans 2:-</li>
+                <li id="ans3">Ans 3:-</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            let total1 = 0;
+            let total2 = 0;
+            let total3 = 0;
+
+            total = a + b;
+            total1 = a * 2 + b * 2;
+            total2 = (3 * b) * (2 * a);
+            total3 = (2 * a) + total2;
+
+            document.getElementById("ans1").innerHTML = total;
+            document.getElementById("ans2").innerHTML = total1;
+            document.getElementById("ans3").innerHTML = total3;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="number" value="5">
+        <button onclick="toggle()">toggle</button>
+    </div>
+    <div>
+        <p id="shownumber"></p>
+    </div>
+    <script>
+        var togglestatus = true;
+        function toggle() {
+            let number = parseInt(document.getElementById("number").value);
+            let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            if ( togglestatus == false) {
+                for (i = 1; i <= number; i++) {
+                    togglestatus = true;
+                    console.log(togglestatus)
+                    console.log(i)
+                    showvalue = showvalue + "<tr><td>" + i + "</td></tr>";
+                }
+            } else {
+                togglestatus = false;
+                console.log(togglestatus)
+            }
+            document.getElementById("shownumber").innerHTML = showvalue;
+        }
+        toggle()
+
+        function toggle() {
+            let number = parseInt(document.getElementById("number").value);
+            let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            if ( togglestatus == false) {
+               // Draw table without selected row
+               togglestatus = true;
+            } else {
+                 // Draw table with selectede row
+                togglestatus = false;
+                console.log(togglestatus)
+            }
+            document.getElementById("shownumber").innerHTML = showvalue;
+        }
+    </script>
+</body>
+
+</html>

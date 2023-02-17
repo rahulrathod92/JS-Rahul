@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>fd interest </title>
+</head>
+
+<body>
+    <div class="container mt-6">
+        <div class=" field has-addons box container column is-half is-offset-one-quarter">
+            <input class="input" type="text" name="" id="value1" value="5000">
+            <input class="input" type="text" name="" id="value2" value="10" placeholder="interest %">
+            <input class="input" type="text" name="" id="year" value="5" placeholder="year %">
+        </div>
+        <div class=" has-text-centered">
+            <button class="button is-primary" onclick="calculate()">calculate</button>
+        </div>
+        <div class="field has-addons box container column is-half is-offset-one-quarter">
+            <p id="ans"></p>
+        </div>
+        
+        </div>
+        <div class="field has-addons box container column is-half is-offset-one-quarter">
+            <p id="answer2"></p>
+        </div>
+        <div class="field has-addons box container column is-half is-offset-one-quarter">
+            <p id="showtable"></p>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            let amount= parseInt(document.getElementById("value1").value);
+            let rate = parseInt(document.getElementById("value2").value);
+            let time = parseInt(document.getElementById("year").value);
+            var totalamount = 0;
+            var totalintrest = 0;
+            var displayamount= amount;
+            var startcal = 0;
+            var strtable = "<table class='table is-bordered'><tr><th>startprincipale</th><th>startbalance</th><th>intrest</th><th>end balance</th><th>end principle</th></tr>";
+
+            for (i = 1; i <= time; i++) {
+                startcal = amount;
+                interest = (amount * rate) / 100;
+                amount = amount + interest;
+                totalintrest = totalintrest + interest;
+                
+
+                strtable = strtable + "<tr><td>" + displayamount+" </td>" +"<td>" +startcal+"</td>" +"<td>"+interest +"</td>" + "<td>" +amount + "</td>" + "<td>" +displayamount+ "</td>";
+
+            }
+            strtable = strtable +"</tr>";
+            strtable = strtable + "</table>";
+            // document.getElementById("ans").innerHTML = totalintrest;
+            // document.getElementById("answer1").innerHTML = totalamount;
+            document.getElementById("answer2").innerHTML = amount;
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+
+    </script>
+</body>
+
+</html>

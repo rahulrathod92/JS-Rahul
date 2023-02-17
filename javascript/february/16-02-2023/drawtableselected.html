@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title> drawtable selected </title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="number" value="5">
+        <input type="text" name="" id="togglevalue" value="3">
+        <button onclick="toggle()">toggle</button>
+        <button onclick="toggleselected()">toggleselected</button>
+    </div>
+    <div>
+        <p id="shownumber"></p>
+    </div>
+    <script>
+        
+        var togglestatus = false;
+        function toggle() {
+            let number = parseInt(document.getElementById("number").value);
+            let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            if ( togglestatus == false) {
+                for (i = 1; i <= number; i++) {
+                    togglestatus = true;
+                    console.log(togglestatus)
+                    console.log(i)
+                    showvalue = showvalue + "<tr><td>" + i + "</td></tr>";
+                }
+            } else {
+                togglestatus = false;
+                console.log(togglestatus)
+            }
+            document.getElementById("shownumber").innerHTML = showvalue;
+        }
+        toggle()
+
+        function toggleselected() {
+            let number = parseInt(document.getElementById("number").value);
+            let togglenumber = parseInt(document.getElementById("togglevalue").value);
+            let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            
+            if ( togglestatus == false) {
+               // Draw table without selected row
+               togglestatus = true;
+                for(i=1;i<=number;i++){
+                    showvalue = showvalue + "<tr><td>" +i+"</td></tr>"; 
+                }
+            
+            } else {
+                 // Draw table with selectede row
+                togglestatus = false;
+                console.log(togglestatus)
+                 for(i=1;i<=number;i++){
+                    if(i==togglenumber){
+                        showvalue = showvalue + "<tr class='is-selected'><td>" +i+"</td></tr>"; 
+                    }else{
+                        showvalue = showvalue + "<tr><td>" +i+"</td></tr>"; 
+                    }
+                   
+                }
+            }
+            document.getElementById("shownumber").innerHTML = showvalue;
+        }
+    </script>
+</body>
+</html>
