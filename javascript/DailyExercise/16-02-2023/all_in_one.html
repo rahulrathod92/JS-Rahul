@@ -16,8 +16,8 @@
         <p class="subtitle has-text-centered"> 1.prime number
             2.odd/even number
             3.fibonacci number
-            4.palindrome number
-            5.factorial number
+            4.factorial number
+            5.palindrome number
         </p>
         <div class="field has-addons">
             <input type="text" class="input" id="value1" value="1">
@@ -27,6 +27,8 @@
             <button class="button is-info" onclick="primenumber()">PrimeNumber</button>
             <button class="button is-success" onclick="oddeven()">odd_even</button>
             <button class="button is-warning" onclick="fibonaci()">fibonacciNumber</button>
+            <button class="button is-link" onclick="fectorial()">fectorialNumber</button>
+            <button class="button is-danger" onclick="palindrm()">PalindromeNumber</button>
 
         </div>
         <div>
@@ -38,8 +40,10 @@
             <p id="odd1">*</p><br>
             <label for="" class="label">FibonacciNumber</label>
             <p id="fibonac">3.fibonacci number :-</p><br>
-            <p>4.palindrome number:-</p><br>
-            <p>5.factorial number :-</p>
+            <label for="" class="label">FactorialNumber</label>
+            <p id="fectorl">4.factorial number :-</p>
+            <label for="" class="label">PalindromeNumber</label>
+            <p id="palindrome">5.palindrome number:-</p><br>
         </div>
     </div>
     <script>
@@ -54,7 +58,7 @@
                 for (i = 1; i <= j; i++) {
                     if (j % i == 0)
                         count++
-                    // console.log(i)
+                    console.log(i)
                 }
 
                 if (count == 2) {
@@ -73,7 +77,7 @@
         function oddeven() {
             let a = parseInt(document.getElementById("value1").value);
             let b = parseInt(document.getElementById("value2").value);
-            let count = 0;
+
             let oddnumber = "";
             let evennumber = "";
             for (j = a; j <= b; j++) {
@@ -100,18 +104,55 @@
             let a = parseInt(document.getElementById("value1").value);
             let b = parseInt(document.getElementById("value2").value);
             let next = 0;
+            let c = 0;
+            let d = 1;
             var string = "";
-            for (j = a; j <= b; j++) {
-                for (i = 1; i <= j; i++) {
-                   next= a+b;
-                   
-                   string = string  + next;
-                 
-                   console.log(a,b,string,next)
-                }
+            for (i = a; i <= b; i++) {
+                //console.log(i)
+                next = c + d;
+                //console.log(next)
+                string = string + next + " ,";
+                c = d;
+                d = next;
+                // console.log(string)
 
             }
+
             document.getElementById("fibonac").innerHTML = string;
+        }
+        function fectorial() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let next = 1;
+            var string = "";
+            for (i = a; i <= b; i++) {
+                // console.log(i)
+                next = next * i;
+                // console.log(i,next)
+                string = string + next + " ,";
+
+            }
+
+            document.getElementById("fectorl").innerHTML = string;
+        }
+        function palindrm() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            var rev = 0;
+            var d = 0;
+            var n1 = n;
+            for (i = a; i <= b; i++) {
+                if (n != 0) {
+                    d = n % 10;
+                    rev = rev * 10 + d;
+                    n - n / 10;
+                }if(rev==n1){
+                    return 1;
+                }else{
+                    return 0;
+                }
+                
+            }
 
         }
     </script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>buttondynamic</title>
+</head>
+
+<body>
+    <div class="container box">
+        <div class="field has-addons column is-half is-offset-one-quarter">
+            <input class="input" type="text" id="btnvalue" value="10">
+        </div>
+
+        <div class="buttons">
+            <button class="button is-info" onclick="genbtn()">generate</button>
+            <button class="button is-success" onclick="rightsidebtn()">></button>
+            <button class="button is-warning">
+                < </button>
+        </div>
+        <div>
+            <p id="showbutton"></p>
+        </div>
+    </div>
+
+    <script>
+        function genbtn() {
+            let a = parseInt(document.getElementById("btnvalue").value);
+            strbtn = "";
+            for (i = 1; i <= a; i++) {
+                strbtn = strbtn + "<button class='button'>" + i + "</button>";
+            }
+            document.getElementById("showbutton").innerHTML = strbtn;
+        }
+        toggle = false;
+        function rightsidebtn() {
+            let a = parseInt(document.getElementById("btnvalue").value);
+            strbtn = "";
+            var next = "";
+            if ( toggle == false ) {
+                
+                toggle = true;
+                console.log(toggle)
+                for (i = 1; i <= a; i++) { 
+                    next= i;
+                    console.log(next)   
+                    strbtn = strbtn + "<button class='button is-info'>" + i + "</button>";
+                    
+                }
+
+            } else{
+                toggle = false;
+                console.log(toggle)
+                for (i = 1; i <= a; i++) {
+                    strbtn = strbtn + "<button class='button'>" + i + "</button>";
+                }
+            }
+            document.getElementById("showbutton").innerHTML = strbtn;
+        }    
+    </script>
+</body>
+
+</html>

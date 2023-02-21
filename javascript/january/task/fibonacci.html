@@ -48,9 +48,13 @@
 
                 for (i = 0; i <= number; i++) {
                     next = a + b;
-                    stringValue = stringValue + next;
+                    console.log(next)
+                    stringValue = stringValue + next + ",";
+                    //console.log(stringValue)
                     a = b;
+                    //console.log(a,b)
                     b = next ;
+                    //console.log(b,next)
                 }
            document.getElementById("next").innerHTML = stringValue;
             }
