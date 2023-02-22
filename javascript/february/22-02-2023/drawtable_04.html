@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>drawtable_04</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="text" name="" id="tablevalue" value="10">
+            <button onclick="draw()">drawtable</button>
+        </div>
+        <div>
+            <p id="showtable"></p>
+        </div>
+    </div>
+    <script>
+        function draw() {
+            let rownumber = parseInt(document.getElementById("tablevalue").value);
+            let strtable = "<div class='columns is-multiline'>";
+            for (i = 1; i <= rownumber; i++) {
+                
+                strtable = strtable + "<div class='column'><table class='table is-bordered'><tr><td>" + i + "</td></tr></table></div>";
+            }
+          
+            strtable = strtable + "</div>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+    </script>
+</body>
+
+</html>
