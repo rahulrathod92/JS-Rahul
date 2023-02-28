@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>add and pass</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="field has-addons">
+            <div class="control">
+                <input type="text" class="input" id="value1" value="5">
+                <input class="input" type="text" id="value2" value="10">
+                <input class="input" type="text" id="value3" value="5">
+                <input class="input" type="text" id="value4" value="5">
+                <label class="label">total</label>
+                <input class="input" type="text" id="sum">
+            </div>
+            <div class="control">
+                <a class="button is-loading">
+                </a>
+                <div>
+                    <button class="button is-info" onclick="add1()">
+                        add&pass1
+                    </button>
+                </div>
+                <div>
+                    <button class="button is-info" onclick="add2()">
+                        add&pass2
+                    </button>
+                </div>
+                <div>
+                    <button class="button is-info" onclick="add3()">
+                        add&pass3
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+        function add1() {
+            let valueA = parseInt(document.getElementById("value1").value);
+            let valueb = parseInt(document.getElementById("value2").value);
+            var sum = 0;
+            var showsum = 0;
+            sum = valueA + valueb;
+            console.log(sum)
+            showsum = sum + valueA;
+            // console.log(showsum)
+            document.getElementById("value2").value = sum;
+            console.log(sum)
+            document.getElementById("sum").value = showsum;
+            //  console.log(showsum)
+        }
+
+        function add2() {
+            let valueA = parseInt(document.getElementById("value1").value);
+            let valueb = parseInt(document.getElementById("value2").value);
+            let valuec = parseInt(document.getElementById("value3").value);
+            let sum2 = 0;
+            var showsum1 = 0;
+            sum2 = valueb + valuec;
+            showsum1 = sum2 + valueA + valueb;
+            console.log(showsum1)
+
+            document.getElementById("value3").value = sum2;
+            document.getElementById("sum").value = showsum1;
+
+        }
+        function add3() {
+            let valueA = parseInt(document.getElementById("value1").value);
+            let valueb = parseInt(document.getElementById("value2").value);
+            let valuec = parseInt(document.getElementById("value3").value);
+            let valued = parseInt(document.getElementById("value4").value);
+            var showsum2 = 0;
+            let sum3 = 0;
+            sum3 = valuec + valued;
+            showsum2 = sum3 + valueA + valueb + valuec;
+            console.log(showsum2)
+            document.getElementById("value4").value = sum3;
+            document.getElementById("sum").value = showsum2;
+        }
+
+    </script>
+</body>
+
+</html>
