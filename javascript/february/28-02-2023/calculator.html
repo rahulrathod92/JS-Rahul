@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>calculator with sumbetween</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="title has-text-centered mt-3">sum-multiple-substraction-divide-swap</h1>
+    </div>
+    <div class="columns mt-5">
+        <div class="column is-half is-offset-one-quarter field has-addons">
+            <input type="text" class="class input" id="value1" value="1">
+            <input type="text" class="class input" id="value2" value="10">
+        </div>
+    </div>
+    <div class="buttons is-centered ">
+        <button class="button" onclick="sum()">sum</button>
+        <button class="button" onclick="multiple()">multiple</button>
+        <button class="button" onclick="substraction()">substraction</button>
+        <button class="button" onclick="divide()">divide</button>
+        <button class="button" onclick="sumbetween()">sumbetween</button>
+        <button class="button" onclick="swap()">swap</button>
+    </div>
+    <div class="has-text-centered">
+        <label for="" class="label">showvalue</label>
+        <p id="showvalue"></p>
+    </div>
+
+    <div class="has-text-centered">
+        <label for="" class="label">answer</label>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function sum() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            total = a + b;
+            document.getElementById("answer").innerHTML = total;
+        }
+        function multiple() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            total = a * b;
+            document.getElementById("answer").innerHTML = total;
+        }
+        function substraction() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            total = a - b;
+            document.getElementById("answer").innerHTML = total;
+        }
+        function divide() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            total = a / b;
+            document.getElementById("answer").innerHTML = total;
+        }
+        function sumbetween() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            let result = "";
+            for (i = a; i <= b; i++) {
+                total = total + i;
+                if (i != b) {
+                    result = result + i + "+";
+                }else{
+                    result = result + i;
+                }
+            }
+            document.getElementById("showvalue").innerHTML = result;
+            document.getElementById("answer").innerHTML = total;
+        }
+        function swap(){
+            let temp = document.getElementById("value1").value;
+            document.getElementById("value1").value =  document.getElementById("value2").value;
+            document.getElementById("value2").value = temp;
+        }
+    </script>
+</body>
+
+</html>
+</body>
+</html>

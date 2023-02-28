@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <title>drawTable</title>
+    </head>
+
+    <body>
+        <div class="box container mt-5">
+        <div>
+            <h1 class="title has-text-centered mt-3">drawtable</h1>
+        </div>
+        <div class="columns mt-5">
+            <div class="column is-half is-offset-one-quarter field has-addons">
+                <div> <label for="" class="label">Row</label>
+                    <input type="text" class="class input" id="usercolumns" value="3">
+                </div>
+                <div>
+                     <label for="" class="label">column</label>
+                    <input type="text" class="class input" id="userrows" value="5">
+                </div>
+            </div>
+        </div>
+        <div class="buttons is-centered ">
+            <button class="button" onclick="drawTable()">drawTable</button>
+        </div>
+        <div class="has-text-centered">
+            <label for="" class="label">showTable</label>
+            <p id="showvalue" class="p-5"></p>
+        </div>
+    </div>
+    </body>
+    <script>
+        function drawTable() {
+            let col = parseInt(document.getElementById("usercolumns").value);
+            let row = parseInt(document.getElementById("userrows").value);
+            let strtable = "<table class='table is-bordered'><tr>";
+            var counter = 0;
+            for (i = 1; i <= col; i++) {
+                for (j = 1; j <= row; j++) {
+                    counter = counter + 1;
+                    strtable = strtable + "<td>" + counter + "</td>";
+
+                }
+                strtable = strtable + "</tr>";
+            }
+            strtable = strtable + "</table>";
+            document.getElementById("showvalue").innerHTML = strtable;
+        }
+    </script>
+
+    </html>
+</body>
+
+</html>
