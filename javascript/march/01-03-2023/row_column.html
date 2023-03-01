@@ -28,7 +28,7 @@
             <div class="columns mt-5">
                 <div class="column is-half is-offset-one-quarter field has-addons">
                     <div> <label for="" class="label">Row</label>
-                        <input type="text" class="class input" id="usercolumns" value="3">
+                        <input type="text" class="class input" id="usercolumns" value="5">
                     </div>
                     <div>
                         <label for="" class="label">column</label>
@@ -54,22 +54,24 @@
             let col = parseInt(document.getElementById("usercolumns").value);
             let row = parseInt(document.getElementById("userrows").value);
             let highlights = parseInt(document.getElementById("highlights").value);
-            let strtable = "<table class='table is-bordered'><tr>";
+            let strtable = "<div class='table-container'><table class='table is-bordered '><tr>";
             var counter = 0;
             for (i = 1; i <= col; i++) {
                 for (j = 1; j <= row; j++) {
-                    counter = counter + 1;
-                    if (highlights == counter) {
+                    counter = counter+1;
+                    if (highlights == counter && highlights == j) {
+
                         strtable = strtable + "<td class='is-selected'>" + counter + "</td>";
                     } else {
                         strtable = strtable + "<td>" + counter + "</td>";
+
                     }
 
 
                 }
                 strtable = strtable + "</tr>";
             }
-            strtable = strtable + "</table>";
+            strtable = strtable + "</table></div>";
             document.getElementById("showvalue").innerHTML = strtable;
         }
     </script>
