@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Button</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="container p-5">
+        <input type="text" id="first" value="50" class="input is-large" placeholder="Enter The Value">
+        <input type="text" id="second" value="5"  class="input is-large" placeholder="Enter The Value">
+        <div class="column has-text-centered">
+            <button onclick="satish()" class="button is-danger">Click</button>
+        </div>
+        <p id="button"></p>
+        <div class="column has-text-centered">
+            <button onclick="satish1()" class="button is-danger">Left</button>
+            <button onclick="satish2()" class="button is-danger">Right</button>
+        </div>
+    </div>
+    <script>
+        tracker = 0;
+        function satish() {
+            var a = Number(document.getElementById("first").value);
+           // var c = Number(document.getElementById("second").value); 
+            var b = '<table class="table  is-bordered">';
+            for (i = 1; i <= a; i++) {
+                if (i == tracker) {
+                    b = b + "<tr><button class='button' style='background-color:red'>" + i + "</button>";
+                }
+                else {
+                    b = b + "<tr><button class=button >" + i + "</button>";
+                }
+            }
+            document.getElementById("button").innerHTML = b;
+        }
+        function satish1() {
+            tracker =  tracker - Number(document.getElementById("second").value);;
+        satish();
+        }
+        function satish2() {
+            tracker =  tracker  + Number(document.getElementById("second").value);;
+            satish();
+        }
+    </script>
+</body>
+</html>
+<!-- if (element.className == "button is-info" ) {
+    element.className = "button is-danger";
+}
+else {
+   element.className = "button is-info";
+} -->

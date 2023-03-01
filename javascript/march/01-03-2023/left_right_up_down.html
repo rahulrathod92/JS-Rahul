@@ -23,25 +23,29 @@
     <body>
         <div class="box container mt-5">
             <div>
-                <h1 class="title has-text-centered mt-3">drawtable</h1>
+                <h1 class="title has-text-centered mt-3">drawtable left right updown</h1>
             </div>
             <div class="columns mt-5">
                 <div class="column is-half is-offset-one-quarter field has-addons">
-                    <div> <label for="" class="label">Row</label>
-                        <input type="text" class="class input" id="usercolumns" value="5">
+                    <div> <label for="" class="label">row</label>
+                        <input type="text" class="class input" id="userrows" value="3">
                     </div>
                     <div>
                         <label for="" class="label">column</label>
-                        <input type="text" class="class input" id="userrows" value="5">
+                        <input type="text" class="class input" id="usercolumns" value="5">
                     </div>
                     <div>
                         <label for="" class="label">highlights</label>
-                        <input type="text" class="class input" id="highlights" value="5">
+                        <input type="text" class="class input" id="highlights" value="3">
                     </div>
                 </div>
             </div>
             <div class="buttons is-centered ">
                 <button class="button" onclick="drawTable()">drawTable</button>
+                <button class="button" onclick="left()">left</button>
+                <button class="button" onclick="right()">right</button>
+                <button class="button" onclick="up()">up</button>
+                <button class="button" onclick="down()">down</button>
             </div>
             <div class="has-text-centered">
                 <label for="" class="label">showTable</label>
@@ -50,23 +54,27 @@
         </div>
     </body>
     <script>
+        var tempi = 1;
+        var tempj = 1;
+        var tracker = 0;
+        var counter = 0;
         function drawTable() {
             let col = parseInt(document.getElementById("usercolumns").value);
             let row = parseInt(document.getElementById("userrows").value);
             let highlights = parseInt(document.getElementById("highlights").value);
             let strtable = "<div class='table-container'><table class='table is-bordered '><tr>";
             var counter = 0;
-            for (i = 1; i <= col; i++) {
-                for (j = 1; j <= row; j++) {
+
+            for (i = 1; i <= row; i++) {
+                for (j = 1; j <= col; j++) {
                     counter = i;
-                    if (highlights == counter && highlights == j) {
+                    if (tempi == i && tempj == j) {
 
-                        strtable = strtable + "<td class='is-selected'>" + "*" + "</td>";
+                        strtable = strtable + "<td class='is-selected'>" + i + "." + j + "</td>";
                     } else {
-                        strtable = strtable + "<td>" + counter + "</td>";
 
+                        strtable = strtable + "<td>" + i + "." + j + "</td>";
                     }
-
 
                 }
                 strtable = strtable + "</tr>";
@@ -74,6 +82,26 @@
             strtable = strtable + "</table></div>";
             document.getElementById("showvalue").innerHTML = strtable;
         }
+        function right() {
+            tempj = tempj + 1;
+            console.log(tempj)
+            drawTable();
+        }
+        function left() {
+            tempj = tempj - 1;
+            drawTable();
+        }
+        function down() {
+            tempi = tempi + 1;
+            drawTable();
+        }
+        function up() {
+            tempi = tempi - 1;
+            drawTable();
+        }
+
+
+
     </script>
 
     </html>
