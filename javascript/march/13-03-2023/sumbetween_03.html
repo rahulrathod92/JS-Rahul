@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumbetween</title>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="value1" value="1">
+        <input type="text" name="" id="value2" value="5">
+        <button onclick="sum()">sum</button>
+        <P id="showvalue"></P>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function sum() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let total = 0;
+            let result = "";
+            for (i = a; i <= b; i++) {
+                total = total + i;
+                if (i != b) {
+                    result = result + i + "+";
+                } else {
+                    result = result + i;
+                }
+            }
+            document.getElementById("showvalue").innerHTML = result;
+            document.getElementById("answer").innerHTML = total;
+        }
+    </script>
+</body>
+
+</html>
