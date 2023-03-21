@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>fibonaci</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="value1" value="5">
+        <button onclick="fibonaci()">fb</button>
+        <p id="fibonac"></p>
+    </div>
+
+
+
+
+    <script>
+        function fibonaci() {
+            let a = parseInt(document.getElementById("value1").value);
+            let next = 0;
+            let c = 0;
+            let d = 1;
+            var string = "";
+            for (i = 1; i <= a; i++) {
+                for (j = 0; j < i; j++) {
+                    next = c + d;
+                    console.log('next->',next,'=','c->',c,'+','d->',d)
+                    c = d;
+                    d = next;
+                    string = string + " "+ next;
+                    // console.log(string)
+                }
+                string = string + "<br />";
+            }
+
+            document.getElementById("fibonac").innerHTML = string;
+        }
+    </script>
+
+
+</body>
+
+</html>

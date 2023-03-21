@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <div class="container p-5">
+        <div class="column has-text-centered">
+            <button onclick="genrateTable()" class="button is-info"> Genrate Table</button> <br><br>
+            <button onclick="leftButton()">left</button>
+            <button onclick="rightButton()">right</button>
+            <button onclick="upButton()">up</button>
+            <button onclick="downButton()">down</button>
+        </div>
+        <p id="printTable"></p>
+    </div>
+    <script>
+        var rowValue = 13;
+        var columnValue = 13;
+        var tempja = 1;
+        var tempjb =1;
+        var tempjc =1;
+        var tempjd;
+        var tempje;
+        var a = 1;
+        var b = 2;
+        var c = 3;
+        var d;
+        var e;
+        function genrateTable() {
+            stringTable = '<table class="table is-bordered">';
+            for (let i = 1; i <= rowValue; i++) {
+                for (let j = 1; j <= columnValue; j++) {
+                    if (i == tempja && j == a || i == tempjb && j == b || i == tempjc && j == c) {
+                        stringTable = stringTable + '<td>' + "*" + '</td>';
+                    }
+                    else {
+                        stringTable = stringTable + '<td>' + '</td>';
+                    }
+                }
+                stringTable = stringTable + '</tr>';
+            }
+            document.getElementById("printTable").innerHTML = stringTable;
+        }
+        function rightButton() {
+            if(tempjc == columnValue){
+                alert("error")
+            }
+            else{
+                a = b;
+            b = c;
+            c = c + 1;
+            console.log(c)
+            tempja = tempjb;
+            tempjb =tempjc;
+            }
+            genrateTable()
+        }
+        function leftButton() {
+            a = b;
+            b = c;
+           c =c-1;
+           tempja = tempjb;
+           tempjb = tempjc;
+           genrateTable()
+     }
+        function upButton() {
+            tempje = tempjb;
+            tempjd = tempjc;
+            tempjc = tempjc - 1;
+            tempjb = tempjd;
+            tempja = tempje;
+            abc()
+        }
+        function downButton() {
+            tempje = tempjb;
+            tempjd = tempjc;
+            tempjc = tempjc + 1;
+            tempjb = tempjd;
+            tempja = tempje;
+            abc()
+        }
+        function abc() {
+            a =b;
+            b = c;
+            genrateTable()
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

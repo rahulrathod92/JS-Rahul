@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title></title>
+</head>
+
+<body>
+    <!-- The prime factors of 13195 are 5, 7, 13 and 29. -->
+    <!-- What is the largest prime factor of the number 600851475143 ? -->
+
+    <div class="container mt-5">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+                <p>The prime factors of 13195 are 5, 7, 13 and 29.</p>
+                <p>What is the largest prime factor of the number 600851475143 ?</p>
+                <input class="input" type="text" name="" id="valueA" value="13195" placeholder="enter the value">
+                <div class="mt-3">
+                    <button class="button" onclick="prime()"> Prime fectore</button>
+                </div>
+                <div class="mt-3">
+                    <p id="showvalue">showvalue</p>
+                 
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function prime() {
+                let valueA = parseInt(document.getElementById("valueA").value);
+                let showvalue ="";
+                for (i = 1; i <= valueA; i++) {
+                    if (valueA % i == 0) {
+                        valueA /= i;
+                        console.log(valueA)
+                        showvalue = showvalue + "\n"+valueA;
+                    }
+                }
+                document.getElementById("showvalue").innerHTML = showvalue;
+             
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Dreawtable</title>
+</head>
+
+<body>
+    <div class="box container mt-3">
+        <div class="columns is-mobile is-centered mt-3">
+            <div class="column is-half">
+                <input type="text" class="input" id="drawtable" value="10">
+            </div>
+        </div>
+        <div class="has-text-centered">
+            <button class="button is-primary" onclick="drawtable()">DrawTable</button>
+        </div>
+        <div class="has-text-centered mt-3">
+            <button class="button is-info" onclick="left()">Left</button>
+            <button class="button is-success " onclick="right()">Right</button>
+            <button class="button is-warning" onclick="up()">Up</button>
+            <button class="button is-danger" onclick="down()">Down</button>
+        </div>
+    </div>
+    <div class="container has-text-centered">
+        <label>ShowTable</label>
+        <div class="columns is-mobile ">
+            <div class="column is-half container">
+                <p id="showtable"> </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var tempi = 1;
+        var tempj = 1;
+        var tracker = 0;
+        var counter = 0;
+        var col = 0;
+        var row = 0;
+        var a = 1;
+        var b = 2;
+        var c = 3;
+        function drawtable() {
+            let drawtablevalue = parseInt(document.getElementById("drawtable").value);
+            let strtable = "<table class='table is-bordered'><tr>";
+            let counter = 1;
+            let col = drawtablevalue;
+            let row = drawtablevalue;
+            for (i = 1; i <= row; i++) {
+                for (j = 1; j <= col + 2; j++) {
+                    //  counter = counter + i;
+
+                    if (tempi == i && tempj == j) {
+
+                        strtable = strtable + "<td class='is-selected'>" + "*" +"</td>";
+                    } else {
+
+                        strtable = strtable + "<td>" + " " + "</td>";
+                    }
+                    // strtable = strtable + "<td>" + ""+ "</td>"; 
+                }
+                strtable = strtable + "</tr>";
+            }
+
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function right() {
+            console.log("tempj:->" + tempj + " col:->" + col);
+            if (tempj < col + 1) {
+                alert("limite stope");
+            } else {
+                tempj = tempj + 1;
+
+                console.log(tempj)
+                drawtable();
+            }
+        }
+        function left() {
+
+            // console.log("tempj:->" + tempj + "col:->" + col);
+            if (tempj == 1) {
+                alert("limite stope")
+            } else {
+                tempj = tempj - 1;
+
+            }
+            drawtable();
+        }
+        function up() {
+            if (tempi == 1) {
+                alert("limite stope")
+            } else {
+                tempi = tempi - 1;
+            }
+
+            drawtable();
+        }
+        function down() {
+            console.log(tempi)
+            if (tempi < row - 1) {
+                alert("limite stope")
+            } else {
+                tempi = tempi + 1;
+                drawtable();
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
