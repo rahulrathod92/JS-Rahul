@@ -1,0 +1,15 @@
+<?php include_once "head.php" ?>
+<?php include_once "navbar.php" ?> 
+<?php include_once "section.php" ?>
+<?php include_once "banner.php" ?>
+<?php include_once "featuredtools.php" ?>
+<?php include_once "toolscategories.php" ?>
+<?php include_once "texttool.php" ?>
+<?php include_once "imagetool.php" ?>
+<?php include_once "csstool.php" ?>
+<?php include_once "coddingtool.php" ?>
+<?php include_once "colortool.php" ?>
+<?php include_once "socialmediatool.php" ?>
+<?php include_once "miscellaneous.php" ?>
+ <?php include_once "buymecoffee.php" ?>
+<?php  include_once "footer.php" ?>
