@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star pettern </title>
+</head>
+
+<body>
+    <div>
+        <p id="show"></p>
+    </div>
+    <script>
+        let n = 7;
+        let i, j, k;
+        let string = "";
+        let count =0;
+        for (i = 1; i <= n; i++) {
+            for (j =0; j < i; j++) {
+                count=count+1;
+                string = string+ "&nbsp;&nbsp;"+String.fromCharCode(count + 64)
+
+            }
+            string = string + "<br>";
+            document.getElementById("show").innerHTML = string;
+        } 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+
+<body>
+    <div class="columns is-mobile is-centered mt-2">
+        <div class="column is-half">
+            <form name="form1">
+                <h1 class="title is-5">calculator in javascript</h1>
+                <input type="text" name="answer" id="number">
+                <table class="table is-bordered mt-3">
+                    <tr class="buttons">
+                        <td class="button" value="CLear All" onclick="form1.answer.value='' " id="clear">c</td>
+                        <td class="button">Er</td>
+                        <td class="button" value="%" onclick="form1.answer.value+='%'">%</td>
+                        <td class="button" value="/" onclick="form1.answer.value+='/'">/</td>
+                    </tr>
+
+                    <tr class="buttons">
+                        <td class="button" value="7" onclick="form1.answer.value +='7'">7</td>
+                        <td class="button" value="8" onclick="form1.answer.value+='8'">8</td>
+                        <td class="button" value="9" onclick="form1.answer.value+='9'">9</td>
+                        <td class="button" value="*" onclick="form1.answer.value+='*'">x</td>
+                    </tr>
+                    <tr class="buttons">
+                        <td class="button" value="4" onclick="form1.answer.value+='4'">4</td>
+                        <td class="button" value="5" onclick="form1.answer.value+='5'">5</td>
+                        <td class="button" value="6" onclick="form1.answer.value+='6'">6</td>
+                        <td class="button" value="-" onclick="form1.answer.value+='-'">-</td>
+                    </tr>
+                    <tr class="buttons">
+                        <td class="button" value="1" onclick="form1.answer.value+='1'">1</td>
+                        <td class="button" value="2" onclick="form1.answer.value+='2'">2</td>
+                        <td class="button" value="3" onclick="form1.answer.value+='3'">3</td>
+                        <td class="button" value="+" onclick="form1.answer.value+='+'">+</td>
+
+                    </tr>
+                    <tr class="buttons">
+                        <td class="button"></td>
+                        <td class="button" value="0" onclick="form1.answer.value+='0'">0</td>
+                        <td class="button" value="." onclick="form1.answer.value+='.'">.</td>
+                        <td class="button" value="=" onclick="form1.answer.value=eval(form1.answer.value)">=</td>
+                    </tr>
+                </table>
+        </div>
+        </form>
+    </div>
+    <script>
+
+        let number = document.getElementById("number");
+        let string = "";
+
+
+    </script>
+</body>
+
+</html>

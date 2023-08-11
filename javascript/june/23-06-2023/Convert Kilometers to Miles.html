@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert_Kilometers_to_Miles</title>
+</head>
+<body>
+    <div>
+        <label for="">kilometers</label>
+        <input type="text" name="" id="valueA" value="2">
+         <button onclick="miless()">click</button>
+<br><br><label for="">miles</label>
+        <p id="result"></p>
+    </div>
+    <script>
+        function miless(){
+            const factor = 0.621371;
+            let kilometers = parseInt(document.getElementById("valueA").value);
+            let miles = kilometers * factor;
+
+            document.getElementById("result").innerHTML = miles;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime number</title>
+</head>
+
+<body>
+    <div>
+
+        <p id="showprime"></p>
+
+    </div>
+    <script>
+       // Function to check if a number is prime
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  let i = 5;
+  while (i * i <= num) {
+    if (num % i === 0 || num % (i + 2) === 0) return false;
+    i += 6;
+  }
+
+  return true;
+}
+
+// Function to generate prime numbers up to a given limit
+function generatePrimes(limit) {
+  const primes = [];
+  let num = 2;
+
+  while (primes.length < limit) {
+    if (isPrime(num)) {
+      primes.push(num);
+    }
+    num++;
+  }
+
+  return primes;
+}
+
+// Function to generate the Prime Number Pyramid pattern
+function primeNumberPattern(rows) {
+  if (rows <= 0) {
+    console.log("Please enter a positive number of rows.");
+    return;
+  }
+
+  const primes = generatePrimes(rows);
+
+  let currentIndex = 0;
+  for (let i = 1; i <= rows; i++) {
+    const row = [];
+    for (let j = 0; j < i; j++) {
+      row.push(primes[currentIndex]);
+      currentIndex++;
+    }
+    console.log(row.join(" "));
+  }
+}
+
+// Usage example: Generate a Prime Number Pyramid with 5 rows
+primeNumberPattern(5);
+
+    </script>
+</body>
+
+</html>

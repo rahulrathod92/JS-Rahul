@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starwithfactorial</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+        <button onclick="factorial()">click</button>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function factorial() {
+            let a = parseInt(document.getElementById("uservalue").value);
+            let string = "";
+            let multiple = 1;
+            let counter =1;
+            for (i = 1; i <= a; i++) {
+                for (j = 1; j <= i; j++) {
+                    multiple = multiple * counter;
+                    console.log(multiple)
+                    string =  string + multiple+ "&nbsp;&nbsp;";
+                    // console.log(string)
+                    counter++;
+                    
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer").innerHTML = string;
+        }
+        factorial()
+    </script>
+</body>
+
+</html>

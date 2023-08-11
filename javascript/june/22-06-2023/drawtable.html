@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>drawtable</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <input type="text" name="" id="tableid" value="10">
+        <button onclick="draw()">click</button>
+        <input type="text" name="" id="togglevalue" value="5">
+        <button onclick="toggleA()">toggle</button>
+        <p id="showtable"></p>
+    </div>
+    <script>
+        function draw() {
+            let tableid = parseInt(document.getElementById("tableid").value);
+            let string = "<table class='table is-bordered'><tr><td>" + "Number" + "</td></tr>";
+            for (i = 1; i <= tableid; i++) {
+                string = string + "<tr><td>" + i + "</td></tr>";
+            }
+            string = string + "</table>";
+            document.getElementById("showtable").innerHTML = string;
+        }
+        toggle = true;
+        function toggleA() {
+            let tableid = parseInt(document.getElementById("tableid").value);
+            let togglevalue = parseInt(document.getElementById("togglevalue").value);
+            let string = "<table class='table is-bordered'><tr><td>" + "Number" + "</td></tr>";
+            // console.log(togglevalue)
+            if (toggle == false) {
+                for (i = 1; i <= tableid; i++) {
+                string = string + "<tr><td class='is-selected'>" + i + "</td></tr>";
+                console.log(string)
+            }
+                toggle = true;
+            } else {
+                for (i = 1; i <= tableid; i++) {
+                string = string + "<tr><td>" + i + "</td></tr>";
+            }
+                toggle = false;
+            }
+            string = string + "</table>";
+            document.getElementById("showtable").innerHTML = string;
+            console.log(toggle)
+        }
+    </script>
+</body>
+
+</html>

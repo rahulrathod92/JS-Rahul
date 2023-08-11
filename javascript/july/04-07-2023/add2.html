@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addtwoname</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="fname" value="rathod">
+        <button onclick="add()">add</button>
+        <input type="text" name="" id="lname" value="rahul">
+    </div>
+    <br>
+    <div>
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        function add() {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let string = fname + "&nbsp"+ lname;
+            document.getElementById("textarea").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

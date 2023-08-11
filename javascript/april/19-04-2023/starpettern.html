@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+    <title>star pettern</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="starvalue" value="5">
+        <button onclick="star()">star_1</button>
+        <button onclick="star2()">star_2</button>
+        <button onclick="star3()">star_3</button>
+        <button onclick="star4()">star_4</button>
+        <button onclick="star5()">star_5</button>
+    </div><br>
+    <div>
+
+        <label for="">(1)</label>
+        <p id="showpettern"></p>
+    </div>
+    <div>
+        <label for="">(2)</label>
+        <p id="showpettern1"></p>
+    </div>
+    <div>
+        <label for="">(3)</label>
+        <p id="showpettern2"></p>
+    </div>
+    <div>
+        <label for="">(4)</label>
+        <p id="showpettern3"></p>
+    </div>
+    <div>
+        <label for="">(5)</label>
+        <p id="showpettern4"></p>
+    </div>
+    <script>
+        function star() {
+            let a = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("showpettern").innerHTML = string;
+        }
+
+        function star2() {
+            let a = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (k = 1; k <= a - i; k++) {
+                    string = string + "&nbsp;&nbsp;";
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("showpettern1").innerHTML = string;
+        }
+
+        function star3() {
+            let a = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (j = 0; j <= a - i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("showpettern2").innerHTML = string;
+        }
+
+        function star4() {
+            let a = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (k = 1; k <= i; k++) {
+                    string = string + "&nbsp;&nbsp;"
+                }
+                for (j = 0; j <= a - i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br />";
+            }
+            document.getElementById("showpettern3").innerHTML = string;
+        }
+        function star5() {
+            let a = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (k = 1; k <= 5-i; k++) {
+                    string = string + "&nbsp";
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("showpettern4").innerHTML = string;
+        }
+        star5()
+    </script>
+</body>
+
+</html>

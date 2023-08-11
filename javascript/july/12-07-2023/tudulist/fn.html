@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="12345" id="num">
+        <button onclick="rev()">reverse</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+      function rev(){
+            let num = document.getElementById("num").value;
+            num = num + "";
+            console.log(num)
+      }
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+<script>
+    function reverse_a_number(n)
+{
+n = n + "";
+return n.split("").reverse().join("");
+}
+console.log(Number(reverse_a_number(32243)));
+</script> -->

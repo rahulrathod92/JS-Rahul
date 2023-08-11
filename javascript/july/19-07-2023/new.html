@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="primevalueA" value="1">
+        <input type="text" name="" id="primevalueB" value="10">
+        <button onclick="prime()">prime</button>
+    </div>
+    <p id="primeshow">
+
+    </p>
+    <script>
+        function prime() {
+         let a = parseInt(document.getElementById("primevalueB").value);
+         let b = parseInt(document.getElementById("primevalueB").value);
+         let show ="";
+         let count = 0;
+            for (j = a; j <= b; j++) {
+                for (i = 1; i <= j; i++) {
+                    if (j % i == 0)
+                        count++
+                    console.log(i)
+                }
+
+                if (count == 2) {
+                    // console.log(j)
+
+                    // console.log("before show:->"+show)
+                    show = show + " " + j + " , ";
+                    // console.log("after show:->"+show)
+                }
+
+                count = 0;
+            }
+            document.write(show);
+            // document.getElementById("primeshow").innerHTML = show;
+
+        }
+     
+    </script>
+</body>
+
+</html>

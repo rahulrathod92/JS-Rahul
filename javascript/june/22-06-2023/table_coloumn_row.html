@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>table_coloumn_row </title>
+</head>
+
+<body>
+    <div class=" box container column is-half is-offset-one-quarter mt-5">
+        <input type="text" id="coloum" value="5" placeholder="coloum">
+        <input type="text" id="row" value="3" placeholder="row">
+        <button onclick="draw()">drawtable</button>
+        <br><br>
+        <p id="showtable"></p>
+    </div>
+    <script>
+        function draw() {
+
+            let coloumA = parseInt(document.getElementById("coloum").value);
+            let rowB = parseInt(document.getElementById("row").value);
+            let string = "<div class='table-container columns is-multiline'><table class='table is-bordered'>";
+                let counter = 0;
+            for (i = 1; i <= coloumA; i++) {
+                    for(let j=1; j<=rowB; j++){
+                        counter=counter+1;
+                        string = string + "<td>" + counter + "</td>";
+                    }
+                string = string + "</tr>";
+            }
+            string = string + "</table></div>";
+            document.getElementById("showtable").innerHTML = string;
+        }
+
+    </script>
+</body>
+
+</html>

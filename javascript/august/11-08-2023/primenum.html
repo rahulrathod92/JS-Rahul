@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primenumber</title>
+</head>
+
+<body>
+    <!-- <label for="">febonacci number</label>
+    <h4>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946,</h4>
+    <label for="">primenumber</label>
+    <h4>1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,47.</h4> -->
+
+    <div>
+        <label for="">febonacciNumber</label>
+        <p id="febonacciresult"></p>
+        <p id="prime"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let num = 21;
+    let a = 1, b = 0;
+    let temp = 0;
+    let string = "";
+    for (i = 1; i <= num; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+        string = string + "&nbsp;" + temp;
+        document.getElementById("febonacciresult").innerHTML = string;
+        let primestring = "";
+        if (temp % i == 0) {
+
+            primestring = primestring + "&nbsp" + temp + " prime";
+        } else {
+            console.log(temp)
+              rimestring = primestring + " "+temp;
+        }
+    }
+    document.getElementById("prime").innerHTML = primestring;
+
+
+</script>

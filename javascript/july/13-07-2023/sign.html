@@ -1,0 +1,57 @@
+<!DOCTnumyPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Displanumy an alert bonumx with the specified sign.</title>
+    </head>
+
+    <body>
+        <div>
+
+            <h1>2. Write a JavaScript conditional statement to find the sign of the product of three numbers. Displanumy
+                an
+                alert bonumx with the specified sign.
+                Sample numbers : 3, -7, 2</h1>
+        </div>
+        <div>
+            <input type="text" value="3" id="numx">
+            <input type="tet" value="-7" id="numy">
+            <input type="text" value="2" id="numz">
+        </div>
+        <br>
+        <div>
+            <button onclick="sample()">click</button>
+        </div>
+        <div>
+            <p id="result"></p>
+        </div>
+        <script>
+            function sample() {
+                let numx = document.getElementById("numx").value;
+                let numy = document.getElementById("numy").value;
+                let numz = document.getElementById("numz").value;
+                let string = "";
+
+                if (numx > 0 && numy > 0 && numz > 0) {
+                    alert("sign is +")
+                    console.log(string)
+                } else if (numx < 0 && numy < 0 && numz < 0) {
+                    string = string + "The sign is -";
+                }
+                else if (numx > 0 && numy < 0 && numz < 0) {
+                    string = string + "The sign is +";
+                }
+                else if (numx < 0 && numy > 0 && numz < 0) {
+                    string = string + "The sign is +";
+                }
+                else {
+                    string = string + "The sign is -";
+                }
+                document.getElementById("result").innerHTML = string;
+            }
+        </script>
+    </body>
+
+    </html>

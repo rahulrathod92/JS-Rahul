@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random_name</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="randomvalue" value="3">
+        <button onclick="random()">random</button>
+    </div>
+    <div>
+        <textarea name="" id="showname" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        const characters = 'rahul';
+        const charactersLength = characters.length;
+        function random( length) {
+            let randomvalue = document.getElementById("randomvalue").value;
+            let string = '';
+            for (i = 1; i < randomvalue; i++) {
+                string = string + characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            // return string;
+            document.getElementById("showname").innerHTML = string;
+            console.log(string)
+        }
+    </script>
+    <script>
+        // program to generate random strings
+
+// declare all characters
+// const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+// function generateString(length) {
+//     let result = ' ';
+//     // const charactersLength = characters.length;
+//     for ( let i = 0; i < length; i++ ) {
+//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//     }
+
+//     return result;
+// }
+
+// console.log(generateString(5));
+    </script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@
 
 <body>
     <div>
-        
+        <p id="ans"></p>
     </div>
     <script>
         var string = prompt("enter the value");
@@ -22,6 +22,7 @@
             if (string[i] != string[len - 1 - i]) {
                 var msg = 'it is not palindrome';
             }
+            document.getElementById("ans").innerHTML= string;
              console.log(`${string}:${msg}`);
         }
     </script>

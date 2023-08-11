@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>febonacci with prime number </title>
+
+</head>
+<!--  1 1 2 3 5 8 13 21 34 55 89 febonacci number-->
+<!-- 2, 4, 6, 8, 10, 12, 14, 16. even number -->
+<!-- 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 prime number -->
+
+<body>
+    <p id="show"></p>
+    <label for="">prime number</label>
+    <p id="prime"></p>
+    <script>
+        let n = 10;
+        let temp = 0;
+        let a = 1, b = 0;
+        let string = "";
+        let primestring = "";
+        for (i = 1; i <= n; i++) {
+            temp = a + b;
+            a = b;
+            b = temp;
+            string = string + "&nbsp;" + temp;
+
+            for (j = 1; j <= temp; j++) {
+                if (temp % 3 == 0) {
+                    console.log(temp)
+                }
+            }
+
+
+            document.getElementById("show").innerHTML = string;
+            document.getElementById("prime").innerHTML = primestring;
+        }
+
+    </script>
+</body>
+
+</html>

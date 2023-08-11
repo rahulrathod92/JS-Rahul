@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <p id="answer"></p>
+    </div>
+    <script>
+        let n = 5;
+        let i, j, k;
+
+        let string = "";
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= n - i; j++) {
+                string = string + "&nbsp;";
+            }
+            let s = 1;
+            for (k = 1; k <= (i * 2) - 1; k++) {
+                string = string + s;
+                if (k>=i) {
+                    s--;
+                }
+                else {
+                    s++;
+                }
+
+            }
+
+            string = string + "<br/>";
+            document.getElementById("answer").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

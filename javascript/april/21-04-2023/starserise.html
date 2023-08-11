@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star seriese</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="starvalue" value="5">
+        <button onclick="star()">star</button>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function star() {
+
+            let num = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            let counter = 1;
+            let temp = 1;
+            for (let i = 1; i <= num; i++) {
+                    string = string +temp + "&nbsp;";
+                    temp = temp + counter;
+                    counter++;
+                    console.log("countvalue:->"+counter)
+                    temp++;
+                    console.log("tempvalue:->"+temp) 
+                       
+                string = string + ",&nbsp;";
+            }
+            document.getElementById("answer").innerHTML = string;
+
+        }
+        star()
+    </script>
+</body>
+
+</html>

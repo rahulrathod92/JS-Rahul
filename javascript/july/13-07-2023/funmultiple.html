@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function multiple</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="2" id="valueA">
+        <input type="text" value="5" id="valueB">
+        <button onclick="multiple()">multiple</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function multiple() {
+            let valueA = parseInt(document.getElementById("valueA").value);
+            let valueB = parseInt(document.getElementById("valueB").value);
+            console.log(valueA, valueB)
+            let total = logicmultiple(valueA, valueB);
+            console.log(total)
+            document.getElementById("result").innerHTML = total;
+        }
+        function logicmultiple(valueA, valueB) {
+            return valueA * valueB;
+
+         }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randombutton calculator</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="answer" id="number">
+        <br><br>
+        <button onclick="random()">Random</button>
+        <button onclick="Sum()">+</button><br><br>
+        <label for="">Random_Total</label>
+        <p id="result"></p>
+
+    </div>
+    <script>
+        function random() {
+            var number = document.getElementById("number").value = Math.floor(Math.random() * 100);
+            // console.log(number)
+        }
+        function Sum() {
+            let number = Number(document.getElementById("number").value);
+            let random = document.getElementById("number").value = Math.floor(Math.random() * 100);
+            console.log(random)
+            let sum = number + random;
+            document.getElementById("result").innerHTML = sum;
+            document.getElementById("number").value = number + "+" + random;
+            console.log(number)
+        }
+
+    </script>
+</body>
+
+</html>

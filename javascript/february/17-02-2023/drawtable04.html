@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,27 +13,27 @@
 <body>
     <div class="box container column is-half is-offset-one-quarter mt-5">
         <h1 class="title has-text-centered">Dynamic Table</h1>
-    <div class="field has-addons has-addons-centered">
-        <input type="text" class="input" id="number" value="" placeholder="entervalue drawtable">
-        <input type="text" class="input" id="togglevalue" value="" placeholder="selectrow with toggle value">
+        <div class="field has-addons has-addons-centered">
+            <input type="text" class="input" id="number" value="" placeholder="entervalue drawtable">
+            <input type="text" class="input" id="togglevalue" value="" placeholder="selectrow with toggle value">
         </div>
         <div class="buttons">
-        <button class="button" onclick="toggle()">draw</button>
-        <button class="button" onclick="toggleselected()">selectrow</button>
+            <button class="button" onclick="toggle()">draw</button>
+            <button class="button" onclick="toggleselected()">selectrow</button>
         </div>
         <div>
             <p id="shownumber"></p>
         </div>
-    
+
     </div>
-    
+
     <script>
-        
+
         var togglestatus = false;
         function toggle() {
             let number = parseInt(document.getElementById("number").value);
             let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
-            if ( togglestatus == false) {
+            if (togglestatus == false) {
                 for (i = 1; i <= number; i++) {
                     togglestatus = true;
                     console.log(togglestatus)
@@ -51,29 +52,30 @@
             let number = parseInt(document.getElementById("number").value);
             let togglenumber = parseInt(document.getElementById("togglevalue").value);
             let showvalue = "<table class='table is-bordered'><tr><th>number</th></tr>";
-            
-            if ( togglestatus == false) {
-               // Draw table without selected row
-               togglestatus = true;
-                for(i=1;i<=number;i++){
-                    showvalue = showvalue + "<tr><td>" +i+"</td></tr>"; 
+
+            if (togglestatus == false) {
+                // Draw table without selected row
+                togglestatus = true;
+                for (i = 1; i <= number; i++) {
+                    showvalue = showvalue + "<tr><td>" + i + "</td></tr>";
                 }
-            
+
             } else {
-                 // Draw table with selectede row
+                // Draw table with selectede row
                 togglestatus = false;
                 console.log(togglestatus)
-                 for(i=1;i<=number;i++){
-                    if(i==togglenumber){
-                        showvalue = showvalue + "<tr class='is-selected'><td>" +i+"</td></tr>"; 
-                    }else{
-                        showvalue = showvalue + "<tr><td>" +i+"</td></tr>"; 
+                for (i = 1; i <= number; i++) {
+                    if (i == togglenumber) {
+                        showvalue = showvalue + "<tr class='is-selected'><td>" + i + "</td></tr>";
+                    } else {
+                        showvalue = showvalue + "<tr><td>" + i + "</td></tr>";
                     }
-                   
+
                 }
             }
             document.getElementById("shownumber").innerHTML = showvalue;
         }
     </script>
 </body>
+
 </html>

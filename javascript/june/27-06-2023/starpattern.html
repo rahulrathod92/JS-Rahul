@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star pattern</title>
+</head>
+
+<body>
+    <p id="show">
+
+    </p>
+    <script>
+        let num = 5;
+        let string = "";
+        for (i = 0; i < num; i++) {
+            for (j = 0; j < num; j++) {
+                if (i == 0 || i == num - 1) {
+                    string = string + "*";
+                    console.log(string ,i)
+                } else if (j == 0 || j == num - 1) {
+                    string = string + "*";
+                } else {
+                    string = string + "&nbsp; ";
+                }
+            }
+            string = string + "</br>";
+            document.getElementById("show").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>drawtable</title>
+</head>
+
+</style>
+
+<body>
+    <div>
+        <h1 class="title has-text-centered mt-3">DRAW TABLEPROGRAM</h1>
+        <div class="columns is-mobile is-centered mt-5">
+            <div class="column is-half field has-addons">
+                <div>
+                    <label class="label">First value</label>
+                    <input type="text" class="input" id="valueA" value="1">
+                </div>
+                <div>
+                    <label class="label">secound value</label>
+                    <input type="text" class="input" id="valueB" value="10">
+                </div>
+                <div>
+                    <label class="label">toggle value</label>
+                    <input type="text" class="input" id="togglevalue" value="7">
+                </div>
+            </div>
+        </div>
+        <div class="has-text-centered">
+            <button class="button is-primary is-rounded " onclick="draw()">click</button>
+            <button class="button is-primary is-rounded " onclick="toggle()">toggle</button>
+        </div>
+        <div class="columns is-mobile is-centered mt-5">
+            <div class="column is-half box">
+                <label class="label">showtable</label>
+                <p id="showtable"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function draw() {
+            let a = parseInt(document.getElementById("valueA").value);
+            let b = parseInt(document.getElementById("valueB").value);
+            let strtable = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+            for (i = a; i <= b; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        var togglestatus = false;
+        function toggle() {
+            let a = parseInt(document.getElementById("valueA").value);
+            let b = parseInt(document.getElementById("valueB").value);
+            let togglevalue = parseInt(document.getElementById("togglevalue").value);
+            let strtable = "<table class='table is-bordered'><tr><th>Number</th></tr>";
+            if (togglestatus == false) {
+                togglestatus = true;
+                for (i = 1; i <= b; i++) {
+                    strtable = strtable + "<tr><td>" + i + "</td></tr>";
+                }
+                console.log(togglestatus)
+
+            } else {
+                togglestatus = false;
+                for (i = 1; i <= b; i++) {
+                    if(i==togglevalue){
+
+                        strtable = strtable + "<tr><td class='is-selected'>" + i + "</td></tr>";
+                    }else{
+                        strtable = strtable + "<tr><td>" + i + "</td></tr>";
+                    }
+                }
+                console.log(togglestatus)
+            }
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+    </script>
+</body>
+
+</html>

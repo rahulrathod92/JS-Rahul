@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>missingNumber</title>
+</head>
+<body>
+<div>
+    <input type="text" name="" id="inputvalue">
+    <button onclick="findMissing()">check</button>
+    <p id="result"></p>
+</div>
+
+
+    <script>
+        // Javascript code to implement the approach
+        
+        // Function to find the missing number
+        function findMissing(arr,N){
+            var N = parseInt(document.getElementById("inputvalue").value);
+        let i;
+        let temp = [];
+        for (i = 0; i <= N; i++) {
+                    temp[i] = 0;
+                }
+        
+                for (i = 0; i < N; i++) {
+                    temp[arr[i] - 1] = 1;
+                }
+        
+                let ans = 0;
+                for (i = 0; i <= N; i++) {
+                    if (temp[i] == 0)
+                        ans = i + 1;
+                }
+                console.log(ans);
+                document.getElementById("result").innerHTML = ans;
+        }
+        
+        // Driver code
+                let arr = [ 1, 3, 7, 5, 6, 2 ];
+                let n = arr.length;
+        
+                // Function call
+            findMissing(arr,n);
+        
+        
+        </script>
+        
+</body>
+</html>

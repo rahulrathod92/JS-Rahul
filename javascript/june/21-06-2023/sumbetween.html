@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumbetween</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="valueA" value="1">
+        <input type="text" name="" id="valueB" value="5">
+        <button onclick="sum()">sumbetween</button>
+        <p id="showvalue"></p>
+        <label for="">Total</label>
+        <p id="total"></p>
+    </div>
+    <script>
+        function sum() {
+            let result = "";
+            let total = 0;
+            let a = parseInt(document.getElementById("valueA").value);
+            let b = parseInt(document.getElementById("valueB").value);
+            for (i = a; i <= b; i++) {
+                total = total + i;
+                if (i != b) {
+                    result = result + i + "+";
+                } else {
+                    result = result + i;
+                }
+            }
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("showvalue").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

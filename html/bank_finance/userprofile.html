@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>finace bank</title>
+</head>
+
+<body>
+    <div class="container m-0 p-0 is-fluid ">
+        <nav class="navbar is-transparent is-black px-5">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <i class=" fa fa-2x fa-sharp fa-solid fa-building-columns">
+                    </i>
+                </a>
+
+                <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>/
+                </div>
+            </div>
+
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#home">
+                        Home
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="#">
+                            Account Info
+                        </a>
+                        <div class="navbar-dropdown is-boxed">
+                            <a class="navbar-item" href="#">
+                                User Profile
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Personal Loan
+                            </a>
+                            <a class="navbar-item" href="#">
+                                Business Loan
+                            </a>
+                            <a class="navbar-item" href="#">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ........................ -->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <p class="control ">
+                                <a class="bd-tw-button button is-primary is-outlined" href="register.html">
+                                    <span>
+                                        Register
+                                    </span>
+                                </a>
+                            </p>
+                            <!-- .......... -->
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-button button is-primary is-outlined" href="login.html">
+                                    Login
+                                </a>
+
+                            </div>
+                            <!-- .......... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav><br>
+        <!-- userprofile start -->
+        <div class="tabs is-centered">
+            <ul>
+                <li class="is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fa-solid fa-envelope"></i></i></span>
+                        <span>rahulrathod396@gmail.com</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="icon is-small"><i class="fa-sharp fa-solid fa-bell"></i></span>
+                        <span>bankalert</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="icon is-small"></span>
+                        <span>Mr. Rathod Rahul.S</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="icon is-small"></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="columns is-mobile">
+            <div class="column">
+                <label class="label has-text-centered">Blance</label>
+                <div class="box">
+                    <h1 class="title is-size-7">available</h1>
+                    $ 100000/-
+                </div>
+            </div>
+            <div class="column">
+                <label class="label has-text-centered">transfer money</label>
+                <div class="box">
+                    <h1 class="title is-size-7">available</h1>
+                    $ 100000/-
+                </div>
+            </div>
+
+            <div class="column">
+                <label class="label has-text-centered">account type</label>
+                <div class="box">
+                    <h1 class="title is-size-7">saving</h1>
+                    A/C 10001004826356
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="columns is-mobile">
+        <div class="column is-half is-offset-one-quarter">
+            <canvas id="myChart" style="width:50%;max-width:600px"></canvas>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <label class="label has-text-centered">Recent Tranjection</label>
+            <button class="button is-primary is-small">checknow</button>
+        </div>
+        <div class="column">
+            <label class="label">Flow Chart</label>
+        </div>
+
+    </div>
+    <!-- userprofile end -->
+
+    <!-- footer start -->
+    <footer class="footer has-background-link-light">
+        <div class="container">
+            <div class="columns is-mobile is-multiline">
+                <div class="column is-half-mobile  is-one-quarter-desktop">
+                    <h6 class="title is-5">Quick Links</h6>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#team">team</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Information</h6>
+                    <ul>
+                        <li><a href="#">finacebank</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Follow Patner</h6>
+                    <ul>
+                        <li><a href=""><i class="fa-sharp fa-solid fa-piggy-bank"></i>Piggy Bank</a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i>Twitter</a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i>linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="column is-half-mobile is-one-quarter-desktop">
+                    <h6 class="title is-5">Location:</h6>
+                    <address>
+                        <strong>FinaceBank</strong><br>
+                        Ghodasar kenal<br>
+                        Ahmedabad Gujarat<br>380001.
+                        <br> <i class="fas fa-phone"></i>
+                        <a href="tel:+123456789">+079 2282888</a><br>
+                        <i class="fas fa-envelope"> </i>
+                        <a href="email">info@finacebank.com</a>
+                    </address>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <p class=" title is-6 has-text-centered">
+            &copy;2023 FinaceBank.All rights reserved
+        </p>
+    </footer>
+    <!-- footer end -->
+</body>
+<script>
+    
+</script>
+<script>
+    var xValues = ["january", "February", "March,", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var yValues = [55, 49, 44, 24, 15, 20, 30, 45, 12, 35, 80, 98];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145",
+        "#0000FF",
+        "#000000",
+        "#ffff00",
+        "#ff00ff",
+        "#00ffff",
+        "#00ffbf",
+        "#00bfff"
+    ];
+
+    new Chart("myChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Tranjection flowchart 2023"
+            }
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+
+    });
+</script>
+
+</html>

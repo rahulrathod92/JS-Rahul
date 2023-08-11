@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>square_root</title>
+</head>
+
+<body>
+    <div>
+        <label for="">finde square root</label>
+        <input type="text" id="number">
+        <button onclick="square()">click</button>
+        <p id="resultshow"></p>
+    </div>
+    <script>
+        function square(){
+
+            let number = parseInt(document.getElementById("number").value);
+            let result = Math.sqrt(number);
+            document.getElementById("resultshow").innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>

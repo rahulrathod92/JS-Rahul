@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddEven function</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="10" id="valueA">
+        <button onclick="check()">checked</button>
+        <p id="result"></p>
+        <p id="show"></p>
+    </div>
+    <script>
+        function check() {
+
+            let number = parseInt(document.getElementById("valueA").value);
+            let num =  sums(number);
+            let sum = 0;
+            let string = "";
+            for (i = 1; i <= number; i++) {
+                sum = sum + i;
+                if (i != number) {
+                    string = string + i + "+";
+                } else {
+                    string = string + i;
+                }
+            }
+            document.getElementById("result").innerHTML = string + "<br>SumBetween" + "&nbsp" + sum;
+        }
+        function sums(sum) {
+            let oddeven = "";
+            if (sum % 2 == 0) {
+                // console.log("even");
+                oddeven = oddeven + "even";
+
+            } else {
+                // console.log("odd");
+                oddeven = oddeven + "odd";
+            }
+            document.getElementById("show").innerHTML = oddeven;
+        }
+
+    </script>
+</body>
+
+</html>

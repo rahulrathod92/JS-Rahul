@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>downstar</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="starvalue" value="5">
+        <button onclick="star()">star</button>
+        <button onclick="star2()">stardiamond</button>
+        <br><br>
+        <label for="">downstar</label>
+        <p id="answer"></p>
+        <label for="">stardiamond</label>
+        <p id="answer1"></p>
+    </div>
+    <script>
+        function star() {
+
+            let num = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = num; i >= 1; i--) {
+                for (k = 1; k <= num - i; k++) {
+                    string = string + "&nbsp;"
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer").innerHTML = string;
+        }
+        star()
+
+        function star2() {
+
+            let num = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= num; i++) {
+                for (k = 1; k <= num-i; k++) {
+                    string = string + "&nbsp;";
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br/>";
+            }
+            for (i = num; i >= 1; i--) {
+                for (k = 1; k <= num - i; k++) {
+                    string = string + "&nbsp;"
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "*";
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer1").innerHTML = string;
+        }
+        star2()
+    </script>
+</body>
+
+</html>

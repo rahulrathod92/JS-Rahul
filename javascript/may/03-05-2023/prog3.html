@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc_123</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="value" value="10">
+        <button onclick="star()">click</button>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function star() {
+
+            let num = parseInt(document.getElementById("value").value);
+            let string = "";
+            let count = 1;;
+            let check = 0;
+            let count1 = 1;
+
+            for (i = 1; i <= num; i++) {
+                check = check + 1;
+                if (check % 2 != 0) {
+                    for (j = 1; j <= i; j++) {
+                        string = string + count+"&nbsp;";
+                        count++;
+                    }
+
+                }
+                else {
+                    for (j = 1; j <= i; j++) {
+                        string = string + String.fromCharCode(count1 + 64)+"&nbsp";
+                        count1++;
+                        if (count1 == 27) {
+                            count1 = 1;
+                        }
+                    }
+                }
+
+                string = string + "<br/>";
+            }
+            document.getElementById("answer").innerHTML = string;
+        }
+        star();
+    </script>
+</body>
+
+</html>

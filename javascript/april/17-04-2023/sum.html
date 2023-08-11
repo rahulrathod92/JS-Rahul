@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="valueA" value="1">
+        <input type="text" name="" id="valueB" value="2">
+        <button onclick="sum()">sum</button>
+        <p id="answer"></p>
+    </div>
+    <script>
+        function sum(){
+            let a = parseInt(document.getElementById("valueA").value);
+            let b = parseInt(document.getElementById("valueB").value);
+            let total = 0;
+            total = a+b;
+            document.getElementById("answer").innerHTML= total;
+        }
+    </script>
+</body>
+</html>

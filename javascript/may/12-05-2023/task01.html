@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new task </title>
+</head>
+
+<body>
+    <div>
+        <p id="ans"></p>
+    </div>
+    <div>
+        <script>
+            let n = 5;
+            let i, j, k, m;
+            let string = "";
+            for (i = 1; i <= n; i++) {
+                for (j = 1; j <= n; j++) {
+                    string = string + "*";
+                    for (m = 1; m <= i; m++) {
+                        string = string + "*";
+                    }
+                }
+                for (k = i; k >= i; k--) {
+                    string = string + i;
+                }
+                string = string + "<br/>";
+                document.getElementById("ans").innerHTML = string;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>tip_calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <label class="label">Bill Amount</label>
+        <input type="text" name="" id="billamount" placeholder="$">
+        <label class="label">Tip</label>
+        <div class="control">
+            <div class="">
+                <input type="text"class="" id="percentage" placeholder="%">
+            </div>
+            <div class="mt-2">
+                <button class="button is-info" onclick="submit()">submit</button>
+            </div>
+            <label class="label">Final Amount</label>
+            <input type="text"  id="result" placeholder="=">
+
+        </div>
+    </div>
+
+    <script>
+        function submit() {
+            let billamount = parseInt(document.getElementById("billamount").value);
+            let per = parseInt(document.getElementById("percentage").value);
+            let finalamount = 0;
+            finalamount = billamount * per / 100;
+           
+            console.log(finalamount)
+            document.getElementById("result").value = finalamount;
+        }
+
+    </script>
+</body>
+
+</html>

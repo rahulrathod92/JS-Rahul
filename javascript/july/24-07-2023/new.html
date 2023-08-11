@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="show"></p>
+</body>
+
+</html>
+
+
+
+<script>
+    let a = [];
+    let N = 13;
+    a[0] = 0;
+    a[1] = 1;
+    let string = "";
+    
+
+
+    for (let i = 2; i < N; i++) {
+        a[i] = a[i - 2] + a[i - 1];
+    }
+
+    for (let i = N - 1; i >= 0; --i) {
+        string = string + "&nbsp"+ (a[i]);
+
+        console.log(a[i]);
+        document.getElementById("show").innerHTML =string ;
+
+    }
+</script>

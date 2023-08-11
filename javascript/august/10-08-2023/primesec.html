@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>prime number</h1>
+        <h1>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47</h1>
+        <input type="number" name="" id="number">
+        <button onclick="prime()">check</button>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function prime() {
+        let num = parseInt(document.getElementById("number").value);
+        let string = "";
+        if (num < 1) {
+            string = string + "enter valid number";
+            return;
+        }
+        let isprimenumber = true;
+        if (num == 1) {
+            isprimenumber = false;
+        } else {
+            for (i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    isprimenumber = false;
+                    break;
+                }
+            }
+        }
+        if (isprimenumber == true) {
+            string = string + num + "&nbsp" + "is prime";
+        } else {
+            string = string + num + "&nbsp" + "is not a prime";
+        }
+        document.getElementById("result").innerHTML = string;
+        
+    }
+</script>

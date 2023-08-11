@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="valueToFind">
+  <button onclick="check()">click</button>
+    <p id="demo"></p>
+
+<script>
+  function check(){
+
+    const array = [1, 2, 3, 4,5, 6,7,10];
+    const valueToFind = parseInt(document.getElementById("valueToFind").value);
+    const position = array.indexOf(valueToFind);
+    
+    if (position !== -1) {
+      console.log(`The value ${valueToFind} is found at index ${position}.`);
+    } else {
+      console.log(`The value ${valueToFind} is not present in the array.`);
+    }
+  }
+
+</script>
+
+</body>
+</html>

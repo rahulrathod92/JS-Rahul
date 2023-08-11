@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+<input id="firstValue" type="text">
+<button onclick="sum()" >Click</button>
+<p id="print"></p>
+<p id="print1"></p>
+<script>
+    function sum(){
+    let n = Number(document.getElementById("firstValue").value);
+    let valueSum = calculateSum(n)
+    let valueDivede = calculateDivide(n)
+    document.getElementById("print").innerHTML = valueSum;
+    document.getElementById("print1").innerHTML = valueDivede;
+    }
+
+    function calculateSum(satish){
+       let c = satish+1;
+        return c;
+    }
+    function calculateDivide(satis1h){
+      let   d = satis1h / 2;
+        return d;
+    }
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script>
+          function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+          }
+          window.addEventListener('load', addDarkmodeWidget);
+        </script>
+</body>
+</html>

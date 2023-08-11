@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <p id="star"></p>
+    </div>
+    <script>
+        let i, j, k;
+        let num = 5;
+        let string = "";
+        for (i = 1; i <= num; i++) {
+            for (k = 0; k <= num-i; k++) {
+                string = string + "&nbsp;";
+            }
+            for (j = 1; j <= i; j++) {
+                string = string + "*";
+            }
+            string = string + "</br>";
+            document.getElementById("star").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

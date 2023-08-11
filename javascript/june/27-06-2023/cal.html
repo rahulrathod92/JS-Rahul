@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random sum</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="answer" id="randomvalue"><br><br>
+
+        <button onclick="random_1()">random_1</button>
+        <button onclick="random_2()">random_2</button><br><br>
+        <button onclick="add()">+</button>
+        <p id="result"></p>
+
+
+    </div>
+    <script>
+        function random_1() {
+            var random_1 = parseInt(document.getElementById("randomvalue").value = Math.floor(Math.random() * 10));
+            console.log(random_1)
+        }
+        function random_2() {
+            var random_2 = Math.floor(Math.random() * 10);
+            console.log(random_2)
+        }
+        function add() {
+            var random_1 = Math.floor(Math.random() * 10);
+            var random_2 = Math.floor(Math.random() * 10);
+            var total = random_1 + random_2;
+            console.log(total)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci pattern</title>
+</head>
+
+<body>
+    <p id="star"></p>
+    <script>
+        document.addEventListener('DOMContentLoaded', star)
+        let n = 5;
+        let a = 0; b = 1;
+        let tem = 0;
+        let string = "";
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= i; j++) {
+                temp = a + b;
+                a = b;
+                b = temp;
+                // console.log(temp)
+                string = string +"&nbsp"+ temp;
+            }
+            string = string + "<br>";
+            document.getElementById("star").innerHTML = string;
+        }
+
+    </script>
+</body>
+
+</html>

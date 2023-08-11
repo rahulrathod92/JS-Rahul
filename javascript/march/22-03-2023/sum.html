@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>sum</title>
+</head>
+
+</style>
+
+<body>
+    <div>
+        <h1 class="title has-text-centered mt-3">SUM PROGRAM</h1>
+        <div class="columns is-mobile is-centered mt-5">
+            <div class="column is-half field has-addons">
+                <input type="text" class="input" id="valueA" value="10">
+                <input type="text" class="input" id="valueB" value="15">
+            </div>
+        </div>
+        <div class="has-text-centered">
+            <button class="button is-primary is-rounded " onclick="sum()">click</button>
+        </div>
+        <div class="columns is-mobile is-centered mt-5">
+            <div class="column is-half box">
+                <label class="label">Sum</label>
+                <p id="sum"></p>
+            </div>
+        </div>
+        <script>
+            function sum() {
+
+                let a = parseInt(document.getElementById("valueA").value);
+                let b = parseInt(document.getElementById("valueB").value);
+                total = 0;
+                total = a + b;
+                document.getElementById("sum").innerHTML = total;
+            }
+        </script>
+</body>
+
+</html>

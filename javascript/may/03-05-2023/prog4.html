@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>starpattern</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="value" value="5">
+        <button onclick="star()">click</button>
+        <button onclick="toggle()">toggle</button>
+        <p id="answer" class="block"></p>
+    </div>
+    <script>
+        function star() {
+            var n = parseInt(document.getElementById("value").value);
+            var string = "";
+            for (let i = 1; i <= n; i++) {
+                // console.log(i)
+                for (let j = 1; j <= i; j++) {
+                    // console.log(j)
+                    string = string + "&nbsp";
+                }
+
+                for (let k = (n - i) * 2 - 1; k >= 1; k--) {
+                    if (k === 1 || k === (n - i) * 2 - 1) {
+                        string = string + "*";
+                        
+                    }
+                    else {
+                        string = string + "&nbsp;";
+                    }
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer").innerHTML = string;
+        }
+        // star();
+
+        function toggle() {
+            let m = document.getElementById("answer");
+            console.log(m)
+            if (m.className == "block") {
+                m.className = "block is-hidden";
+            }
+            else {
+                m.className = "block";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

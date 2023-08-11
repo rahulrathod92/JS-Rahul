@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invert half pyramid</title>
+</head>
+
+<body>
+    <p id="star"></p>
+    <script>
+        let num = 5;
+        let i, j;
+        let string = "";
+        for (i = 1; i <= num; i++) {
+            for (j = 0; j <= num-i; j++) {
+                string = string + i+"";
+                console.log(string)
+            }
+            string = string + "<br>";
+            document.getElementById("star").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

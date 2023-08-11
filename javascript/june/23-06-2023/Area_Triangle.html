@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area_triangle</title>
+</head>
+
+<body>
+    <div>
+        <label for="">basevalue</label>
+        <input type="text" id="basevalue" value="4">
+        <label for="">heightvalue</label>
+        <input type="text" id="heightvalue" value="6">
+        <button onclick="triangle()">click</button>
+        <br><br> <label for="">triangle area</label>
+        <p id="result"></p>
+        <p id="star"></p>
+    </div>
+    <script>
+        function triangle() {
+            let string = "";
+            let basevalue = parseInt(document.getElementById("basevalue").value);
+            let heightvalue = parseInt(document.getElementById("heightvalue").value);
+            let area = (basevalue * heightvalue) / 2;
+            document.getElementById("result").innerHTML = area;
+
+            for (i = 1; i <= basevalue; i++) {
+                for (j = 1; j <= heightvalue; j++) {
+                     string = string +"*";
+                    }
+                string = string + "</br>";
+            }
+            
+            document.getElementById("star").innerHTML = string;
+            // console.log(string)
+        }
+    </script>
+</body>
+
+</html>

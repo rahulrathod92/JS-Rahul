@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hellow invert half pyramid</title>
+</head>
+
+<body>
+    <div>
+        <p id="star"></p>
+    </div>
+    <script>
+        let i, j, k;
+        let string = "";
+        let num = 5;
+        for (i = 1; i <= num; i++) {
+            for (j = 0; j < i; j++) {
+                if (i == num) {
+                    string = string + "&nbsp" + "*";
+                } else if (j == 0 || j == i - 1) {
+                    string = string + "&nbsp" + "*";
+                    console.log(string)
+                } else {
+                    string = string + "&nbsp;&nbsp;&nbsp;";
+                }
+
+            }
+            string = string + "<br>";
+            document.getElementById("star").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="show"></p>
+        <p id="star"></p>
+    </div>
+    <script>
+        let i, j, k;
+        let n = 5;
+        let string = "";
+        for (i = 1; i <= n; i++) {
+            for (k = 1; k <= n - i; k++) {
+                string = string + "&nbsp;&nbsp";
+            }
+            for (j = 1; j <= i; j++) {
+
+                string = string + "*";
+                console.log(string)
+            }
+            for (p = 1; p <= i; p++) {
+                string = string + "*";
+            }
+
+            string = string + "<br>";
+
+            document.getElementById("show").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

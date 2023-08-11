@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="star"></p>
+    <script>
+        let rows = 5;
+
+        // pattern variable carries the final pattern in string format
+        let pattern = "";
+
+        // outer loop runs for `rows` no. of times
+        for (let i = 1; i <= rows; i++) {
+            for (let j = 1; j <= 5; j++) {
+                // print star only if it is the boundary location
+                if (i == 1 || i == rows)
+                    pattern += "*";
+                else {
+                    if (j == 1 || j == 5) {
+                        pattern += "*";
+                    } else {
+                        pattern += "&nbsp&nbsp";
+                    }
+                }
+            }
+            pattern += "<br />";
+
+            document.getElementById("star").innerHTML = pattern;
+
+        }
+
+        console.log(pattern);
+
+    </script>
+</body>
+
+</html>

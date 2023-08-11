@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawtable</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="field has-addons">
+            <input type="text" id="valueA" class="input" value="5">
+            <input type="text" id="" class="input">
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="drawtable()">draw</button>
+            <button class="button" onclick="add()">Add</button>
+            <button class="button" onclick="del()">delete</button>
+            <button class="button" onclick="toggle()">toggle</button>
+        </div>
+        <div class="mt-3">
+            <p id="showtable"></p>
+        </div>
+    </div>
+    <script>
+
+        function drawtable() {
+            let tablevalue = parseInt(document.getElementById("valueA").value);
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= tablevalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+
+        function add() {
+            tablevalue = i;
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= tablevalue; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function del() {
+            tablevalue = i - 1;
+            console.log(tablevalue)
+            let strtable = "<table class='table is-bordered'><tr><th>number</th></tr>";
+            for (i = 1; i <= tablevalue - 1; i++) {
+                strtable = strtable + "<tr><td>" + i + "</td></tr>";
+            }
+            strtable = strtable + "</table>";
+            document.getElementById("showtable").innerHTML = strtable;
+        }
+        function toggle(){
+            
+        }
+    </script>
+</body>
+
+</html>

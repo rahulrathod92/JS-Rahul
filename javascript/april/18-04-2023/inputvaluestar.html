@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inputvaluestar</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="star" value="5">
+        <button onclick="star()">click</button>
+        <p id="star1"></p>
+    </div>
+    <script>
+        function star() {
+
+            let a = parseInt(document.getElementById("star").value);
+            let string = "";
+            for (i = 1; i <= a; i++) {
+                for (k = 1; k <= a - i; k++) {
+                    string = string + "*";
+                }
+                for (j = 1; j <= i; j++) {
+                    string = string + "";
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("star1").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

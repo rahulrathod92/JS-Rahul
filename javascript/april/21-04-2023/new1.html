@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="first" type="text">
+    <button onclick="satish()">Click</button>
+    <p id="print"></p>
+    <script>
+        function satish() {
+            let n = Number(document.getElementById("first").value);
+            counter = 0;
+            let store = "";
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    store = store + counter;
+                    counter++;
+                }
+                // store = store + "<br>";
+            }
+            let temp = counter;
+            let tempstr = "";
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    tempstr = tempstr + temp + "&nbsp;&nbsp;    ";
+                    temp--;
+                }
+                tempstr = tempstr + "<br>";
+            }
+            document.getElementById("print").innerHTML = tempstr;
+        }
+    </script>
+</body>
+
+</html>

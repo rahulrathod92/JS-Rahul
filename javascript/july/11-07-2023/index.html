@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="indexJs.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+        <div class="columns is-mobile is-centered mt-5">
+            <div class="column is-half">
+                <label class="label">sum</label>
+              <div class="field has-addons ">
+                <input type="text" class="input" id="valueA">
+                <input type="text" class="input"  id="valueB">
+              </div>
+              <div class="mt-2">
+                <button class="button is-info" onclick="add()">Pluse</button>
+                <button class="button is-info" onclick="multiple()">multiple</button>
+                <button class="button is-info" onclick="sub()">subtraction</button>
+                <button class="button is-info" onclick="div()">division</button>
+              </div>
+              <div class=" field mt-2">
+                <label class="label">Answer</label>
+                <input type="text" class="input" name="" id="ans">
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

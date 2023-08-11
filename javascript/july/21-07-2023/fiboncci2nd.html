@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>febonacci secound way</title>
+</head>
+
+<body>
+    <!-- using for and function -->
+    <p id="show"></p>
+    <script>
+        function feb(n) {
+            let sequence = [0, 1];
+            console.log(sequence)
+            for (i = 2; i < n; i++) {
+                let nextnum = sequence[i - 1] + sequence[i - 2];
+                sequence.push(nextnum);
+                console.log(nextnum)
+            }
+            return sequence;
+        }
+        let result = feb(15);
+        console.log(result)
+        document.getElementById("show").innerHTML = result;
+    </script>
+</body>
+
+</html>

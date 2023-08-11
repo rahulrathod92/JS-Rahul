@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleven Tens number pattern</title>
+</head>
+
+<body>
+    <div>
+        <p id="show"></p>
+    </div>
+    <script>
+        let n = 5;
+        let i, j;
+        let string = "";
+        let tens = 11;
+        let count = 0;
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j < i; j++) {
+                count = count + 1;
+                string = string + "&nbsp;" + tens * count;
+            }
+            string = string + "<br>";
+            document.getElementById("show").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

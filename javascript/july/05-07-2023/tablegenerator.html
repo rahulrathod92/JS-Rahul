@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>table_generator</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <div>
+                    <article class="message">
+                        <div class="message-header">
+                            <p>Column and Row Dynamic Add</p>
+                        </div>
+                        <div class="message-body">
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <label for="" class="label">columns</label>
+                                    <input type="number" name="" id="cols" placeholder="column" oninput="isauto()"value="3">
+                                </p>
+                                <p class="control">
+                                    <label for="" class="label">rows</label>
+                                    <input type="number" name="" id="rows" placeholder="row"oninput="isauto()" value="4">
+                                </p>
+                            </div>
+                            <div>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="isAuto" oninput="isauto()">
+                                    Auto
+                                </label>
+                                <button class="button is-info" onclick="genbtn()">Generate</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="column ">
+                <div class="box">
+                    <label for="" class="label">Table HTML Code</label>
+                    <textarea name="" id="tabletext" cols="80" rows="8"></textarea>
+                </div>
+            </div>
+        </div>
+        <p id="showstable"></p>
+    </div>
+
+    <script>
+        function genbtn() {
+            let col = Number(document.getElementById("cols").value);
+            let row = Number(document.getElementById("rows").value);
+            let counter = 0;
+            let sum = 0;
+            
+            let string = "<div class='table-container'><table class='table is-bordered'><tr>";
+            for (j = 0; j < col; j++) {
+                counter = counter + 1;
+                string = string + "<th>" + "HEADER"+"&nbsp;" + counter + "</th>";
+            }
+            string = string + "</tr>";
+            for (i = 0; i < row; i++) {
+                for (j = 0; j < col; j++) {
+                    sum=sum+1;
+                    string = string + "<td>" + sum + "</td>";
+                }
+                string = string + "</tr>";
+            }
+            string = string + "</table></div>";
+            document.getElementById("showstable").innerHTML = string;
+            document.getElementById("tabletext").innerHTML = string;
+        }
+
+        function isauto() {
+            let checkbox = document.getElementById("isAuto");
+            if (checkbox.checked == true) {
+                genbtn();
+            }
+        }
+        genbtn();
+    </script>
+</body>
+
+</html>

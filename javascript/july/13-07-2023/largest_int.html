@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>largest Integers number</title>
+</head>
+<!--  Write a JavaScript program that displays the largest integer among two integers. -->
+
+<body>
+    <div>
+        <h1> Write a JavaScript program that displays the largest integer among two integers.</h1>
+    </div>
+    <div>
+
+        <input type="text" value="10" id="numA" placeholder="1st number">
+        <input type="text" value="5" id="numB" placeholder="2nd number">
+        <button onclick="IntNum()">CheckNumber</button>
+    </div>
+    <div>
+        <label for="">
+            <h4>largest Integer number</h4>
+        </label>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function IntNum() {
+        let numberA = parseInt(document.getElementById("numA").value);
+        let numberB = parseInt(document.getElementById("numB").value);
+        let string = "";
+        if (numberA > numberB) {
+            console.log("b small")
+            string = string + "Big Number is " + numberA;
+        } else if (numberB > numberA) {
+            console.log(" a is small")
+            string = string + "Big Number is " + numberB;
+        }
+        document.getElementById("result").innerHTML = string;
+    }
+    // IntNum();
+</script>

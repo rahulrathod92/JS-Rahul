@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star pettern</title>
+</head>
+
+<body>
+    <div>
+        <p id="star"></p>
+    </div>
+    <script>
+        let string = "";
+        let a = 10;
+        for (i = 1; i <= a; i++) {
+            for (j = 1; j <= i; j++) {
+                string = string + " &nbsp*";
+            }
+            string = string+ "<br/>";
+            document.getElementById("star").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

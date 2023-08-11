@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swaptwovariable</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="variableA" value="a">
+        <input type="text" name="" id="variableB" value="b">
+        <button onclick="swap()">swap</button>
+    </div>
+    <script>
+        function swap() {
+            let temp = document.getElementById("variableA").value;
+            document.getElementById("variableA").value = document.getElementById("variableB").value;
+
+            document.getElementById("variableB").value = temp;
+        }
+    </script>
+</body>
+
+</html>

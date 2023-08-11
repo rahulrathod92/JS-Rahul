@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplebetween</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="valueA" value="1">
+        <input type="text" id="valueB" value="5">
+        <button onclick="sum()">sum</button>
+        <p id="showvalue"></p>
+        <p id="total"></p>
+    </div>
+    <script>
+        function sum() {
+
+            let valueA = parseInt(document.getElementById("valueA").value);
+            let valueB = parseInt(document.getElementById("valueB").value);
+            let total = 1;
+            let string = "";
+            for (i = valueA; i <= valueB; i++) {
+                total = total * i;
+                if (i != valueB) {
+                    string = string + i + "&nbsp" + "*" + "&nbsp";
+                } else {
+                    string = string + i;
+                }
+
+            }
+            document.getElementById("showvalue").innerHTML = string;
+            document.getElementById("total").innerHTML = total;
+        }
+        sum();
+    </script>
+</body>
+
+</html>

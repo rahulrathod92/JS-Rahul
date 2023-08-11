@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>febonacci</title>
+</head>
+<!--  1 1 2 3 5 8 13 21 34 55 89 febonacci number-->
+<!-- 2, 4, 6, 8, 10, 12, 14, 16. even number -->
+<!-- 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 prime number -->
+
+<body>
+    <div>
+        <label for="">febonacci number</label>
+        <p id="show"></p>
+        <label for="">even number</label>
+        <p id="even"></p>
+        <label for="">odd number</label>
+        <p id="odd"></p>
+        
+    </div>
+    <script>
+        let n = 10;
+        let string = "";
+        let evenstring = "";
+        let oddstring = "";
+        let temp = 0;
+        let a = 1, b = 0;
+        for (i = 0; i <= n; i++) {
+            temp = a + b;
+            a = b;
+            b = temp;
+            string = string + "&nbsp;" + temp;
+            // console.log(temp)
+            if (temp % 2 == 0) {
+                evenstring = evenstring + "&nbsp; " + temp;
+            } else {
+                oddstring = oddstring + "&nbsp;" + temp;
+            }
+            
+
+            document.getElementById("show").innerHTML = string;
+            document.getElementById("even").innerHTML = evenstring;
+            document.getElementById("odd").innerHTML = oddstring;
+          
+        }
+    </script>
+</body>
+
+</html>

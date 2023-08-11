@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Febonaci Third way</title>
+</head>
+
+<body>
+    <!-- Using recursion: -->
+    <p id="show"></p>
+    <script>
+        function fibonacciUsingRecursion(n) {
+            if (n <= 0) return [];
+            if (n === 1) return [0];
+            if (n === 2) return [0, 1];
+
+            const sequence = fibonacciUsingRecursion(n - 1);
+            sequence.push(sequence[n - 2] + sequence[n - 3]);
+            return sequence; 
+        }
+        const resultRecursion = fibonacciUsingRecursion(10);
+        document.getElementById("show").innerHTML = resultRecursion;
+    </script>
+</body>
+
+</html>

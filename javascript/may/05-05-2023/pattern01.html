@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>pattern_01</title>
+</head>
+
+<body>
+    <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+        <div class="column">
+            pattern
+            <label>(1)</label>
+            <p id="answer"></p>
+            <script>
+                var n = 5;
+                var i, j;
+                var string = "";
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= n; j++) {
+                        string = string + "1";
+                    }
+                    string = string + "<br>";
+                    document.getElementById("answer").innerHTML = string;
+                }
+            </script>
+        </div>
+        <div class="column">
+            pattern
+            <label>(2)</label>
+            <p id="ans1"></p>
+            <script>
+                var n = 5;
+                var i, j;
+                var string = "";
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= n; j++) {
+                        if (i % 2 == 1) {
+                            string = string + "1";
+                        } else {
+                            string = string + "0";
+                        }
+
+                    }
+                    string = string + "<br/>";
+                    document.getElementById("ans1").innerHTML = string;
+                }
+            </script>
+        </div>
+        <div class="column">
+            pattern
+            <label for="">(3)</label>
+            <p id="ans2"></p>
+            <script>
+                var n = 5;
+                var i, j;
+                var string = "";
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= n; j++) {
+                        if (j % 2 == 1) {
+                            console.log(j)
+                            string = string + "0";
+
+                        } else {
+                            string = string + "1";
+                        }
+                    }
+                    string = string + "<br/>";
+                    document.getElementById("ans2").innerHTML = string;
+                }
+
+            </script>
+        </div>
+        <div class="column">
+            pattern
+            <label>(4)</label>
+            <p id="ans3"></p>
+            <script>
+                var n = 5;
+                var i, j;
+                var string = "";
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= n; j++) {
+                        if (i == 1 || i == n) {
+                            string = string + "1";
+                        } else if (j == 1 || j == n) {
+                            string = string + "1";
+                        } else {
+                            string = string + "0"
+                        }
+
+                    }
+                    string = string + "<br>";
+                    document.getElementById("ans3").innerHTML = string;
+                }
+            </script>
+        </div>
+        <div class="column">
+            pattern
+            <label for="">(5)</label>
+            <p id="ans4"></p>
+            <script>
+                var n = 5;
+                var i, j;
+                var string = "";
+
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= n; j++) {
+                        if (i == 3 && j == 3) {
+
+                            string = string + "0";
+                        } else {
+                            string = string + "1";
+                        }
+                    }
+                    string = string + "<br>";
+                    document.getElementById("ans4").innerHTML = string;
+                }
+
+            </script>
+        </div>
+        <div class="column">
+            Column
+        </div>
+    </div>
+
+
+    <!-- ***************************** -->
+
+
+</body>
+
+</html>

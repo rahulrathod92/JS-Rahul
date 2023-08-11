@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime_number_star_program</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="value1" value="1">
+        <input type="text" name="" id="value2" value="5">
+        <button onclick="prime()">click</button>
+        <p id="show"></p>
+    </div>
+    <script>
+        function prime() {
+            let a = parseInt(document.getElementById("value1").value);
+            let b = parseInt(document.getElementById("value2").value);
+            let count = 0;
+            var string = "";
+
+            for (j = a; j <= b; j++) {
+                for (i = 1; i <= j; i++) {
+                    if (j % i == 0)
+                        count++
+                    console.log(i)
+                }
+
+                if (count == 2) {
+                    // console.log(j)
+                    for (k = 1; k <= 10; k++) {
+                        for (n = 1; n <= k; n++) {
+                            string = string + " " + j ;
+                        }
+                        string=string+"<br/>";
+                    }
+                    // console.log("before show:->"+show)
+                    // string = string + " " + j + " <br/> ";
+                    // console.log("after show:->"+show)
+                }
+
+                count = 0;
+            }
+            document.getElementById("show").innerHTML = string;
+
+        }
+    </script>
+</body>
+
+</html>

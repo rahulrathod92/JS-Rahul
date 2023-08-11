@@ -1,0 +1,73 @@
+<script>
+	
+    // JavaScript code for the above approach
+    
+    let a = new Array(30), cnt;
+    
+    // Function to check whether queen can be
+    // placed in current position or not.
+    function place(pos)
+    {
+        let i;
+        for (i = 1; i < pos; i++) {
+        if ((a[i] == a[pos])
+            || ((Math.abs(a[i] - a[pos]) == Math.abs(i - pos))))
+            return 0;
+        }
+        return 1;
+    }
+    
+    // Function to print out the chess board
+    function print_sol(N)
+    {
+        let i, j;
+        cnt++;
+        document.write("Solution #" + cnt + ":" + "<br/>");
+        for (i = 1; i <= N; i++) {
+        for (j = 1; j <= N; j++) {
+            if (a[i] == j)
+            document.write("Q ");
+            else
+            document.write("* ");
+        }
+        document.write("<br/>");
+        }
+    }
+    
+    // Function to plave N queens on
+    // a N*N chess borad such that
+    // no queen attacks each other
+    function queen(n)
+    {
+        cnt = 0;
+        let k = 1;
+        a[k] = 0;
+        while (k != 0) {
+        a[k] = a[k] + 1;
+        while ((a[k] <= n) && place(k) == 0)
+            a[k]++;
+        if (a[k] <= n) {
+            if (k == n)
+            print_sol(n);
+            else {
+            k++;
+            a[k] = 0;
+            }
+        }
+        else
+            k--;
+        }
+    }
+    
+    
+        // Driver code
+        
+        let N = 4;
+    
+        // Function call
+        queen(N);
+        document.write("Total solutions=" + cnt + "<br/>");
+        
+        // This code is contributed by code_hunt.
+    </script>
+    

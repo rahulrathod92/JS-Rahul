@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Days name </label><br>
+        <input type="text" name="" id="day" placeholder="Enter the value 1 to 7">
+        <button onclick="days()">click</button><br><br>
+        <label for=""></p></label>
+        <p id="ans">showdays name :-</p>
+    </div>
+    <script>
+        function days() {
+
+            let day = parseInt(document.getElementById("day").value);
+            let string = "";
+            if (day <= 1) {
+                string = string + "monday";
+
+            } else if (day <= 2) {
+                string = string + "tuesday";
+            } else if (day <= 3) {
+                string = string + "wednesday";
+            } else if (day <= 4) {
+                string = string + "thursday";
+            } else if (day <= 5) {
+                string = string + "friday";
+            } else if (day <= 6) {
+                string = string + "saturday";
+            } else if (day <= 7) {
+                string = string + "sunday";
+            }
+            else {
+                string = string + "Enter the valid number";
+            }
+            console.log(string)
+            document.getElementById("ans").innerHTML = string;
+        }
+    </script>
+</body>
+
+</html>

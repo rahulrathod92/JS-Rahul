@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starpetternwithprime</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="starvalue" value="5">
+        <button onclick="star()">star_6</button>
+        <button onclick="star7()">star_7</button>
+        <button onclick="star8()">star_8</button>
+       
+        <p id="answer"></p>
+        <p id="answer7"></p>
+        <p id="answer8"></p>
+       
+    </div>
+    <script>
+        function star() {
+            let num = parseInt(document.getElementById("starvalue").value)
+            let string = "";
+            for (i = 1; i <= num; i++) {
+                for (j = 1; j <= i; j++) {
+                    string = string + i;
+                }
+                string = string + "<br />";
+            }
+            document.getElementById("answer").innerHTML = string;
+        }
+        // star()
+        function star7() {
+            let num = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            for (i = 1; i <= num; i++) {
+                for (j = 1; j <= i; j++) {
+                    string = string + j;
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer7").innerHTML = string;
+        }
+        // star7()
+        function star8() {
+            let num = parseInt(document.getElementById("starvalue").value);
+            let string = "";
+            let counter = 1;
+            for (i = 1; i <= num; i++) {
+                for (j = 1; j <= i; j++) {
+                    string = string + counter + "&nbsp;";
+                    counter++;
+                }
+                string = string + "<br/>";
+            }
+            document.getElementById("answer8").innerHTML = string;
+        }
+        //star8()
+        
+    </script>
+</body>
+
+</html>
