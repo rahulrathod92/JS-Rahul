@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>htmlcheatsheet</title>
+</head>
+
+<body>
+    <div class="container is-fluid"> <!--main div start--><div class="container mt-6">
+    <div class="columns is-mobile">
+        <div class="column is-12">
+            <h1 class="title is-3">HTML CheatSheet</h1>
+            <div class="box">
+                <div class="content">
+                    <ul class="is-italic is-size-6">
+                        <li><strong>HTML</strong> is an acronym which stands for Hyper Text Markup Language which is used for creating
+                            web pages and web applications. Let's see what is meant by Hypertext Markup Language, and
+                            Web page.
+                        </li>
+                        <li><strong>Hyper Text:</strong> HyperText simply means "Text within Text." A text has a link
+                            within it, is a
+                            hypertext. Whenever you click on a link which brings you to a new webpage, you have clicked
+                            on a hypertext. HyperText is a way to link two or more web pages (HTML documents) with each
+                            other.</li>
+                        <li><strong>Markup language: </strong>A markup language is a computer language that is used to
+                            apply layout and
+                            formatting conventions to a text document. Markup language makes text more interactive and
+                            dynamic. It can turn text into images, tables, links, etc.</li>
+                        <li><strong>Web Page: </strong>A web page is a document which is commonly written in HTML and
+                            translated by a web
+                            browser. A web page can be identified by entering an URL. A Web page can be of the static or
+                            dynamic type. <strong>With the help of HTML only, we can create static web pages.</strong>
+                        </li>
+                        <li>Hence, HTML is a markup language which is used for creating attractive web pages with the
+                            help of styling, and which looks in a nice format on a web browser. An HTML document is made
+                            of many HTML tags and each HTML tag contains different content.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="container mt-6">
+    <div class="columns">
+        <div class="column is-12">
+            <h1 class="title is-5 "><strong class="has-text-link">#</strong>Basic</h1>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-4">
+            <article class="message">
+                <div class="message-header has-background-link">
+                    <p>&lt;title&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>The title tag is an HTML code tag that allows you to give a web page a title. This title can be
+                        found in the browser title bar, as well as in the search engine results pages (SERP). It's
+                        crucial to add and optimise your website's title tags, as they play an essential role in terms
+                        of organic ranking (SEO).</p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-
+
+                    </h1>
+
+                    <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;This is heading&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+                    </pre>
+                </div>
+            </article>
+            <!-- ******Text tag start******* -->
+            <article class="message">
+                <div class="message-header has-background-link">
+                    <p>&lt;text&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>The Html <strong>&lt;text&gt;</strong> tag is used to define the single-line text field on a web
+                        page. When we set the
+                        value text to the type attribute of an input element as shown in the following syntax:
+
+                    </p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-
+
+                    </h1>
+
+                    <pre>
+&lt;html&gt;  
+&lt;head&gt;  
+&lt;title&gt; Example of text field
+ &lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;form&gt;      
+&lt;label&gt;  
+Firstname:  
+&lt;/label&gt;   
+&lt;input type="text" name="FN"
+ size="5"/&gt;      
+&lt;label&gt;  
+Lastname:  
+&lt;/label&gt;           
+&lt;input type="text" name="LN"
+ size="10"/&lt;    
+&lt;label&gt;  
+Course:  
+&lt;/label&gt;    
+&lt;input type="text"name="Course"
+size="15"/&gt;       
+&lt;label&gt;  
+College:  
+&lt;/label&gt;    
+&lt;input type="text" name="Course"
+size="20"/&gt;              
+&lt;/form&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;   
+</pre>
+                </div>
+            </article>
+            <!-- ****text tag end******** -->
+
+            <!-- *******start**** -->
+            <article class="message">
+                <div class="message-header has-background-link">
+                    <p>&lt;iframe&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>
+                        The <strong>&lt;iframe&gt;</strong> tag specifies an
+                        inline frame. An inline frame is used to embed another document
+                        within the current HTML document.
+                    </p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-</h1>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;The iframe element&lt;/h1&gt;
+&lt;iframe src=
+"https://codebeautify.org/" 
+title="Free Online Web Tutorials"&gt;
+&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+            </pre>
+                </div>
+            </article>
+            <!-- *******end*** -->
+        </div>
+        <div class="column is-4">
+            <article class="message">
+                <div class="message-header">
+                    <p>&lt;a&gt;</p>
+                </div>
+                <div class="message-body">
+                    <p>The HTML &lt;a&gt; tag is an inline HTML (hypertext markup language) element that defines a
+                        hyperlink.
+                        Hyperlinks allow users to navigate from one page to another. The following sections contain
+                        information about this tag, including examples of how it is used and related attributes and
+                        browser compatibility.</p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-
+
+                    </h1>
+
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;h1&gt;This is heading&lt;/h1&gt;
+&lt;a href="html.htm"&gt;Our HTML 
+overview&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+</pre>
+                </div>
+            </article>
+
+            <!-- *****button tag start**** -->
+            <article class="message">
+                <div class="message-header has-background-dark">
+                    <p>&lt;button&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>The <strong>&lt;button&gt;</strong> tag is used to create a clickable button within HTML form on
+                        your webpage. You can
+                        put content like text or image within the &lt;button&gt;........&lt;/button&gt; tag.
+                        <br>
+                        You should always specify the type attribute for a &lt;button&gt; tag. Different browsers use
+                        different default type for the button element.
+                        <br>
+                        HTML Button tag can be used inside and outside the form.
+                        <br>
+                        If you use it inside the form, it works as the submit button. You can also use it as
+                        reset button.
+                        <br>
+                        If you use it outside the form, you can call JavaScript function on it.
+                    </p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-
+
+                    </h1>
+
+                    <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;The button element&lt;/h1&gt;
+&lt;button type="button" onclick="alert
+('Hello world!')"&gt;Click Me!&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+                    </pre>
+                </div>
+            </article>
+            <!-- ******table start**** -->
+            <article class="message">
+                <div class="message-header has-background-dark">
+                    <p>&lt;table&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>
+                        HTML table tag is used to display data in tabular form (row * column).
+                        There can be many columns
+                        in a row. We can create a table to display data in tabular form, using
+                        &lt;table&gt; element, with the help of &lt;tr&gt; , &lt;td&gt;, and
+                        &lt;th&gt; elements.
+                    </p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-</h1>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;The table element&lt;/h1&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&lt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$80&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+            </pre>
+                </div>
+            </article>
+            <!-- *******end*** -->
+
+            <!-- ***button tag end***** -->
+        </div>
+        <div class="column is-4">
+            <article class="message">
+                <div class="message-header has-background-warning">
+                    <p>&lt;br&gt;</p>
+
+                </div>
+                <div class="message-body">
+                    <p>The tag inserts a single line break. The tag is useful for writing addresses or poems.
+                        The tag is an empty tag which means that it has no end tag.</p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-
+
+                    </h1>
+
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+&lt;h1&gt;The br elemen&lt;/h1&gt;
+&lt;p&gt;To force&lt;br&gt;
+line breaks&lt;br&gt;
+in a text,&lt;br&gt; 
+use the br &lt;br&gt; 
+element.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+</pre>
+                </div>
+            </article>
+            <!-- ******div tag start***** -->
+            <article class="message">
+                <div class="message-header has-background-success">
+                    <p>&lt;div&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>
+                        The <strong>&lt;div&gt;</strong> tag defines a division or a section in an HTML document.
+                        <br>
+                        The &lt;div&gt; tag is used as a container for HTML elements - which is then styled with CSS or
+                        manipulated with JavaScript.
+                        <br>
+                        The &lt;div&gt; tag is easily styled by using the class or id attribute.
+                        <br>
+                        Any sort of content can be put inside the &lt;div&gt; tag!
+                    </p>
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-</h1>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;The div element&lt;/h1&gt;
+&lt;div class="myDiv"&gt;
+&lt;h2&gt;This is a heading in 
+a div element&lt;/h2&gt;
+&lt;p&gt;This is some text in 
+a div element.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+            </pre>
+                </div>
+            </article>
+            <!-- *********** -->
+
+            <!-- *******start**** -->
+            <article class="message">
+                <div class="message-header has-background-success">
+                    <p>&lt;video&gt;</p>
+
+                </div>
+                <div class="message-body ">
+                    <p>
+                        The <strong>&lt;video&gt;</strong> tag is used to embed video content in a document, such as a
+                        movie clip or other
+                        video streams. The &lt;video&gt; tag contains one or more
+                        &lt;source&gt; tags with different video sources. The browser will choose the first source it
+                        supports.
+                </div>
+                <div class="box">
+                    <h1 class="title is-6 is-underlined has-text-link">Example:-</h1>
+                    <pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;HELLO HTML&LT;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;The video element&lt;/h1&gt;
+&lt;video width="320" height="240"
+ controls&gt;
+&lt;source src="movie.mp4" 
+type="video/mp4"&gt;
+&lt;source src="movie.ogg" 
+type="video/ogg"&lt;
+Your browser does not support
+ the video tag.
+&lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </pre>
+                </div>
+            </article>
+            <!-- *******end*** -->
+        </div>
+    </div>
+</div><!-- <div class="columns">
+    <div class="column is-4">
+        1
+    </div>
+    <div class="column is-4">
+        2
+    </div>
+    <div class="column is-4">
+        3
+    </div>
+</div> -->
+</div>   <!--main div end-->
+</body>
+</html>
