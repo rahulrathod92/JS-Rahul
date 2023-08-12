@@ -31,18 +31,19 @@
         temp = a + b;
         a = b;
         b = temp;
-        string = string + "&nbsp;" + temp;
+        string = string + "," + temp;
         document.getElementById("febonacciresult").innerHTML = string;
-        let primestring = "";
-        if (temp % i == 0) {
-
-            primestring = primestring + "&nbsp" + temp + " prime";
-        } else {
-            console.log(temp)
-              rimestring = primestring + " "+temp;
-        }
     }
-    document.getElementById("prime").innerHTML = primestring;
 
+
+    let number = string;
+    // console.log(number)
+    let isPrime = true;
+    if (number % 2 == 0 || number % 3 == 0) {
+        console.log("prime" ,number)
+        
+    } else {
+        console.log("not prime",number)
+    }
 
 </script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Apip</label>
+        <input type="text" name="" id="avalue" value="">
+        <label for="">bwl</label>
+        <input type="text" name="" id="bwlvalue" value="">
+        <label for="">empty pip</label>
+        <input type="text" name="" id="bvalue">
+        <button onclick="pip()">click</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function pip(){
+
+        let apip = document.getElementById("avalue").value;
+        let bwl = document.getElementById("bwlvalue").value;
+        let total = apip / bwl;
+        document.getElementById("bvalue").value = total;
+    }
+</script>
