@@ -8,23 +8,39 @@
 </head>
 
 <body>
+    <p id="show"></p>
     <script>
-        let a = 7;
-        let b = 1;
-        let total = 0;
-        let counter = 0;
-        for (i = 0; ; i++) {
+//         let a = 6;
+//         let b = 1.2|0;
+//         let total = 0;
+        
+//         for (i = 0; ; i++) {
 
-            a = a - b;
-            c = a + b;
-            if (a < 0) {
+//             a = a - b;
+//             c = a + b;
+//             if (a < 0 ) {
+                
+//                 break;
+//             }
+//             console.log(a)
+//             // console.log(c)            
 
-                break;
-            }
-            console.log(a)
-            // console.log(c)            
+//         }
 
-        }
+//         let num = 123.429 | 0
+
+// console.log(num);
+
+
+let num = 3.14159;
+let string="";
+string=string+(num.toFixed(2));
+document.getElementById("show").innerHTML=string;
+
+// console.log(num.toFixed(2)); // Output: "3.14" (as a string)
+// console.log(parseFloat(num.toFixed(2))); // Output: 3.14 (as a number)
+// console.log(Number(num.toFixed(2))); // Output: 3.14 (as a number)
+
     </script>
 </body>
 
