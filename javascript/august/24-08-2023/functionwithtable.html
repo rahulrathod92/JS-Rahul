@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>functionwithtable</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+        <button onclick="generateTable()">GenerateTable</button>
+        <p id="showtable"></p>
+    </div>
+</body>
+<script>
+    function generateTable() {
+        let uservalue = parseInt(document.getElementById("uservalue").value);
+        let strtable = stringTable(uservalue);
+        document.getElementById("showtable").innerHTML = strtable;
+
+        let tablemultiple = tableMaltiple(uservalue);
+        console.log(tablemultiple)
+
+    }
+
+    function stringTable(createtable) {
+        let createtablestring = "<table class='table is-bordered'><tr><th>number</th></tr>";
+        for (i = 1; i <= createtable-1; i++) {
+  
+        }
+        for (j = 1; j <= 10; j++) {
+                sum = i * j;
+                createtablestring = createtablestring + "<tr><td>" + i + " x " + j + "=" + sum + "</td>";
+            }
+        createtablestring = createtablestring + "</tr></table>";
+        return createtablestring;
+    }
+
+    // function tableMaltiple(multificationtable) {
+    //     let sum = 0;
+    //     let stringsum="";
+    //     for (j = 1; j <= multificationtable; j++) {
+    //         for (k = 1; k <= 10; k++) {
+    //             sum = multificationtable * k;
+    //             console.log()
+    //         }
+    //     }
+    //     return sum;
+    // }
+
+</script>
+
+</html>

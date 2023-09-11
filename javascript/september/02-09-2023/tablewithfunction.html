@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>tablewithfuncton</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="tablevalue" value="20">
+        <button onclick="showGhadia()">All</button>
+        <button onclick="showEvenGhadia()">Even</button>
+        <button onclick="showOddGhadia()">odd</button>
+        <p id="tableresult"></p>
+    </div>
+</body>
+<script>
+    function showGhadia() {
+        let tablevalue = Number(document.getElementById("tablevalue").value);
+        let drawtable = "<div class='columns is-multiline'>";
+        for (let i = 1; i <= tablevalue; i++) {
+
+            drawtable = drawtable + createTableofGhadio(i);
+        }
+        drawtable = drawtable + "</div>";
+        document.getElementById("tableresult").innerHTML = drawtable;
+
+    }
+
+    function showEvenGhadia() {
+        let tablevalue = Number(document.getElementById("tablevalue").value);
+        let drawtable = "<div class='columns is-multiline'>";
+        for (let i = 1; i <= tablevalue; i++) {
+
+            if (i % 2 == 0) {
+                drawtable = drawtable + createTableofGhadio(i);
+            }
+
+        }
+        drawtable = drawtable + "</div>";
+        document.getElementById("tableresult").innerHTML = drawtable;
+
+    }
+
+
+    function showOddGhadia() {
+        let tablevalue = Number(document.getElementById("tablevalue").value);
+        let drawtable = "<div class='columns is-multiline'>";
+        for (let i = 1; i <= tablevalue; i++) {
+
+            if (i % 2 == 0) {
+            } else {
+                drawtable = drawtable + createTableofGhadio(i);
+
+            }
+
+        }
+        drawtable = drawtable + "</div>";
+        document.getElementById("tableresult").innerHTML = drawtable;
+
+    }
+
+
+    function createTableofGhadio(num) {
+        let string = "<div class='column'><table class='table is-bordered'>";
+        let multiple = 0;
+        for (j = 1; j <= 10; j++) {
+            multiple = num * j;
+            string = string + " <tr><td>" + num + "x" + j + "=" + multiple + "</td></tr>";
+        }
+        string = string + "</table></div>";
+        return string;
+
+    }
+
+
+
+</script>
+
+</html>

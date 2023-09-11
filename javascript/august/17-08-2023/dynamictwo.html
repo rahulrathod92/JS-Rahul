@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>column with table Dynamic</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="valuea" value="12">
+        <button onclick="draw()">table</button>
+        <p id="showtable"></p>
+    </div>
+</body>
+<script>
+    function draw() {
+        let num = parseInt(document.getElementById("valuea").value);
+        let string = "<div class='columns is-multiline'>";
+        let sum = 0;
+        for (i = 1; i <= num; i++) {
+            string = string + "<div class='column'><table class='table is-bordered'><tr><th>table</th></tr>";
+            for (j = 1; j <= 10; j++) {
+                sum = i * j;
+                    
+                string = string + "<tr><td>" + i + "x" + j + "=" + sum + "</td></tr>";
+            }
+
+            string = string + "</table></div>";
+        }
+        string = string + "</div>";
+        document.getElementById("showtable").innerHTML = string;
+    }
+    draw()
+</script>
+
+</html>

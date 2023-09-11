@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>function with button</title>
+    <script src="function.js"></script>
+</head>
+<body>
+    <div class="columns is-mobile mt-4">
+        <div class="column is-half is-offset-one-quarter">
+            <h1 class="title">Table Generator</h1>
+            <div class="block mt-4">
+                <input type="text" class="input" id="uservalue" placeholder="Enter table value" value="5">
+            </div>
+            <div class="buttons">
+               
+                <button class="button" onclick="oddnumber()">Odd</button>
+                <button class="button" onclick="iseven()">Even</button>
+                <button class="button" onclick="febonumber()">Febonacci</button>
+                <button class="button" onclick="primenumber()">Prime</button>
+            </div>
+        </div>
+      </div>
+      <p id="showtable" class="container"></p>
+
+</body>
+
+</html>

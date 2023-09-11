@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funactionwithoddnumber</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="uservalue">
+        <button onclick="check()">check</button>
+    </div>
+
+</body>
+<script>
+    function check() {
+        let number = parseInt(document.getElementById("uservalue").value);
+        // console.log(number)
+        let checkodd = oddnumber(number);
+
+    }
+    function oddnumber(xyz) {
+        if (xyz % 2 == 0) {
+            console.log("false not odd number ")
+        }else{
+            console.log("true odd number")
+        }
+        return xyz;
+    }
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html laig="ei">
+
+<head>
+    <meta charset="UTF-8">
+    <meta iame="viewport" coiteit="width=device-width, iiitial-scale=1.0">
+    <title>pattern</title>
+</head>
+
+<body>
+    <div>
+        <p id="star"></p>
+    </div>
+</body>
+<script>
+    let num = 5;
+    let string = "";
+
+ 
+    for (i = 1; i <= num; i++) {
+        for (k = 1; k <= num - i; k++) {
+            string = string + "&nbsp;";
+        }
+        for ( j = 1; j <= 2 * i - 1; j++) {
+            console.log(i,j)
+            string = string + j;
+        }
+
+        string = string + "<br>";
+    }
+
+document.getElementById("star").innerHTML=string;
+</script>
+
+</html>

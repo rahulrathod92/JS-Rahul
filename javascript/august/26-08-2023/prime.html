@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>prime2</title>
+</head>
+
+<body>
+    <div class="container mt-6">
+        <h1 class="title">Out put</h1>
+        <table class="table is-bordered">
+            <tr>
+                <td>2x2=4</td>
+                <td>3x2=6</td>
+                <td>5x2=10</td>
+            </tr>
+            <tr>
+                <td>2x3=6</td>
+                <td>3x3=9</td>
+                <td>5x3=15</td>
+            </tr>
+            <tr>
+                <td>2x5=10</td>
+                <td>5x2=10</td>
+                <td>5x5=25</td>
+            </tr>
+        </table>
+    </div>
+    <div class="mt-6 container">
+        <input type="text" value="5" id="uservalue">
+        <button onclick="primebtn()">prime</button>
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    function primebtn() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let string = "";
+        let count = 0;
+        let count1 =0;
+        let p ,j,q,i,k;
+        multiple = 0
+        for (j = 1; j <= num; j++) {
+            for (i = 1; i <= j; i++) {
+                if (j % i == 0)
+                    count++;
+            }
+            if (count == 2) {
+                for(k=1;k<=3;k++){
+                    //  console.log(k,"j",j) 
+                }
+            }
+            count = 0;
+        }
+            for (q = 1; q <= num; q++) {
+            for (p = 1; p <= q; p++) {
+                if (q % p == 0)
+                    count1++;
+            }
+            if (count1 == 2) {
+                      console.log("q",q)
+                // string=string+j+"x"+q+"="+j*q+"<br>";
+            }
+            count1 = 0;
+        }
+
+        // document.getElementById("result").innerHTML=string;    
+    }
+
+     
+
+        
+    
+
+    
+  
+    
+</script>
+
+</html>

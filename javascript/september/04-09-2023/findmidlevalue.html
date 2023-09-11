@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>middle value</title>
+</head>
+
+<body>
+    <br>
+    <h1>find middle in javascript</h1>
+    <div>
+        <input type="text" id="valueA" value="15">
+        <input type="text" id="valueB" value="10">
+        <input type="text" id="valueC" value="6">
+    </div>
+    <br>
+    <div>
+        <button onclick="clickbtn()">clickMiddle</button>
+
+    </div>
+    <p id="showresult"></p>
+</body>
+<script>
+    function clickbtn() {
+        let valueA = parseInt(document.getElementById("valueA").value);
+        let valueB = parseInt(document.getElementById("valueB").value);
+        let valueC = parseInt(document.getElementById("valueC").value);
+        if ((valueA < valueB && valueB < valueC) || (valueC < valueB && valueB < valueA)) {
+            // alert(valueA)
+            console.log(valueB)
+        } else if (valueB > valueA && valueB < valueC) {
+            // alert(valueB)
+            console.log(valueA)
+        } else if (valueA > valueB && valueC < valueA) {
+            // alert(valueC)
+            console.log(valueC)
+        } else {
+            console.log(valueA)
+        }
+
+    }
+
+</script>
+</html>

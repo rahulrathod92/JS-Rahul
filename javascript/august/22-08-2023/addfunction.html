@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>add|toNumber|function</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="valueA" value="2">
+        <input type="text" name="" id="valueB" value="3">
+        <button onclick="addclick()">sum</button>
+        <p id="result"></p>
+        <p id="tableshow"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function addclick() {
+
+        let a = parseInt(document.getElementById("valueA").value);
+        let b = parseInt(document.getElementById("valueB").value);
+
+        let answer = add(a, b);
+        document.getElementById("result").innerHTML = answer;
+        console.log("Answer is :->" + answer);
+        
+        let multiple = ml(a, b);
+        console.log("multiple ans:-", multiple);
+
+        let tableshow = getTable(a, b);
+        document.getElementById("tableshow").innerHTML=tableshow;
+      
+        
+
+    }
+    function add(x, y) {
+
+        let tempAnswer = x + y;
+
+        console.log("tempAnswer is :->" + tempAnswer);
+
+        return tempAnswer;
+
+
+    }
+    function ml(p, q) {
+        let tempml = p * q;
+        console.log("tempml is:-", tempml);
+        return tempml;
+    }
+
+    function getTable() {
+        let string = "<table class='table is-bordered'><tr>";
+        let total = 0;
+        for (i = 1; i <= 10; i++) {
+            total = i * 5;
+            string = string + "<td>" + i + "x" + 5 + "=" + total + "</td>";
+            
+        }
+        console.log(string)
+        return string;
+    }
+</script>

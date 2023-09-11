@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumwithdunction</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="valueA" value="21">
+        <input type="text" name="" id="valueB" value="3">
+        <button onclick="calculate()">sum</button>
+        <p id="result"></p>
+        <p id="minusresult"></p>
+        <p id="multipleresult"></p>
+        <p id="dividresult"></p>
+        <p id="drwaresult"></p>
+
+    </div>
+</body>
+<script>
+    function calculate() {
+        let numberA = Number(document.getElementById("valueA").value);
+        let numberB = Number(document.getElementById("valueB").value);
+        let add = sumSecound(numberA, numberB);
+        // console.log(add)
+        document.getElementById("result").innerHTML = "Sum :-" + add;
+
+        let minus = minusFunction(numberA, numberB);
+        document.getElementById("minusresult").innerHTML = "minus :-" + minus;
+
+        let multiple = multipleFunction(numberA, numberB);
+        document.getElementById("multipleresult").innerHTML = "multiple:-" + multiple;
+
+        let division = divisionFunction(numberA, numberB);
+        document.getElementById("dividresult").innerHTML = "division:-" + division;
+
+
+    }
+    function sumSecound(numA, numB) {
+        let total = numA + numB;
+        return total;
+    }
+    function minusFunction(minusA, minusB) {
+        let minustotal = minusA - minusB;
+        return minustotal;
+    }
+    function multipleFunction(multipleA, multipleB) {
+        let multipletotal = multipleA * multipleB;
+        return multipletotal;
+    }
+    function divisionFunction(dividA, dividB) {
+        let dividetotal = dividA / dividB;
+
+        return dividetotal;
+    }
+    function drawTable() {
+        let string = "<table><tr>"
+    }
+</script>
+
+</html>

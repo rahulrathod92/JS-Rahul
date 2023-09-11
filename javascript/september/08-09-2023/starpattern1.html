@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star|pattern</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="10" id="uservalue">
+        <button onclick="starpattern()">click</button>
+        <p id="showpattern"></p>
+    </div>
+</body>
+<script>
+    function starpattern() {
+        let number = Number(document.getElementById("uservalue").value);
+        let string = "";
+        let count = 0;
+        for (i = 1; i <= number; i = i + 2) {
+            console.log(i)
+            for (k = 1; k <= number - i; k++) {
+                string = string + "&nbsp;";
+            }
+            for (j = 1; j <= i; j++) {
+                count = count + 1;
+                string = string + count * count + "&nbsp;";
+
+            }
+            string = string + "<br>";
+        }
+        document.getElementById("showpattern").innerHTML = string;
+    }
+</script>
+
+</html>

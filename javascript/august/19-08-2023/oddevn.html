@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="value1" value="10">
+    <button onclick="primenumber()">prime</button>
+    <p id="odd1"></p>
+</body>
+
+</html>
+<script>
+    function primenumber() {
+        let a = parseInt(document.getElementById("value1").value);
+            let oddnumber = "";
+            for (j = 1; j <= a; j++) {
+                for (i = 1; i <= j; i++) {
+                    if (j % 2 == 0){
+                        console.log("even",j)
+                        
+                    }else{
+                        console.log("odd",j)
+                    } 
+                       
+            }
+        }
+            document.getElementById("odd1").innerHTML = oddnumber;
+        }
+    
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddtable</title>
+</head>
+
+<body>
+    <div>
+        <input type="" name="" id="user" value="5">
+        <button onclick="oddtable()">click</button>
+    </div>
+    <p id="show"></p>
+</body>
+
+</html>
+<script>
+    function oddtable() {
+        let num = parseInt(document.getElementById("user").value);
+        let string = "";
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+                if (num % 2 == 0) {
+                    console.log("even")
+                } else {
+                }
+                string = string + j;
+                console.log("odd", j)
+            }
+        }
+        document.getElementById("show").innerHTML = string;
+    }
+</script>

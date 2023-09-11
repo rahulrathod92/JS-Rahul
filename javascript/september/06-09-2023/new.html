@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>js</title>
+</head>
+<style>
+    .mystyle {
+        width: 10%;
+        background-color: rgb(14, 235, 220);
+    }
+</style>
+
+<body>
+    <div>
+        <button class="button" id="buttonId">hello</button>
+    </div>
+    <div>
+        <button class="button is-success" onclick="successFn()">Success</button>
+    </div>
+</body>
+<script>
+    let toggle = false;
+    function successFn() {
+        let element = document.getElementById("buttonId");
+        console.log(element);
+        if (toggle == false) {
+            // element.classList.add("is-info");
+            element.className = "button is-info"
+            toggle=true
+        }
+        else{
+            element.className = "button"
+
+            // element.classList.remove("is-info");
+            toggle=false
+        }
+    }
+
+</script>
+
+</html>

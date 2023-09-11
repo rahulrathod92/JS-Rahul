@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star|function</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="star" value="10">
+        <button onclick="starbtn()">click</button>
+        <p id="showstar"></p>
+        <p id="secoundstar"></p>
+    </div>
+</body>
+<script>
+    function starbtn() {
+        let num = document.getElementById("star").value;
+        let gen = genstar(num);
+        // console.log(gen)
+        document.getElementById("showstar").innerHTML = gen;
+
+        let gen2 = genstar2(num);
+        console.log(gen2)
+        document.getElementById("secoundstar").innerHTML = gen2;
+
+    }
+    function genstar(numstar) {
+        let string = "";
+        for (i = 1; i <= numstar; i++) {
+            for (j = 1; j <= i; j++) {
+                string = string + "*"
+            }
+            string = string + "<br>";
+        }
+
+        return string;
+    }
+
+    function genstar2(numstar2) {
+        let string1 = "";
+        for (i = 1; i <=numstar2; i++) {
+            for (j = 1; j <=numstar2-i ; j++) {
+                string1 = string1 + "*"
+            }
+            string1 = string1 + "<br>";
+        }
+        return string1;
+    }
+    starbtn()
+</script>
+
+</html>

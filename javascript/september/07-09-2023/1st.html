@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function|with|pattern</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+        <button onclick="starFn()">click</button>
+    </div>
+</body>
+<script>
+    function starFn() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let pattern = patternFunction(num);
+    }
+    function patternFunction(number) {
+        for (i = 1; i <= number; i++) {
+            console.log(i)
+        }
+    }
+</script>
+
+</html>

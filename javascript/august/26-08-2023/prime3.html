@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime3</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="uservalue">
+        <button onclick="isPrime()"> click</button>
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    // Function to check if a number is prime
+function isPrime(uservalue) {
+  let num =parseInt(document.getElementById("uservalue").value); 
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Generate the first 'n' prime numbers
+function generatePrimes(n) {
+  const primes = [];
+  let num = 2;
+
+  while (primes.length < n) {
+    if (isPrime(num)) {
+      primes.push(num);
+    }
+    num++;
+  }
+
+  return primes;
+}
+
+// Create a prime multiplication table for the first 'n' prime numbers
+function primeMultiplicationTable(n) {
+  const primes = generatePrimes(n);
+  const table = [];
+
+  for (let i = 0; i <= n; i++) {
+    const row = [];
+    for (let j = 0; j <= n; j++) {
+      if (i === 0 && j === 0) {
+        row.push('x');
+      } else if (i === 0) {
+        row.push(primes[j - 1] + 'x' + primes[i]);
+      } else if (j === 0) {
+        row.push(primes[i - 1] + 'x' + primes[j]);
+      } else {
+        row.push(primes[i - 1] * primes[j - 1]);
+      }
+    }
+    table.push(row.join('\t'));
+  }
+
+  return table.join('\n');
+}
+
+// Generate and display the prime multiplication table for the first 3 prime numbers
+const primeTable = primeMultiplicationTable(3);
+console.log(primeTable);
+
+</script>
+</html>

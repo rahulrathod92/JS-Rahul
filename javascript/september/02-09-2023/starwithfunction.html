@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>starcolorwithfunction</title>
+</head>
+
+<body>
+<div>
+    <table class="table is-bordered">
+<tr>  
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td></td>
+</tr>
+    </table>
+</div>
+
+    <div>
+        <input type="text" id="uservalue" value="5">
+        <button onclick="starFunction()">click</button>
+    </div>
+    <p id="showstar"></p>
+
+</body>
+
+<script>
+    function starFunction() {
+        let starnum = parseInt(document.getElementById("uservalue").value);
+        let star = starTable(starnum);
+       
+        document.getElementById("showstar").innerHTML=star;
+    }
+
+    function starTable(num) {
+        let count = 0;
+        let string = "<table class='table is-bordered'><tr>";
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+               count=count+1;
+               string = string + "<td>" +"*"+ "</td>"
+               
+                    console.log(string)
+            }
+            string=string+"</tr>";
+        }
+        string = string + "</table>";
+        return string;
+    }
+</script>
+
+</html>

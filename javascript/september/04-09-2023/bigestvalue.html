@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigest value</title>
+</head>
+
+<body>
+    <br>
+    <h1>find biggest value and smalllest value in javascript</h1>
+    <div>
+        <input type="text" id="valueA" value="3">
+        <input type="text" id="valueB" value="6">
+        <input type="text" id="valueC" value="9">
+    </div>
+    <br>
+    <div>
+        <button onclick="clickbtn()">clickBiggest</button>
+        <button onclick="clickSmall()">clickSmallest</button>
+    </div>
+    <p id="showresult"></p>
+</body>
+<script>
+    function clickbtn() {
+        let valueA = parseInt(document.getElementById("valueA").value);
+        let valueB = parseInt(document.getElementById("valueB").value);
+        let valueC = parseInt(document.getElementById("valueC").value);
+        if (valueA >= valueB && valueA >= valueC) {
+            alert(valueA)
+        } else if (valueB >= valueA && valueB >= valueC) {
+            alert(valueB)
+        } else if (valueC >= valueA && valueC >= valueB) {
+            alert(valueC)
+        } else {
+            return 0;
+        }
+
+    }
+
+    function clickSmall() {
+        let valueA = parseInt(document.getElementById("valueA").value);
+        let valueB = parseInt(document.getElementById("valueB").value);
+        let valueC = parseInt(document.getElementById("valueC").value);
+        if (valueA < valueB && valueA < valueC) {
+            alert(valueA)
+        } else if (valueB < valueA && valueB < valueC) {
+            alert(valueB)
+        } else if (valueC < valueA && valueC < valueB) {
+            alert(valueC)
+        } else {
+            return 0;
+        }
+    }
+</script>
+
+</html>

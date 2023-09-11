@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table call html</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="even">
+        <button onclick="checkeven()">even</button>
+    </div>
+</body>
+<script>
+    function checkeven() {
+        let number = parseInt(document.getElementById("even").value);
+        let isEven2=  isEven(number);
+        console.log(isEven2)
+    }
+    function isEven(number) {
+        return number % 2 === 0;
+    }
+    
+</script>
+
+</html>

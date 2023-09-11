@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>generate|random|number</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="title">generate random table js program</h1>
+
+        <button onclick="genrandom()" class="button">Click</button>
+    </div>
+    <div class="mt-6">
+        <p id="show"></p>
+    </div>
+</body>
+<script>
+    function genrandom() {
+        let x = Math.floor(Math.random() * 100);
+        //  console.log("value of random num X:-",x)
+        let gentable = generateTable(x);
+        document.getElementById("show").innerHTML=gentable;
+    }
+    function generateTable(num) {
+        // console.log(num)
+        let sum = 0;
+        let string = "<table class='table is-bordered'><tr><th>Table</th>";
+        for (i = 1; i <= 10; i++) {
+            sum = num * i;
+            string = string + "<tr><td>" + num + "x" + i + "=" + sum + "</td></tr>";
+        }
+        string = string + "</table>";
+        return string;
+    }
+</script>
+
+</html>

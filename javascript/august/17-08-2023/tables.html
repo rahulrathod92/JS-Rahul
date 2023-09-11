@@ -15,6 +15,7 @@
         <input type="text" name="" id="valueA" value="1">
         <input type="text" name="" id="valueB" value="5">
         <button onclick="gen()">tables</button>
+        
         <p id="result"></p>
     </div>
 </body>
@@ -24,7 +25,7 @@
     function gen() {
         let numA = Number(document.getElementById("valueA").value);
         let numB = Number(document.getElementById("valueB").value);
-        let string = "<table class='table is-bordered'><tr>";
+        let string = "<table class=' table is-bordered'><tr>";
         let sum = 0;
 
         for (j = 1; j <= 10; j++) {
