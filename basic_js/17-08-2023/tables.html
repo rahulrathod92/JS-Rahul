@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Tables</title>
+</head>
+
+<body>
+    <div>
+        <h1>tables</h1>
+        <input type="text" name="" id="valueA" value="1">
+        <input type="text" name="" id="valueB" value="5">
+        <button onclick="gen()">tables</button>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function gen() {
+        let numA = Number(document.getElementById("valueA").value);
+        let numB = Number(document.getElementById("valueB").value);
+        let string = "<table class='table is-bordered'><tr>";
+        let sum = 0;
+
+        for (j = 1; j <= 10; j++) {
+            for (i = numA; i <= numB; i++) {
+                sum = i * j;
+                console.log(sum)
+                string = string + "<td>" + i + "x" + j + "=" + sum + "</td>";
+
+            }
+            string = string + "</tr>";
+        }
+        string = string + "</table>";
+        document.getElementById("result").innerHTML = string;
+    }
+    gen()
+</script>

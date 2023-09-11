@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add square root program</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="valueA" value="4">
+        <input type="text" name="" id="valueB" value="5">
+        <button onclick="add()">add</button>
+        <p id="result"></p>
+        <h3></h3>
+        <p id="sqrroot"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function add() {
+        let a = parseInt(document.getElementById("valueA").value);
+        let b = parseInt(document.getElementById("valueB").value);
+        let total = 0;
+        total = a + b;
+        let sqr = Math.sqrt(total);
+
+        document.getElementById("result").innerHTML = "Sum ="+"&nbsp;"+ total;
+        document.getElementById("sqrroot").innerHTML = "squareroot ="+"&nbsp;"+sqr;
+    }
+</script>

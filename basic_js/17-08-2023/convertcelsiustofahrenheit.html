@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>celsius|to|ahrenheit</title>
+</head>
+
+<body>
+    <div>
+        <h1> Convert Celsius to Fahrenheit</h1>
+        <input type="text" name="" id="clsus" value="10">
+        <button onclick="cel()">celsius</button>
+        <p id="result"></p>
+    </div>
+    <div>
+        <h1>  Convert Fahrenheit Celsius to</h1>
+        <input type="text" name="" id="fahrn" value="100">
+        <button onclick="frn()">fahrenheit</button>
+        <p id="result1"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function cel() {
+
+        let celsius = Number(document.getElementById("clsus").value);
+        let fahrenheit = 0;
+        let string = "";
+        fahrenheit = (celsius * 9 / 5) + 32;
+        string = string + "fahrenheit Ans:- = " + fahrenheit;
+        console.log(fahrenheit)
+        document.getElementById("result").innerHTML = string;
+    }
+    function frn(){
+        
+        let fahrenheit = Number(document.getElementById("fahrn").value);
+        let celsius = 0;
+        let string = "";
+        celsius = (fahrenheit - 32) * 5 / 9;
+        string = string + "celsius Ans:- = " + celsius.toFixed(2);
+        console.log(celsius)
+        document.getElementById("result1").innerHTML = string;
+    }
+</script>

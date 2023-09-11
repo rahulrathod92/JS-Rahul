@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>1.User smart program </title>
+    <title>4.change|bowl|at|end</title>
 </head>
 
 <body>
     <div>
-        <h1 class="title is-3">1.User smart program </h1>
+        <h1 class="title is-3">4.change bowl at end</h1>
         <input type="text" name="" id="Apip" value="10">
-        <input type="text" name="" id="bowl" value="2">
+        <input type="text" name="" id="bowl" value="4">
         <input type="text" name="" id="bpip" value="0">
         <button onclick="pip()">click</button>
     </div>
@@ -23,20 +23,28 @@
 
 <script>
     function pip() {
-        
         let apip = Number(document.getElementById("Apip").value);
-        let bow = Number(document.getElementById("bowl").value);
+        let bowl = Number(document.getElementById("bowl").value);
         let bpip = Number(document.getElementById("bpip").value);
         let string = "<table class='table is-bordered'><th>Apip</th><th>Bowl</th><th>bpip</th><tr>";
 
-        for (i = 0;  ; i++) {
-            apip = apip - bow;
-            bpip = bpip + bow;
-            if (apip < 0) {
-                break;
+        for (; apip != 0;) {
+
+            if (apip >= bowl) {
+                apip = apip - bowl;
+                bpip = bpip + bowl;
+                console.log("in If ", apip, bowl, bpip)
+                string = string + "<td>" + apip.toFixed(1) + "</td>" + "<td>" + bowl + "</td>" + "<td>" + bpip.toFixed(1) + "</td>";
+                string = string + "</tr>";
+
+            } else {
+                bowl = apip;
+                console.log("in else ", apip, bowl, bpip)
+
+
             }
-            string = string + "<td>" + apip + "</td>" + "<td>" + bow + "</td>" + "<td>" + bpip + "</td>";
-            string = string + "</tr>";
+
+
             document.getElementById("tableshow").innerHTML = string;
         }
     }

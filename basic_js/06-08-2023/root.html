@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>root</title>
+</head>
+
+<body>
+    <h1>3.JavaScript Program to Find the Square Root</h1>
+    <input type="text" name="" id="uservalue" value="9">
+    <button onclick="root()">root</button>
+    <p id="resultshow"></p>
+</body>
+
+</html>
+<script>
+    function root() {
+
+        let num = Number(document.getElementById("uservalue").value);
+        let string =0;
+          string=Math.sqrt(num);
+
+        document.getElementById("resultshow").innerHTML = string;
+    }
+
+
+</script>

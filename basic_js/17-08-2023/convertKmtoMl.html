@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Convert|Kilometers|to|Miles</title>
+</head>
+
+<body>
+    <div>
+        <h1>JavaScript Program to Convert Kilometers to Miles</h1>
+        <input type="text" name="" id="uservalue" value="10">
+        <button onclick="mile()">click</button>
+        <p id="result"></p>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function mile() {
+
+        let km = Number(document.getElementById("uservalue").value);
+        let mile = 0;
+        mile = km / 1.609344;
+        console.log(mile)
+
+        document.getElementById("result").innerHTML = "Miles is =" + mile.toFixed(2);
+    }
+
+</script>

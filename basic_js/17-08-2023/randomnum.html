@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random number genarator</title>
+</head>
+
+<body>
+    <div>
+        <h1>random number genarator</h1>
+        <input type="text" name="" id="random" value="">
+        <button onclick="randomNumber()">randomNumber</button>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
+<script>
+    function randomNumber() {
+        let num = parseInt(document.getElementById("random").value);
+        num = Math.random(100)
+        console.log(num.toFixed(2))
+    }
+</script>

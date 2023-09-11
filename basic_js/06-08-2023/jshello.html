@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello_print</title>
+</head>
+
+<body>
+    <h1>1.hello js print program </h1>
+    <input type="text" id="uservalue" value="hello javascript">
+    <button onclick="hello()">click</button>
+    <p id="show"></p>
+</body>
+
+</html>
+<script>
+    function hello() {
+
+        let usertext = document.getElementById("uservalue").value;
+        let string = "";
+        string = string +" '' " +usertext+" '' ";
+        document.getElementById("show").innerHTML = string;
+    }
+</script>

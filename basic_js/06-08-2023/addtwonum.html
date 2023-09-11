@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_two_number</title>
+</head>
+
+<body>
+    <h1>2.add two number program</h1>
+    <input type="text" name="" id="valueone" value="2">
+    <input type="text" name="" id="valuetwo" value="3">
+    <button onclick="add()">add</button>
+    <p id="result"></p>
+</body>
+
+</html>
+<script>
+    function add() {
+
+        let valueone = parseInt(document.getElementById("valueone").value);
+        let valuetwo = parseInt(document.getElementById("valuetwo").value);
+        let total = 0;
+        total = valueone + valuetwo;
+        document.getElementById("result").innerHTML = total;
+    }
+
+</script>

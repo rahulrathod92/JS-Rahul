@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revs factorial</title>
+</head>
+
+<body>
+    <h1>reverse factorial program</h1>
+    <input type="text" name="" id="uservalue" value="120">
+    <button onclick="fact()">click</button>
+    <p id="result"></p>
+</body>
+
+</html>
+<script>
+    function fact() {
+        let ans = 0;
+        let num = parseInt(document.getElementById("uservalue").value)
+        let fact = 1;
+        let string = "";
+        if (num == 0) {
+            string = string + "ans is 1";
+        } else if (num < 0) {
+            string = string + "nagtive number is not factorial";
+        } else {
+
+            for (i = 1; i <= num; i++) {
+                num = num / i;
+                console.log(num, "I value", i)
+                ans = i;
+                string=string+"<br>"+num;
+            }
+        }
+        document.getElementById("result").innerHTML = "revs ans is" + "&nbsp;" + ans + "<br>" + string;
+    }
+</script>

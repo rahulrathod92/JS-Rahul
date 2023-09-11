@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.swap two value</title>
+</head>
+
+<body>
+    <h1>Program to Swap Two Variables</h1>
+    <input type="text" name="" id="valueone" value="1">
+    <button onclick="swap()">swap</button>
+    <input type="text" name="" id="valuetwo" value="2">
+</body>
+
+</html>
+<script>
+    function swap() {
+        // let a = document.getElementById("valueone").value;
+        // let b = document.getElementById("valuetwo").value;
+        // let temp = 0;
+        // temp = a;
+        // // console.log(temp)
+        // a = b;
+        // // console.log(a)
+        // b = temp;
+        // console.log(b)
+
+        // document.getElementById("valueone").value = a;
+        // document.getElementById("valuetwo").value = b;
+
+
+        let temp = document.getElementById("valueone").value;
+        document.getElementById("valueone").value = document.getElementById("valuetwo").value;
+        document.getElementById("valuetwo").value = temp;
+    }
+</script>
