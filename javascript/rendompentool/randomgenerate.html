@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="Big_js/BigNumber.js"></script>
-    <script src="Big_js/logic.js"></script>
+     <script src="BigNumber.js"></script>
     <title>random|number|generator</title>
 </head>
 
@@ -59,7 +58,7 @@
                             <div class="column">
                                 <div class="control has-text-weight-bold has-text-info">
                                     <label class="radio">
-                                        <input type="radio" name="increasing" id="wholeNums"  value="false">
+                                        <input type="radio" name="increasing" id="wholeNums" value="false">
                                         <span class="is-size-7">Generate Random Whole Number</span>
                                     </label>
                                     <label class="radio">
@@ -82,7 +81,8 @@
                             </div>
                         </div>
                         <div class="buttons mt-4 ">
-                            <button class="button is-dark  is-rounded" onclick="generateNumber()">Generate Random Number</button>
+                            <button class="button is-dark  is-rounded" onclick="generateNumber()">Generate Random
+                                Number</button>
                             <button class="button is-dark  is-rounded">Future Button</button>
                         </div>
                     </div>
@@ -94,5 +94,50 @@
         </article>
     </div>
 </body>
+<script>
+    function generateNumber() {
+        let rangeStart = new BigNumber(Number(document.getElementById("rangeStart").value));
+        let rangeEnd = new BigNumber(Number(document.getElementById("rangeEnd").value));
+        let count = Number(document.getElementById("count").value);
+        let sep = document.getElementById("sep").value;
+
+        let wholeNums = document.getElementById("wholeNums").value;
+        let fractNums = document.getElementById("fractNums").value;
+
+        var radios = document.getElementsByName('increasing');
+        for (var radio of radios) {
+            if (radio.checked) {
+
+                increasing = radio.value;
+            }
+        }
+
+        console.log("rangeStart:->", rangeStart, "rangeEnd:->", rangeEnd, "count:->", count, "sep:->", sep, "increasing:->", increasing);
+
+        var randomNumbers = [];
+        for (var i = 0; i < count; i++) {
+            if (wholeNums == increasing) {
+                increasing != true;
+                randomNumbers.push(generateRandomWholeNumber(rangeStart, rangeEnd));
+            } else if (fractNums = increasing) {
+                increasing != false;
+                randomNumbers.push(generateRandomFractNumber(rangeStart, rangeEnd).toFixed());
+            }
+        }
+
+        if (sep == "\\n")
+            sep = "\n";
+        let answer = randomNumbers.join(sep);
+        console.log(answer)
+        document.getElementById("answer").value = answer;
+    }
+    function generateRandomWholeNumber(rangeStart, rangeEnd) {
+        return (BigNumber.random().times(rangeEnd.minus(rangeStart).plus(1)).plus(rangeStart)).floor();
+    }
+    function generateRandomFractNumber(rangeStart, rangeEnd) {
+        return BigNumber.random().times(rangeEnd.minus(rangeStart)).plus(rangeStart);
+    }
+
+</script>
 
 </html>
