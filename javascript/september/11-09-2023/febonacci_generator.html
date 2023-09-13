@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <script src="BigNumber.js"></script>
+    <title>Febonacci|generator</title>
+</head>
+
+<body>
+    <div class="columns is-mobile is-centered mt-5">
+        <div class="column is-half message">
+            <div class="message-header">
+                <h2 class="title has-text-white">Febonacci Generator Tool</h2>
+            </div>
+            <div class="is-flex mt-2">
+                <input type="text" class="input" id="start" placeholder="Start Febonacci Number at this value"
+                    value="1">
+                <input type="text" class="input ml-2" id="count" placeholder="Calculate this many  Febonacci Number"
+                    value="10">
+                <input type="text" class="input ml-2" value="\n" id="sep"
+                    placeholder="Enter your custome Fibonacci  Number delimiter">
+            </div>
+            <div>
+                <button class="button  is-link is-outlined is-fullwidth mt-2 is-medium"
+                    onclick="generateFibonacci()">generate</button>
+            </div>
+            <div class="is-half is-offset-one-quarter">
+                <textarea class="textarea is-primary mt-2" id="answer" placeholder="Print Febonacci Number"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function generateFibonacci() {
+        let start = Number(document.getElementById("start").value);
+        let sep = document.getElementById("sep").value;
+        let count = Number(document.getElementById("count").value);
+
+        console.log("start:->"+start);
+        console.log("count:->"+count);
+        console.log("sep:->"+sep);
+
+        BigNumber.config({
+            EXPONENTIAL_AT: 1e+9
+        });
+
+        var fibs = [];
+        if (start == 0) {
+            if (count == 1) {
+                fibs.push(0);
+            } else if (count == 2) {
+                fibs.push(0);
+                fibs.push(1);
+            } else if (count >= 3) {
+                fibs.push(0);
+                fibs.push(1);
+                fibs.push(1);
+            }
+        } else if (start == 1) {
+            if (count == 1) {
+                fibs.push(1);
+            } else if (count >= 2) {
+                fibs.push(1);
+                fibs.push(1);
+            }
+        }
+        var fprev = new BigNumber(1);
+        var fcur = new BigNumber(1);
+        var fib = new BigNumber(1);
+        while (fibs.length < count) {
+            fib = new BigNumber(0).plus(fprev).plus(fcur);
+            if (fib.gte(start)) {
+                if (fibs.length == 0 && !fib.eq(start)) {
+                    tool.output.showWarningBadge("Starting number is a not Fibonacci.", "You start the sequence from {0}, but the nearest following Fibonacci number is {1}.".format(start, fib));
+                }
+                fibs.push(fib.toString());
+            }
+            fprev = fcur;
+            fcur = fib;
+        }
+        if (sep == "\\n")
+            sep = "\n";
+       
+       
+            let answer = fibs.join(sep);
+            console.log("anwer:->"+answer);
+
+            document.getElementById("answer").value =answer;
+
+
+
+    }
+   
+</script>
+
+</html>

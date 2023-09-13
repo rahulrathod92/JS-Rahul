@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pi_number</title>
+    <script src="BigNumber.js"></script>
+</head>
+
+<body>
+    <div>
+        <textarea name="" id="" cols="50" rows="10" id="answer"></textarea>
+    </div>
+    <div>
+        <input type="text" name="" id="count" value="100">
+        <input type="text" name="" id="sep" value="\n">
+        <input type="checkbox"  id="include3">
+    </div>
+    <div>
+        <button onclick="PiFunction()">Pi digit</button>
+    </div>
+</body>
+<script>
+    function PiFunction() {
+
+        let count = Number(document.getElementById("count").value);
+        let sep = document.getElementById("sep").value;
+        let include = document.getElementById("include3").value;
+        // console.log("count:->", count, "sep:->", sep, "include:->", include3)
+        let piDigits = "141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609090106105779458151";
+
+        if (count == 0) {
+            return "3";
+        }
+        if (include3) {
+            return "3." + piDigits.slice(0, count).split("").join(sep);
+        }
+        return piDigits.slice(0, count).split("").join(sep);
+
+        sep = ["separator"] || "";
+        if (sep == "\\n")
+            sep = "\n";
+        count = ["count"].trim();
+        if (!/^\d+$/.test(count)) {
+            tool.output.showNegativeBadge("Invalid count.", "Count is an invalid number.");
+            return false;
+        }
+        count = parseInt(count);
+        if (count > 1000000) {
+            tool.output.showNegativeBadge("Too many digits.", "We can generate only one million digits.");
+            return false;
+        }
+        include3 = ["include-3"];
+        
+        document.getElementById("answer").value=tool.output;
+    }
+    
+
+
+
+</script>
+
+</html>

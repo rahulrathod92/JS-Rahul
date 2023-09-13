@@ -19,15 +19,15 @@
                 </div>
                 <div class="column is-6">
                     <div class="">
-                        <input type="text" class="input" id="rangeStart" placeholder="Start at this integer" value="1">
+                        <input type="text" class="input" id="rangeStart" placeholder="Start at this integer" value="">
                     </div>
                     <div>
                         <input type="text" class="mt-2 input" id="rangeEnd" placeholder="End at this integer"
-                            value="10">
+                            value="">
                     </div>
                     <div>
                         <input type="text" class="mt-2 input" id="howMany" placeholder="How many integer to generate"
-                            value="5">
+                            value="">
                     </div>
                     <div>
                         <button class="button mt-2 is-primary" onclick="generateFunction()">Generate</button>
@@ -40,8 +40,15 @@
 <script>
     function generateFunction() {
         let rangeStart =Number( document.getElementById("rangeStart").value);
+        console.log("rangeStart:->"+rangeStart);
+
         let rangeEnd =Number(document.getElementById("rangeEnd").value);
+        console.log("rangeEnd:->"+rangeEnd);
         let howMany =Number( document.getElementById("howMany").value);
+
+        console.log("howMany:->"+howMany);
+
+
         var outputStr = '';
         for (let  i = 1; i <= howMany; i++) {
             outputStr += generateRandomNumber(rangeStart, rangeEnd);
