@@ -8,7 +8,6 @@
      <script src="calculate-prime.js"></script>
     <title>calculate|prime|number</title>
 </head>
-
 <body>
     <div class="container is-fluid mt-5">
         <article class="message is-dark">
@@ -23,12 +22,12 @@
                         </div>
                         <div class="columns mt-2">
                             <div class="column is-6">
-                                <input type="text" name="" id="start" class="input" value="2">
+                                <input type="text" name="" id="start" class="input" oninput="genPrimeCalculate()" value="2">
                                 <p class="subtitle is-6 has-text-info">Prime number start from this value</p>
                             </div>
 
                             <div class="column is-6">
-                                <input type="text" name="" id="count" class="input" value="10">
+                                <input type="text" name="" id="count" class="input" oninput="genPrimeCalculate()" value="10">
                                 <p class="subtitle is-6 has-text-info">Generate this many prime number</p>
 
                             </div>
@@ -52,7 +51,7 @@
                         <div class="columns">
                             <div class="column">
                                 <textarea class="textarea is-link" rows="12" cols="20"
-                                    placeholder="random number generate" id="answer"></textarea>
+                                    placeholder="Calculate Prime Number" id="answer"></textarea>
                             </div>
                         </div>
                         <div class="buttons mt-4 ">
