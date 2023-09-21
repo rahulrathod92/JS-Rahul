@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>dom|practice|table</title>
+</head>
+
+<body>
+    <table class="table is-bordered">
+        <tr>
+            <td>1:1</td>
+            <td>2:1</td>
+            <td>3:1</td>
+            <td>4:1</td>
+            <td>5:1</td>
+        </tr>
+        <tr>
+            <td>1:2</td>
+            <td>2:2</td>
+            <td>3:2</td>
+            <td>4:2</td>
+            <td>5:2</td>
+        </tr>
+        <tr>
+            <td>1:3</td>
+            <td>2:3</td>
+            <td>3:3</td>
+            <td>4:3</td>
+            <td>5:3</td>
+        </tr>
+        <tr>
+            <td>1:4</td>
+            <td>2:4</td>
+            <td>3:4</td>
+            <td>4:4</td>
+            <td>5:4</td>
+        </tr>
+        <tr>
+            <td>1:5</td>
+            <td>2:5</td>
+            <td>3:5</td>
+            <td>4:5</td>
+            <td>5:5</td>
+        </tr>
+    </table>
+</body>
+<script>
+    let tableTage = document.body.children[5]
+    
+    console.log(tableTage.tBodies[5].cells[1].style="background-color:blue;")
+</script>
+
+</html>

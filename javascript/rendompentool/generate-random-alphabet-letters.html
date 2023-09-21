@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="BigNumber.js"></script>
+    <script src="grapheme.js"></script>
+    <script src="generate-random-alphabet-letters.js"></script>
+
+    <title>random|password|generate</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>Random Alphabets Latters </p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+                    <div class="column is-4">
+                        <h1 class="title is-size-5 has-text-white">Alphabets and letter choice</h1>
+                        <div class="columns">
+                            <div class="column is-12">
+                                <div class="field">
+                                    <div class="control">
+                                        <span class="select is-fullwidth">
+                                            <select id="alphabet">
+                                                <option label="Alphabets">
+                                                <option selected="" value="english">English</option>
+                                                <option value="french">French</option>
+                                                <option value="german">German</option>
+                                                <option value="spanish">Spanish</option>
+                                                <option value="portuguese">Portuguese</option>
+                                                <option value="turkish">Turkish</option>
+                                                <option value="greek">Greek</option>
+                                                <option value="danish">Danish</option>
+                                                <option value="swedish">Swedish</option>
+                                                <option value="norwegian">Norwegian</option>
+                                                <option value="gothic">Gothic</option>
+                                                <option value="esperanto">Esperanto</option>
+                                                <option value="allalphabets">Use All Alphabets</option>
+                                                </option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <p class="subtitle is-6 has-text-info">Select the language to pick random letter
+                                        from.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="option-lowercase" value="" checked="">
+                                        <span class="has-text-info">Lowercase Letters</span>
+                                    </div>
+                                    <p class="has-text-white is-size-7 ml-4">Select only lowercase letters <br>from the
+                                        given language.</p>
+                                </div>
+                                <div class="mt-2">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="option-digits" checked="">
+                                        <span class="has-text-info">Generate Digits</span>
+                                    </div>
+                                    <p class="has-text-white is-size-7 ml-4">Also include digits 0 to 0 <br>in the
+                                        generated alphabet.</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="option-uppercase" value="">
+                                        <span class="has-text-info">Uppercase Letters</span>
+                                    </div>
+                                    <p class="has-text-white is-size-7 ml-4">Select only uppercase letters <br>from the
+                                        given language.</p>
+                                </div>
+                                <div class="mt-2">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="allow-repetitions">
+                                        <span class="has-text-info">Allow Repeated Letters</span>
+                                    </div>
+                                    <p class="has-text-white is-size-7 ml-4">Allow the random letters <br>to repeat
+                                        multiple times.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="title is-size-5 has-text-white">Letter Format</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" name="" id="number-letters-per-group" class="input  is-link"
+                                    oninput="" value="12">
+                                <p class="subtitle is-7 has-text-white">Number of letters per group.</p>
+                            </div>
+                            <div class="column is-6">
+                                <input type="text" name="" id="letter-separator" class="input  is-link" oninput=""
+                                    value=",">
+                                <p class="subtitle is-7 has-text-white">Individual letter separator.</p>
+                            </div>
+                        </div>
+                        <h1 class="title is-size-5 has-text-white">Group Format</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" name="" id="number-of-groups" class="input  is-link"
+                                    oninput="" value="8">
+                                <p class="subtitle is-7 has-text-white">Number of group in the output.</p>
+                            </div>
+                            <div class="column is-6">
+                                <input type="text" name="" id="group-separator" class="input  is-link" oninput=""
+                                    value="\n">
+                                <p class="subtitle is-7 has-text-white">Individual result group separator.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6 mt-6" >
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea is-link" rows="14" cols="22" placeholder="random alphabet"
+                                    id="answer"></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons mt-6 ml-6 ">
+                            <button class="button is-dark  is-rounded" onclick="alphabetsFun()">Random Alphabets
+                                Generator</button>
+                            <button class="button is-dark  is-rounded">Future Button</button>
+                        </div>
+                    </div>
+                    <div class="column is-2">
+                        <!-- third black space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+
+</html>

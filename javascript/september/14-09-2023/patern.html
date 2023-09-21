@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+</head>
+
+<body>
+    <div>
+        <p id="answer"> </p>
+    </div>
+</body>
+<script>
+    let n = 4;
+    let string = "";
+    let count = 0;
+
+    for (i = 1; i <= n; i++) {
+        console.log("i:->",i)
+        string=string+"&nbsp;"+"I"+i+",";
+        for (j = 1; j <= i; j++) {
+           console.log("j:->",j)
+            count=count+1;
+            string = string +"J"+count+",";
+        }
+        for(k=2;k<=i;k++){
+            console.log("k:->",k)
+            string=string+"k"+k+".";
+        }
+        string=string+"<br>";
+        document.getElementById("answer").innerHTML= string;
+       
+    }
+</script>
+
+</html>

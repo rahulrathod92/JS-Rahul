@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeNumber</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="20" id="uservalue">
+    </div>
+    <div>
+        <button onclick="PrimeFun()">primeTable</button>
+    </div>
+    <p id="prime"></p>
+</body>
+<script>
+    //vertial
+  function PrimeFun() {
+    let num = parseInt(document.getElementById("uservalue").value);
+   
+    let count = 0;
+    var stringshow = "";
+    for (j = 1; j <= num; j++) {
+        for (i = 1; i <= j; i++) {
+            if (j % i == 0)
+                count++
+            console.log(i)
+        }
+
+        if (count == 2) {
+            stringshow = stringshow +j;
+            stringshow=stringshow+" &nbsp"+"<br>";
+        }
+        count = 0;
+    }
+    document.getElementById("prime").innerHTML = stringshow;
+}
+</script>
+
+</html>
+

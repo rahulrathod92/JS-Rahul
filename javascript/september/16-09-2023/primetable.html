@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>primetable</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="10" id="uservalue">
+    </div>
+    <div>
+        <button onclick="primeTablefn()">primeTable</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    let i,j,i2,j2;
+    function primeTablefn() {
+        let uservalue = Number(document.getElementById("uservalue").value);
+        // console.log(uservalue)
+        let checkprime = checkPrime(uservalue)
+        let checkprime2 = checkPrime2(uservalue)
+         console.log(checkprime,checkprime2)
+        let genprimetable = genPrimeTable(checkprime, checkprime2)
+
+    }
+
+    function checkPrime(num) {
+        let stringanswer = "";
+        let primecount = 0;
+       
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+                if (i % j == 0)
+                    primecount++;
+                // console.log(j)
+            }
+            if (primecount == 2) {
+                stringanswer = stringanswer + i + "\n";
+                // console.log(stringanswer)
+            }
+            primecount = 0;
+        }
+        return ;
+    }
+    function checkPrime2(num2) {
+        let count = 0;
+        var stringshow = "";
+        for (j2 = 1; j2 <= num2; j2++) {
+            for (i2 = 1; i2 <= j2; i2++) {
+                if (j2 % i2 == 0)
+                    count++
+                // console.log(i)
+            }
+
+            if (count == 2) {
+                stringshow = stringshow + j2;
+                // console.log(j)
+                // stringshow=stringshow+" &nbsp"+"<br>";
+            }
+            count = 0;
+            
+        }
+        return j2;
+    }
+
+    function genPrimeTable(i,j2) {
+        
+    }
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>change color</title>
+</head>
+<body class="container">
+    <div>
+        <h1 class="title">Change Color</h1>
+    </div><br>
+    <div id="num">
+        <table class="table is-bordered" id="table">
+            <tr>
+                <td id="cell">2</td>
+                <td id="cell">3</td>
+                <td id="cell">5</td>
+                <td id="cell">7</td>
+            </tr>
+            <tr>
+                <td id="cell">11</td>
+                <td id="cell">13</td>
+                <td id="cell">17</td>
+                <td id="cell">19</td>
+            </tr>
+            <tr>
+                <td id="cell">23</td>
+                <td id="cell">29</td>
+                <td id="cell">31</td>
+                <td id="cell">37</td>
+            </tr>
+        </table>
+    </div><br>
+    <div>
+        <input type="text" value="29" id="selectedValue">
+    </div><br>
+    <div>
+        <button onclick="btnClick()">chang</button>
+    </div>
+</body>
+<script>
+  function btnClick(){
+       
+         let  selectedValue = document.getElementById("selectedValue").value;   
+         let cells = document.querySelectorAll("cell");
+
+         cells.forEach(function(cell) {
+        if (cell.textContent === selectedValue) {
+           
+            cell.style.color = "red"; // Change to the color you want
+        } else {
+           
+            cell.style.color = ""; // Reset to the default color
+        }
+    });
+  }
+
+</script>
+</html>

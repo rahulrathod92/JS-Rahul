@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime|number|table</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+    </div>
+    <div>
+        <button onclick="primeTable()">prime</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+
+<script>
+    function primeTable() {
+        let uservalue = Number(document.getElementById("uservalue").value);
+        let isprime = isPrime(uservalue);
+        console.log(isprime)
+
+    }
+    
+	function isPrime(number)
+ { 
+   if (number <= 1)
+   return false;
+
+   // The check for the number 2 and 3
+   if (number <= 3)
+   return true;
+
+   if (number%2 == 0 || number%3 == 0)
+   return false;
+
+   for (var i=2; i*i<=number; i=i+6)
+   {
+      if (number%i == 0 || number%(i+2) == 0)
+      return false;
+   }
+
+   return true;
+ }
+ 
+
+ 
+</script>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Document</title>
+</head>
+<style>
+    /* Default styling for table cells */
+.cell {
+    background-color:rgb(15, 15, 15);
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+</style>
+<body>
+    <table id="myTable">
+        <tr>
+            <td class="cell">2</td>
+            <td class="cell">3</td>
+            <td class="cell">5</td>
+            <td class="cell">7</td>
+        </tr>
+        <tr>
+            <td class="cell">11</td>
+            <td class="cell">13</td>
+            <td class="cell">17</td>
+            <td class="cell">19</td>
+        </tr>
+        <tr>
+            <td class="cell">23</td>
+            <td class="cell">29</td>
+            <td class="cell">31</td>
+            <td class="cell">37</td>
+        </tr>
+    </table>
+    <input type="text" id="selectedValue" placeholder="Enter value">
+<button id="changeColorButton">Change Color</button>
+
+</body>
+<script>
+    // Get a reference to the button element
+var button = document.getElementById("changeColorButton"); // Replace with your button's ID
+
+// Add a click event listener to the button
+button.addEventListener("click", function() {
+    // Get the selected value (in this case, "29")
+    var selectedValue = document.getElementById("selectedValue").value; // Replace with your input field's ID
+
+    // Get all the table cells with the class "cell"
+    var cells = document.querySelectorAll(".cell");
+
+    // Loop through each cell and check if its value matches the selected value
+    cells.forEach(function(cell) {
+        if (cell.textContent === selectedValue) {
+            // Change the color of the cell when the value matches
+            cell.style.color = "red"; // Change to the color you want
+        } else {
+            // Reset the color for other cells
+            cell.style.color = ""; // Reset to the default color
+        }
+    });
+});
+
+</script>
+</html>

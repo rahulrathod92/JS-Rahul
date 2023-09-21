@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>sumbetween</title>
+</head>
+
+<body>
+    <div class="">
+        <label for="">Value</label>
+        <label class="" style="margin-left: 120px;">sum value</label>
+    </div>
+    <div class="is-flex">
+        <input type="text" value="4" id="uservalue">
+        <input type="text" value="10" id="sumvalue">
+    </div>
+    <div class="mt-2">
+        <button onclick="sumBetween()">sumbetween</button>
+    </div>
+    <div>
+        <label for="">Answer:-</label>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function sumBetween() {
+        let number = Number(document.getElementById("uservalue").value);
+        let sumvalue = Number(document.getElementById("sumvalue").value);
+        let string = "";
+        let sum = 0;
+        for (i = number; ; i++) {
+            if (i == sumvalue) {
+                break;
+            }
+            sum = sum + i;
+            if (sum < sumvalue) {
+                string = string + i + "+";
+            } else {
+                string = string + i+"="+sum;
+                break;
+                console.log(i, sum)
+            }
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+
+
+</script>
+
+</html>

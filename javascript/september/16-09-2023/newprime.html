@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newprime</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="10" id="uservalue">
+    </div>
+    <div>
+        <button onclick="primeTablefn()">primeTable</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function primeTablefn() {
+        let num = Number(document.getElementById("uservalue").value);
+        let i, j, i2, j2;
+        let stringanswer = "";
+        let primecount = 0;
+        let multiple = 0;
+        for (k = 1; k <= num; k++) {
+
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+                if (i % j == 0)
+                    primecount++;
+                // console.log(j)
+            }
+            if (primecount == 2) {
+                stringanswer = stringanswer + i + "\n";
+                // console.log(stringanswer)
+            }
+            primecount = 0;
+
+            // add j2
+   
+        let count = 0;
+        var stringshow = "";
+        for (j2 = 1; j2 <= num; j2++) {
+            for (i2 = 1; i2 <= j2; i2++) {  
+                if (j2 % i2 == 0)
+                    count++
+                // console.log(i)
+            }
+
+            if (count == 2) {
+                stringshow = stringshow + j2 + "\n";
+                // console.log(j)
+                // stringshow=stringshow+" &nbsp"+"<br>";
+            }
+            count = 0;
+            console.log(i,j2)
+        }
+        
+        }
+    
+         
+        }
+    }
+</script>
+
+</html>
