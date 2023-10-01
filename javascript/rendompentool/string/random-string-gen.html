@@ -4,61 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-     <script src="BigNumber.js"></script>
-     <script src="grapheme.js"></script>
-    <script src="random-password.js"></script>
-    <title>random|password|generate</title>
+     <script src="/rendompentool/BigNumber.js"></script>
+     <script src="stringfunction.js"></script>
+    <title>string</title>
 </head>
 <body>
     <div class="container is-fluid mt-5">
         <article class="message is-dark">
             <div class="message-header">
-                <p>Random Password</p>
+                <p>Random String Generator</p>
             </div>
             <div class="message-body has-background-black">
                 <div class="columns">
                     <div class="column is-4">
                         <div>
-                            <h5 class="title is-size-5 has-text-white">Password Option</h5>
+                            <h5 class="title is-size-5 has-text-white">String Parameters</h5>
                         </div>
                         <div class="columns mt-2">
                             <div class="column is-6">
-                                <input type="text" name="" id="length" class="input" oninput="randomPass()" value="16">
-                                <p class="subtitle is-6 has-text-info">Password length.</p>
+                                <input type="text" name="" id="length" class="input" oninput="" value="32">
+                                <p class="subtitle is-6 has-text-info">Random string's length.</p>
                             </div>
 
                             <div class="column is-6">
-                                <input type="text" name="" id="count" class="input" oninput="randomPass()" value="8">
-                                <p class="subtitle is-6 has-text-info">How many Password</p>
+                                <input type="text" name="" id="count" class="input" oninput="" value="5">
+                                <p class="subtitle is-6 has-text-info">How many random results?</p>
 
                             </div>
                         </div>
                         <div>
-                            <h5 class="title is-size-5 has-text-white">Password Formate</h5>
+                            <h5 class="title is-size-5 has-text-white">String values</h5>
                         </div>
                         <div class="columns mt-2">
                             <div class="column is-6">
                                 <div class="select is-normal is-link ">
-                                    <select class="is-size-7" id="predefined-charset" oninput="randomPass()">
+                                    <select class="is-size-7" id="predefined-charset">
                                       <option label="Predefined Alphabets">Predefined Alphabets</option>
-                                      <option selected value="alphalc">Lowercase Letters (a-z)</option>
-                                      <option value="alphauc">Uppercase Letters (A-Z)</option>
-                                      <option value="alphamix">Mixed Letters (a-zA-Z)</option>
-                                      <option value="numbers">Digits (0-9)</option>
-                                      <option value="alphalcnum">Lowercase letters and digits</option>
-                                      <option value="alphaucnum">Uppercase letters and digits</option>
-                                      <option value="alphamixnum">All letters and digits</option>
-                                      <option value="base58">Base58 characters</option>
-                                      <option value="custom">Custom alphabet</option>
+                                      <option selected value="alphalc">Lowercase Latin(a-z)</option>
+                                      <option value="alphauc">Uppercase Latin(A-Z)</option>
+                                      <option value="alphamix">Mixed Latin(a-zA-z)</option>
+                                      <option value="numbers">Numbers(0-9)</option>
+                                      <option value="alphalcnum">Lowercase a-z and Number</option>
+                                      <option value="alphaucnum">Uppercase A-Z and Number</option>
+                                      <option value="alphamixnum">All letters a-zA-Z and Number</option>
+                                      <option value="custom">Custom character set</option>
                                     </select>
                                     <p class="subtitle is-6 has-text-info">Use these predefined string alphabets</p>
                                   </div>
                             </div>
                             <div class="column is-6">
                                 <div>
-                                    <textarea name="" id="custom-charset" cols="25" rows="4" placeholder="Alphabets" oninput="randomPass()"></textarea>
+                                    <textarea name="" id="custom-charset" cols="25" rows="4" placeholder="Custom alphabets"></textarea>
                                 </div>
-                                <p class="subtitle is-6 has-text-info">Generate  random passwords from this alphabet(This option only works,if custom alphabet is selected.)</p>
+                                <p class="subtitle is-6 has-text-info">Generate a random string using this alphabet. This option only work if "custom" is selected.</p>
                             </div>
                         </div>
 
@@ -67,11 +65,11 @@
                         <div class="columns">
                             <div class="column">
                                 <textarea class="textarea is-link" rows="12" cols="20"
-                                    placeholder="random password" id="answer"></textarea>
+                                    placeholder="random string" id="answer"></textarea>
                             </div>
                         </div>
                         <div class="buttons mt-4 ">
-                            <button class="button is-dark  is-rounded" onclick="randomPass()">Random Password Generator</button>
+                            <button class="button is-dark  is-rounded" onclick="stringfun()">Random string Generator</button>
                             <button class="button is-dark  is-rounded">Future Button</button>
                         </div>
                     </div>
@@ -83,7 +81,5 @@
         </article>
     </div>
 </body>
-
-
 </html>
 

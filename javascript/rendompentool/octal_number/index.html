@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+     <script src="octals.js"></script>
+     <script src="/rendompentool/BigNumber.js"></script>
+    <title>random|octals|number</title>
+</head>
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random octals</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+                    <div class="column is-4">
+                        <div>
+                            <h5 class="title is-size-5 has-text-white">Octal Options</h5>
+                        </div>
+                        <div class="columns mt-2">
+                            <div class="column is-6">
+                                <input type="text" name="" id="length" class="input" oninput="" value="16">
+                                <p class="subtitle is-6 has-text-info">Start at this fraction</p>
+                            </div>
+
+                            <div class="column is-6">
+                                <input type="text" name="" id="count" class="input" oninput="" value="10">
+                                <p class="subtitle is-6 has-text-info">End at this fraction</p>
+
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="column is-6 mt-5">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea is-link" rows="12" cols="20"
+                                    placeholder="Octals Number" id="answer"></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons mt-4 ">
+                            <button class="button is-dark  is-rounded" onclick="octalFun()">Prime Number Calculate</button>
+                            <button class="button is-dark  is-rounded">Future Button</button>
+                        </div>
+                    </div>
+                    <div class="column is-2">
+                        <!-- black space future  -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
+

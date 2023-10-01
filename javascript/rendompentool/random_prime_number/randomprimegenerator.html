@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/BigNumber.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>random|prime|number|generate</title>
+</head>
+
+<body>
+
+    <div class="columns is-mobile is-centered mt-5">
+        
+        <div class="column is-half message">
+            <div class="message-header">
+                <h2 class="title has-text-white">Prime Number Generator Tool</h2>
+            </div>
+
+            <div class="is-half is-offset-one-quarter">
+                <textarea class="textarea is-primary mt-2" id="answer" placeholder="Print Febonacci Number"></textarea>
+            </div>
+            <div class="is-flex mt-2">
+                <input type="text" class="input" id="rangeStart" placeholder=""
+                    value="10">
+                <input type="text" class="input ml-2" id="rangeEnd" placeholder=""
+                    value="1000">
+                    <input type="text" class="input ml-2" id="count" placeholder=""
+                    value="10">
+                <input type="text" class="input ml-2" value="\n" id="sep"
+                    placeholder="Enter your custome Fibonacci  Number delimiter">
+            </div>
+            <div>
+                <button class="button  is-link is-outlined is-fullwidth mt-2 is-medium"
+                    onclick="isPrimeFunction()">generate</button>
+            </div>
+           
+        </div>
+    </div>
+
+</body>
+<script>
+    function isPrimeFunction() {
+        let rangeStart = Number(document.getElementById("rangeStart").value);
+        let rangeEnd = Number(document.getElementById("rangeEnd").value);
+        let count = Number(document.getElementById("count").value);
+        let sep = document.getElementById("sep").value;
+        console.log("rangeStart:->", rangeStart, "rangeEnd:->", rangeEnd, "count:->", count, "sep:->", sep)
+
+        var primes = [];
+        var possiblePrimesList = [];
+        var start = rangeStart;
+        var startPrimality = isPrime(start);;
+        if (start < 5) {
+            if (start < 4) {
+                possiblePrimesList.push(3);
+            }
+            if (start < 3) {
+                possiblePrimesList.push(2);
+            }
+            start = 5;
+        } else if (!startPrimality && start % 2 == 0 && start % 3 == 0) {
+            possiblePrimesList.push(start + 1);
+            start += 5;
+        } else if (startPrimality && (start + 1) % 2 == 0 && (start + 1) % 3 != 0) {
+            possiblePrimesList.push(start);
+            start += 4;
+        } else if (!startPrimality && start % 2 == 0 && (start + 1) % 3 == 0) {
+            start += 3;
+        } else if (!startPrimality && start % 2 != 0 && start % 3 == 0) {
+            start += 2;
+        } else if (!startPrimality && start % 2 == 0 && (start - 1) % 3 == 0) {
+            start += 1;
+        } else if (!startPrimality && (start - 1) % 2 == 0 && (start - 1) % 3 == 0) {
+            start += 4;
+        }
+        console.log(start)
+
+
+        for (var i = start; i <= rangeEnd; i += 6) {
+            if (i % 5 == 0) {
+                possiblePrimesList.push(i + 2);
+                continue;
+            }
+            possiblePrimesList.push(i);
+            possiblePrimesList.push(i + 2);
+        }
+        if (possiblePrimesList.length != 0) {
+            for (var i = 0; primes.length < count; i++) {
+                var j = Math.floor(Math.random() * possiblePrimesList.length);
+                var possiblePrime = possiblePrimesList[j];
+                if (isPrime(possiblePrime)) {
+                    primes.push(possiblePrime);
+                }
+                possiblePrimesList.splice(j, 1);
+                if (possiblePrimesList.length == 0) {
+                    break;
+                }
+            }
+        }
+        if (primes.length < count) {
+            tool.output.showWarningBadge("Not enough primes.", "There are only {0} primes in range {1} to {2} but you wanted to generate {3}.".format(primes.length, rangeStart, rangeEnd, count));
+        }
+        if (sep == "\\n")
+        sep = "\n";
+        let answer = primes.join(sep);
+        document.getElementById("answer").value = answer;
+    }
+  
+    function isPrime(n) {
+        if (n <= 1)
+            return false;
+        if (n <= 3)
+            return true;
+        if (n % 2 == 0 || n % 3 == 0) {
+            return false;
+        }
+        var sqrtN = Math.sqrt(n);
+        for (var i = 5; i <= sqrtN; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return false;
+            }
+        }
+      return  true;
+        
+    }
+  
+
+
+</script>
+
+</html>

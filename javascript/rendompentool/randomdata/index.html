@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="data.js"></script>
+    <script src="/rendompentool/BigNumber.js"></script>
+    <title>random|data</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random data</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+                    <div class="column is-4">
+                        <div>
+                            <h5 class="title is-size-5 has-text-white">Regular Expression</h5>
+                        </div>
+                        <div class="columns mt-2">
+                            <div class="column is-6">
+                                <textarea class="textarea is-link" rows="2" cols="2" id="regex" placeholder="RegExp">letters: [a-z]{1,5}</textarea>
+                                <p class="subtitle is-6 has-text-info">Enter your regular expression here</p>
+                            </div>
+
+
+                        </div>
+                        <h5 class="title is-size-5 has-text-white">Generator</h5>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text"  id="results" class="input" oninput="" value="10">
+                                <p class="subtitle is-6 has-text-info">How many results to generate?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6 mt-5">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea is-link" id="answer" rows="12" cols="20" placeholder="random data"></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons mt-4 ">
+                            <button class="button is-dark  is-rounded" onclick="dataFun()">generate</button>
+                            <button class="button is-dark  is-rounded">Future Button</button>
+                        </div>
+                    </div>
+                    <div class="column is-2">
+                        <!-- black space future  -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

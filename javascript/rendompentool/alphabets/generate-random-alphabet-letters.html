@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="BigNumber.js"></script>
-    <script src="grapheme.js"></script>
+    <script src="/rendompentool/BigNumber.js"></script>
+    <script src="graphemesplitter.js"></script>
     <script src="generate-random-alphabet-letters.js"></script>
 
     <title>random|password|generate</title>
@@ -58,7 +58,7 @@
                             <div class="column is-6">
                                 <div>
                                     <div class="checkbox">
-                                        <input type="checkbox" id="option-lowercase" value="" checked="">
+                                        <input type="checkbox" id="option-lowercase" value="" oninput="alphabetsFun()" checked="">
                                         <span class="has-text-info">Lowercase Letters</span>
                                     </div>
                                     <p class="has-text-white is-size-7 ml-4">Select only lowercase letters <br>from the
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="mt-2">
                                     <div class="checkbox">
-                                        <input type="checkbox" id="option-digits" checked="">
+                                        <input type="checkbox" id="option-digits" checked="" oninput="alphabetsFun()">
                                         <span class="has-text-info">Generate Digits</span>
                                     </div>
                                     <p class="has-text-white is-size-7 ml-4">Also include digits 0 to 0 <br>in the
@@ -76,7 +76,7 @@
                             <div class="column is-6">
                                 <div>
                                     <div class="checkbox">
-                                        <input type="checkbox" id="option-uppercase" value="">
+                                        <input type="checkbox" id="option-uppercase" value="" oninput="alphabetsFun()">
                                         <span class="has-text-info">Uppercase Letters</span>
                                     </div>
                                     <p class="has-text-white is-size-7 ml-4">Select only uppercase letters <br>from the
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="mt-2">
                                     <div class="checkbox">
-                                        <input type="checkbox" id="allow-repetitions">
+                                        <input type="checkbox" id="allow-repetitions" oninput="alphabetsFun()">
                                         <span class="has-text-info">Allow Repeated Letters</span>
                                     </div>
                                     <p class="has-text-white is-size-7 ml-4">Allow the random letters <br>to repeat
@@ -96,11 +96,11 @@
                         <div class="columns">
                             <div class="column is-6">
                                 <input type="text" name="" id="number-letters-per-group" class="input  is-link"
-                                    oninput="" value="12">
+                                    oninput="alphabetsFun()" value="12" >
                                 <p class="subtitle is-7 has-text-white">Number of letters per group.</p>
                             </div>
                             <div class="column is-6">
-                                <input type="text" name="" id="letter-separator" class="input  is-link" oninput=""
+                                <input type="text" name="" id="letter-separator" class="input  is-link" oninput="alphabetsFun()"
                                     value=",">
                                 <p class="subtitle is-7 has-text-white">Individual letter separator.</p>
                             </div>
@@ -109,15 +109,16 @@
                         <div class="columns">
                             <div class="column is-6">
                                 <input type="text" name="" id="number-of-groups" class="input  is-link"
-                                    oninput="" value="8">
+                                    oninput="alphabetsFun()" value="8">
                                 <p class="subtitle is-7 has-text-white">Number of group in the output.</p>
                             </div>
                             <div class="column is-6">
-                                <input type="text" name="" id="group-separator" class="input  is-link" oninput=""
+                                <input type="text" name="" id="group-separator" class="input  is-link" oninput="alphabetsFun()"
                                     value="\n">
                                 <p class="subtitle is-7 has-text-white">Individual result group separator.</p>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="column is-6 mt-6" >
                         <div class="columns">
@@ -126,10 +127,10 @@
                                     id="answer"></textarea>
                             </div>
                         </div>
-                        <div class="buttons mt-6 ml-6 ">
-                            <button class="button is-dark  is-rounded" onclick="alphabetsFun()">Random Alphabets
+                        <div class="buttons mt-6">
+                            <button class="button is-dark is-rounded " onclick="alphabetsFun()">Random Alphabets
                                 Generator</button>
-                            <button class="button is-dark  is-rounded">Future Button</button>
+                            <button class="button is-dark is-rounded">Future Button</button>
                         </div>
                     </div>
                     <div class="column is-2">

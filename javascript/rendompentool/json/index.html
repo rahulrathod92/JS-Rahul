@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="json.js"></script>
+    <title>random|json</title>
+</head>
+<body>
+    <div class="main">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random json</p>
+            </div>
+            <div class="message-body has-background-black">
+                <h1 class="title is-size-4 has-text-white is-underlined	">Random json data generator options</h1>
+                <div class="columns">
+                    <div class="column is-6">
+                        <h1 class="title is-size-5 has-text-white"> Generator Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="depth" value="3">
+                                <p class="subtitle is-6 has-text-info">Max JSON structure's depth</p>
+                                <div>
+                                    <input type="checkbox" class="checkbox" id="always-max-elements" checked>
+                                    <span class="title is-6 has-text-white">Always max elements</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Always generate maximum elements per
+                                            depth level</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column is-6">
+                                <input type="text" class="input  is-small" id="max-elements" value="6">
+                                <p class="subtitle is-6 has-text-info">Max elements per depth level</p>
+                            </div>
+                        </div>
+                        <!-- generator option end -->
+                        <h1 class="title is-size-5 has-text-white">Allowed data types</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="checkbox" class="checkbox" id="booleans" checked>
+                                    <span class="title is-6 has-text-white">Booleans</span>
+                                    <div>
+                                        <span class="subtitle is-6 p-2 has-text-info">Generate booleans?</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <input type="checkbox" class="checkbox" id="strings" checked>
+                                    <span class="title is-6 has-text-white">Strings</span>
+                                    <div>
+                                        <span class="subtitle is-6 p-2 has-text-info">Generate strings?</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <input type="checkbox" class="checkbox" id="objects" checked>
+                                    <span class="title is-6 has-text-white">Objects</span>
+                                    <div>
+                                        <span class="subtitle is-6 p-2 has-text-info">Generate objects?</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="">
+                                    <input type="checkbox" class="checkbox" id="numbers" checked>
+                                    <span class="title is-6 has-text-white">Numbers</span>
+                                    <div>
+                                        <span class="subtitle is-6 p-2 has-text-info">Generate numbers?</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <input type="checkbox" class="checkbox" id="arrays" checked>
+                                    <span class="title is-6 has-text-white">Arrays</span>
+                                    <div>
+                                        <span class="subtitle is-6 p-2 has-text-info">Generate arrays?</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- allowed data end -->
+                        <h1 class="title is-size-5 has-text-white">String Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="">
+                                    <input type="radio" class="radio" value="english-strings" name="option-group" >
+                                    <span class="title is-6  has-text-white">Use random English words</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Use random English words for strings
+                                            and object keys</span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <input type="text" class="input is-small" id="max-string-length" value="10">
+                                        <span class="subtitle is-6 has-text-info">Maximum random string length? (Only
+                                            works with random strings.)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="">
+                                    <input type="radio" class="radio" value="random-strings" name="option-group"  checked>
+                                    <span class="title is-6  has-text-white">Use completely random strings</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Use randomly generated characters for
+                                            strings and object keys</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- string option end -->
+                        <h1 class="title is-size-5 has-text-white">Indentation</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="">
+                                    <input type="radio" class="" value="formatting-spaces" checked name="Indentation">
+                                    <span class="title is-6  has-text-white">Use spaces</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Indent output with two spaces</span>
+                                    </div>
+                                </div>
+                             
+                                <div class="mt-2">
+                                    <input type="radio" class="" value="formatting-none" name="Indentation">
+                                    <span class="title is-6  has-text-white">Keep unformatted</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Output minified result</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="column is-6">
+                                <div class="">
+                                    <input type="radio" class="" value="formatting-tabs" name="Indentation">
+                                    <span class="title is-6  has-text-white">Use Tabs</span>
+                                    <div>
+                                        <span class="subtitle is-6 has-text-info">Indent output with one tab</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- indentation -->
+                    </div>
+                    <div class="column is-4">
+                        <h1 class="title is-4 has-text-white is-underlined">random json</h1>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" id="answer" cols="65" rows="30"
+                                            placeholder="random data generate"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="columns"> 
+                        <div class="column">
+                            <div class="buttons">
+                                <button class="button is-rounded is-dark is-outlined has-text-white" onclick="jsonFun()">json generate</button>
+                                <button class="button is-rounded is-dark is-outlined has-text-white">future button</button>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="column is-2">
+                        <!-- black spce -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

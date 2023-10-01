@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fectorial number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+    </div>
+    <div>
+        <button onclick="fectFun()">fectorial</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function fectFun() {
+
+        let num = Number(document.getElementById("uservalue").value)
+        let string = "";
+        let fect = 1;
+        for (i = 1; i <= num; i++) {
+            fect = fect * i;
+            console.log(fect)
+        }
+        string = string + fect;
+        console.log(string)
+        document.getElementById("answer").innerHTML=string;
+    }
+</script>
+
+</html>

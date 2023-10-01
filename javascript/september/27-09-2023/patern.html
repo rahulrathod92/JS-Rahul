@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+</head>
+
+<body>
+    <div>
+        <h1>output</h1>
+        12345<br>
+        4321<br>
+        123<br>
+        21<br>
+        1
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    let num = 5;
+    let string = "";
+    for (i = num; i >= 1; i--) {
+        if (i % 2 != 0) {
+            for (j = 1; j <= i; j++) {
+                string = string + j;
+            }
+
+        } else {
+            for (j = i; j >= 1; j--) {
+                string = string + j;
+            }
+        }
+        string = string + "<br>";
+        document.getElementById("answer").innerHTML = string;
+    }
+</script>
+
+</html>

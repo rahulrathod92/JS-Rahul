@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="121">
+        <button onclick="palFun()">check</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+     function palFun() {
+         let string = document.getElementById("uservalue").value;
+         let len = string.length;
+         let msg = "is palindrome";
+         for (i = 0; i < len / 2; i++) {
+             // console.log("len:->", len, "i:->", i)
+             if (string[i] != string[len - 1 - i]) {
+                 msg = "not palindrome";
+                }
+            }
+            console.log(msg)
+            document.getElementById("answer").innerHTML= msg;
+        }
+</script>
+
+</html>

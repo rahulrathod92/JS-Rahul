@@ -110,12 +110,12 @@ function parseOptions(tool, alphabets) {
     }
     console.log("optionLowecase:->", optionLowecase)
 
-    var optionUppercase = document.getElementById("option-uppercase");
-    if (optionUppercase.checked == false) {
-        optionUppercase = false;
-    } else {
-        optionUppercase = true;
-    }
+    var optionUppercase = document.getElementById("option-uppercase").checked;
+    // if (optionUppercase.checked == false) {
+    //     optionUppercase = false;
+    // } else {
+    //     optionUppercase = true;
+    // }
     console.log("optionUppercase:->", optionUppercase)
     
     var optionDigits = document.getElementById("option-digits");

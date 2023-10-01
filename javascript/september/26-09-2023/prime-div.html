@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.11/chance.min.js"
+        integrity="sha512-Mvo/gaGprTVzN9i+swfStIsSkBkzMsTRgWdES5BuVoV5WP9/SfJgoR+GlQIYMS4RCf62DiAn/JR/Im3q/GHNNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>prime|div</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Random Prime Number Generator</h1>
+        <hr class="has-background-black">
+    <div class="buttons">
+        <button class="button" onclick="btnTwo()">2</button>
+        <button class="button" onclick="btnFive()">5</button>
+        <button class="button" onclick="btnTen()">10</button>
+        <button class="button" onclick="btnFifteen()">15</button>
+        <button class="button" onclick="btnTowFive()">25</button>
+    </div>
+    <hr class="has-background-black">
+
+    <div class="columns is-mobile is-multiline" id="answer">
+
+    </div>
+    <hr class="has-background-black">
+    </div>
+</body>
+<script>
+    function btnTwo() {
+        let strNum = "";
+        let num;
+        let i;
+        for (i = 1; i <= 2; i++) {
+               
+            chance.prime()
+            num = chance.prime({ min: 1, max: 1000 });
+            console.log(i, num)
+            strNum = strNum + "<div class='column  is-narrow'>" +"<div class='card'>"+"  <header class='card-header'>"+"<p class='card-header-title'>"+ num +"</p>"+"</div>"+"</div>"+"</div>";
+        }
+        strNum=strNum+"</div>";
+        document.getElementById("answer").innerHTML = strNum;
+
+    }
+
+function btnFive(){
+    let strNum = "";
+        let num;
+        let i;
+        for (i = 1; i <= 5; i++) {
+               
+            chance.prime()
+            num = chance.prime({ min: 1, max: 1000 });
+            console.log(i, num)
+            strNum = strNum + "<div class='column is-narrow'>" +"<div class='card'>"+"  <header class='card-header'>"+"  <p class='card-header-title'>"+ num +"</p>"+"</div>"+"</div>"+"</div>";
+        }
+        strNum=strNum+"</div>";
+        document.getElementById("answer").innerHTML = strNum;
+
+}
+function btnTen(){
+
+    let strNum = "";
+        let num;
+        let i;
+        for (i = 1; i <= 10; i++) {
+            chance.prime()
+            num = chance.prime({ min: 1, max: 1000 });
+            console.log(i, num)
+            strNum = strNum + "<div class='column is-narrow'>" +"<div class='card'>"+"  <header class='card-header'>"+"  <p class='card-header-title'>"+ num +"</p>"+"</div>"+"</div>"+"</div>";
+        }
+        strNum=strNum+"</div>";
+        document.getElementById("answer").innerHTML = strNum;
+}
+function btnFifteen(){
+    let strNum = "";
+        let num;
+        let i;
+        for (i = 1; i <= 15; i++) {
+               
+            chance.prime()
+            num = chance.prime({ min: 1, max: 1000 });
+            console.log(i, num)
+            strNum = strNum + "<div class='column is-narrow'>" +"<div class='card'>"+"  <header class='card-header'>"+"  <p class='card-header-title'>"+ num +"</p>"+"</div>"+"</div>"+"</div>";
+        }
+        strNum=strNum+"</div>";
+        document.getElementById("answer").innerHTML = strNum;
+
+}
+function btnTowFive(){
+    let strNum = "";
+        let num;
+        let i;
+        for (i = 1; i <= 25; i++) {
+               
+            chance.prime()
+            num = chance.prime({ min: 1, max: 1000 });
+            console.log(i, num)
+            strNum = strNum + "<div class='column is-narrow'>" +"<div class='card'>"+"  <header class='card-header'>"+"  <p class='card-header-title'>"+ num +"</p>"+"</div>"+"</div>"+"</div>";
+        }
+        strNum=strNum+"</div>";
+        document.getElementById("answer").innerHTML = strNum;
+
+}
+</script>
+
+</html>

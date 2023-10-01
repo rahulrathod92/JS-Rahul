@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>generate|integer|tool</title>
+</head>
+
+<body>
+    <div class="columns is-mobile is-centered mt-5">
+        <div class="column is-half message">
+            <h2 class="title">Random Integer Generator</h2>
+            <div class="columns">
+                <div class="column is-6">
+                    <textarea class="textarea is-primary" id="answer" rows="7"
+                        placeholder="Primary textarea"></textarea>
+                </div>
+                <div class="column is-6">
+                    <div class="">
+                        <input type="text" class="input" id="rangeStart" placeholder="Start at this integer" value="">
+                    </div>
+                    <div>
+                        <input type="text" class="mt-2 input" id="rangeEnd" placeholder="End at this integer"
+                            value="">
+                    </div>
+                    <div>
+                        <input type="text" class="mt-2 input" id="howMany" placeholder="How many integer to generate"
+                            value="">
+                    </div>
+                    <div>
+                        <button class="button mt-2 is-primary" onclick="generateFunction()">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function generateFunction() {
+        let rangeStart =Number( document.getElementById("rangeStart").value);
+        console.log("rangeStart:->"+rangeStart);
+
+        let rangeEnd =Number(document.getElementById("rangeEnd").value);
+        console.log("rangeEnd:->"+rangeEnd);
+        let howMany =Number( document.getElementById("howMany").value);
+
+        console.log("howMany:->"+howMany);
+
+
+        var outputStr = '';
+        for (let  i = 1; i <= howMany; i++) {
+            outputStr += generateRandomNumber(rangeStart, rangeEnd);
+             outputStr += "\n";
+            console.log(outputStr)
+        }
+        document.getElementById("answer").value = outputStr;
+
+    }
+
+    function generateRandomNumber(rangeStart, rangeEnd) {
+        return Math.floor(Math.random() * (rangeEnd - rangeStart +1)) + rangeStart;
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="graphemesplitte.js"></script>
+    <script src="shufflewords.js"></script>
+
+    <title>shuffle-word</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>Random Shuffle Letters</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+                    <div class="column is-5">
+                        <div class="column">
+                            <div class="">
+                                <h1 class="title has-text-white is-size-4">Words</h1>
+                                <textarea class="textarea is-link" rows="10" cols="20" placeholder=""
+                                    id="textareafirst"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="column">
+                            <h1 class="title has-text-white is-size-4">shuffled words</h1>
+                            <textarea class="textarea is-link" rows="10" cols="20" placeholder=""
+                                id="answer"></textarea>
+                        </div>
+                    </div>
+                    <div class="column is-5 mt-6">
+                        <h1 class="title is-4 has-text-white has-text-centered has-background-link">Word Shuffle
+                            Option</h1>
+                        <span class="title is-5 has-text-white">Word Delimiters</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="column">
+                                    <div>
+                                        <input class="input is-small" id="input-separator" placeholder="Input Delimiter" type="text" value="">
+                                        <span class="subtitle is-size-6 has-text-info">Split the input data by this
+                                            sequence of characters.(Leave empty to shuffle letters.)</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="column is-6 ">
+                                <div class="column">
+                                    <div>
+                                        <input class="input is-small" id="output-separator"
+                                            placeholder="Output Delimiter"  type="text" value="">
+                                        <span class="subtitle is-size-6 has-text-info">Join the shuffled output data by this sequence of characters.(Use \n symbol for a newline.)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="title is-5 has-text-white">Group and Copies</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="column">
+                                    <input type="text" name="" id="shuffle-group-size" class="input is-small" value="1">
+                                    <span class="subtitle has-text-info is-size-6">Combine this many letters in a single
+                                        group and shuffle them as a whole unit.</span>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="column">
+                                    <input type="checkbox" name="" id="skip-duplicates" class="checkbox">
+                                    <span class="title subtitle is-size-6 has-text-white">Remove Repeated
+                                        Words</span><br>
+                                    <span class="subtitle is-size-6 has-text-info">Skip copies of words (and tuples) and
+                                        mix only unique words/tuples.</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <span class="title is-5 has-text-white">Punctuation Marks</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="column">
+                                    <div>
+                                        <input type="text" name="" id="punctuation-chars" class="input is-small" value="'.,?!()&quot;">
+                                        <span class="subtitle has-text-info is-size-6">Enter the list of
+                                            punctuationmarks to remove.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="column">
+                                    <div>
+                                        <input type="checkbox" name="" id="remove-punctuation">
+                                        <span class="title is-size-5 has-text-white">Remove Punctuation</span><br>
+                                        <span class="subtitle is-size-6 has-text-info">Shuffle words without punctuation
+                                            marks.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button is-dark  is-rounded" onclick="shuffleWords()">shuffle
+                                        words</button>
+                                    <button class="button is-dark  is-rounded">Future Button</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-2">
+                        <!-- black space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

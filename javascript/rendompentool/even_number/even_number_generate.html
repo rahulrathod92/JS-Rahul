@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/BigNumber.js"></script>
+    <title>even|number|generate</title>
+</head>
+<body>
+    <div>
+        <h1>Even Number Generate</h1>
+    </div>
+    <div>
+        <textarea name="" id="answer" cols="30" rows="10"></textarea>
+    </div><br>
+    <div>
+        <input type="text" value="0" id="start"><br><br>
+        <input type="text" value="10" id="count"><br><br>
+        <input type="text" value="\n" id="sep">
+    </div><br>
+    <div>
+        <input type="radio" name="increasing" id="increasingEvenNumbers" checked value="true">
+        Increasing Even Number
+        <input type="radio" name="increasing" id="decreasingEvenNumbers" value="">
+        Decreasing Even Number
+    </div><br>
+    <div>
+        <button onclick="GenEvenFunction()">generate_even_number</button>
+    </div>
+</body>
+<script>
+    function GenEvenFunction(){
+        let start = Number(document.getElementById("start").value);
+        let count = Number(document.getElementById("count").value);
+        let sep = document.getElementById("sep").value;
+        var radios = document.getElementsByName('increasing');
+        for ( var radio of radios)
+        {
+            if (radio.checked) {
+               
+                increasing = radio.value;
+            }
+        }
+        console.log("start:->",start,"count:->",count,"sep:->",sep,"increasing:->",increasing)
+
+        if (increasing) {
+            var evenNumbers = increasingEvenNumbers(start, count);
+        } else {
+            var evenNumbers = decreasingEvenNumbers(start, count);
+        }
+        if (sep == "\\n")
+            sep = "\n";
+        let answer = evenNumbers.join(sep);
+        console.log(answer)
+        document.getElementById("answer").value = answer;
+
+    }
+    function increasingEvenNumbers(start, count) {
+        var evenNumbers = [];
+        for (var i = new BigNumber(start); evenNumbers.length < count; i = i.plus(1)) {
+            if (i.mod(2).eq(0)) {
+                evenNumbers.push(i);
+            }
+        }
+        return evenNumbers;
+    }
+    function decreasingEvenNumbers(start, count) {
+        var evenNumbers = [];
+        for (var i = new BigNumber(start); evenNumbers.length < count; i = i.minus(1)) {
+            if (i.mod(2).eq(0)) {
+                evenNumbers.push(i);
+            }
+        }
+        return evenNumbers;
+    }
+</script>
+</html>

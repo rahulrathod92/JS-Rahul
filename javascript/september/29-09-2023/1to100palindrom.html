@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1|to|100|palindrome</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="firstvalue" value="1">
+        <input type="text" name="" id="secoundvalue" value="100">
+    </div><br>
+    <div>
+        <button onclick="generatePalindrome()">generatePalindrome</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function generatePalindrome() {
+        let start =Number(document.getElementById("firstvalue").value);
+        let end = Number(document.getElementById("secoundvalue").value);
+        let answer = palindrome_range(start, end);
+        document.getElementById("answer").innerHTML = answer;
+        // console.log(palindrome_range(start, end));
+    }
+
+    // This function checks whether a given number is a palindrome or not
+    function is_palindrome(num) {
+        return String(num) === String(num).split("").reverse().join("");
+    }
+
+    // This function returns a list of all palindrome numbers within a given range
+    function palindrome_range(start, end) {
+        let nums = Array.from({ length: (end - start) + 1 }, (_, i) => i + start);
+        let palindromes = nums.filter(num => is_palindrome(num));
+        return palindromes;
+    }
+
+    // Example usage
+
+</script>
+
+</html>
