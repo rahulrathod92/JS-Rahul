@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/BigNumber.js"></script>
+    <script src="bignumber.js"></script>
     <title>odd|number|generate</title>
 </head>
 
@@ -21,9 +21,9 @@
         <input type="text" value="\n" id="sep">
     </div><br>
     <div>
-        <input type="radio" id="increasingOddNumbers" name="increasSeq"  value="false">
+        <input type="radio" id="increasingOddNumbers" name="increasing">
         Increassing odd number
-        <input type="radio" id="decreasingOddNumbers" name="increasSeq" checked value="true">
+        <input type="radio" id="decreasingOddNumbers" name="increasing" checked value="">
         Decreasssing odd number
     </div><br>
     <button onclick="oddNumberFn()">Odd_Number_Generator</button>
@@ -34,30 +34,29 @@
         let start = Number(document.getElementById("start").value);
         let count = Number(document.getElementById("count").value);
         let sep = document.getElementById("sep").value;
-
-        var radios = document.getElementsByName('increasSeq');
-        for (var radio of radios)
+        var radios = document.getElementsByName('increasing');
+        for ( var radio of radios)
         {
             if (radio.checked) {
                
-                increasSeq = radio.value;
+                increasing = radio.value;
             }
         }
-        console.log("start:->", start, "count:->", count, "sep:->", sep, "increasSeq:->",increasSeq)
+        console.log("start:->",start,"count:->",count,"sep:->",sep,"increasing:->",increasing)
 
-        if (increasSeq) {
+        if (increasing) {
             var oddNumbers = increasingOddNumbers(start, count);
         } else {
-             
             var oddNumbers = decreasingOddNumbers(start, count);
         }
         if (sep == "\\n")
             sep = "\n";
         let answer = oddNumbers.join(sep);
+        console.log(answer)
         document.getElementById("answer").value = answer;
 
-    }
 
+    }
     function increasingOddNumbers(start, count) {
         var oddNumbers = [];
         for (var i = new BigNumber(start); oddNumbers.length < count; i = i.plus(1)) {
@@ -76,6 +75,9 @@
         }
         return oddNumbers;
     }
+
+    
+
 </script>
 
 </html>
