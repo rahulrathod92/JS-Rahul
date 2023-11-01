@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="stringbyteslibary.js"></script>
+    <script src="stringtobytes.js"></script>
+    <title>string-to-bytes-converter</title>
+</head>
+
+<body>
+    <div class="container is-fluid">
+        <article class="message">
+            <div class="message-header">
+                <p>string to bytes converter</p>
+            </div>
+            <div class="message-body has-background-dark">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">string</span>
+                                    <textarea name="" class="textarea" id="inputteaxtarea" cols="30" rows="15">                                     
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">bytes</span>
+                                    <textarea name="" class="textarea" id="answer" cols="30" rows="15"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column  is-half is-offset-one-quarter">
+                                <div class="buttons ml-6 ">
+                                    <button class="button is-link is-outlined has-text-white"
+                                        onclick="stringToBytesFun()">Generate</button>
+                                    <button class="button is-link is-outlined has-text-white" onclick="sampleFun()">sample</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="columns">
+                            <div class="column has-background-white">
+                                <label class="label has-text-info">String to bytes converter options</label>
+                            </div>
+                        </div>
+                        <span class="label has-text-white">Full Bytes</span>
+                        <div class="columns">
+                            <div class="column is-8">
+                                <div>
+                                    <label class="checkbox has-text-white is-size-6">
+                                        <input type="checkbox"  id="padding" name="checkbox">
+                                        Use Full Bytes
+                                    </label>
+                                </div>
+                                <span class="subtitle has-text-info is-size-6">If a byte is less than<br>0xf, make it
+                                    0x0f.</span>
+                            </div>
+
+                        </div>
+                        <span class="label has-text-white">Delimiter</span>
+                        <div class="columns">
+                            <div class="column">
+                                <div>
+                                    <label class="checkbox has-text-white is-size-6">
+                                        <input type="checkbox" id="spacing" name="checkbox">
+                                        Add a Whitespace
+                                    </label>
+                                </div>
+                                <div>
+
+                                    <span class="subtitle has-text-info is-size-6">Select this option to<br>add a whitespace char<br>after
+                                        each byte.</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+
+</html>

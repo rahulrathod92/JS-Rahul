@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="uuids.js"></script>
+    <title>random|uuids|generator</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random uuids generator</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea" id="answer" cols="50" rows="15"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <h1 class="title is-size-5 has-text-white">UUID Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input is-small" id="count" value="15" oninput="uuidsFun()">
+                                    <p class="subtitle is-size-7 has-text-info">How many UUIDs to generate?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button is-rounded" onclick="uuidsFun()">generate</button>
+                                    <button class="button is-rounded">future Button</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        <!-- blanck space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

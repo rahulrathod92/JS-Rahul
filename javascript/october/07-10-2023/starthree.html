@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star-three</title>
+</head>
+
+<body>
+    <p id="answer"></p>
+</body>
+<script>
+    star();
+    function star() {
+        let num = 5;
+        let string = "";
+
+
+        for (i = 1; i <= num; i++) {
+            for (k = 1; k <= num - i; k++) {
+                string = string + "&nbsp;&nbsp;";
+            }
+            for (j = 1; j <= i; j++) {
+                string = string + "*";
+            }
+            for (l = 2  ; l <= i; l++) {
+                string = string + "*";
+            }
+            string = string + "<br>";
+        }
+
+        document.getElementById("answer").innerHTML = string;
+    }
+</script>
+
+</html>

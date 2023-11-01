@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsPrime Function</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+        <button onclick="findprime()">click</button>
+    </div>
+    <p id="answer"></p>
+    <script>
+        function findprime() {
+            let num = parseInt(document.getElementById("uservalue").value);
+            let answer = getMeNthPrime(num);
+            document.getElementById("answer").innerHTML = answer;
+            console.log(answer)
+        }
+        function isPrime(n) {
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function getMeNthPrime(n) {
+            let counter = 0;
+            let string = "";
+            for (let i = 2; ; i++) {
+                if (isPrime(i) == true) {
+                    counter++;
+                }
+                if (counter == n) {
+                    string = string + "prime position is " + i;
+                    return string;
+                    console.log(string)
+                    break;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

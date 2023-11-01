@@ -1,0 +1,30 @@
+<script>
+
+    let findByString = false;
+    let findByRegex = false;
+    var radios = document.getElementsByName('pattern');
+    for (var radio of radios) {
+        if (radio.checked) {
+            if (radio.value == "text") {
+                findByString = true
+            }
+            if (radio.value == "regex") {
+                findByRegex = true
+            }
+        }
+    }
+    console.log("findByString :->" + findByString);
+    console.log("findByRegex :->" + findByRegex);
+
+</script>
+
+
+//Radio Button
+<div class="control">
+    <label class="radio">
+        <span class="is-size-4"><input type="radio" name="randomNum" value="wholeNums" oninput="generaterRandomNumber()"
+                checked></span>
+        <span class="has-text-black">Generate Random Whole Numbers
+        </span>
+    </label>
+</div>

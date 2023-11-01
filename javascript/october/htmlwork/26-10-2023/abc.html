@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Define the number of years
+const years = 5;
+
+// Create an array to store the quarters
+const quarters = [];
+
+// Loop through the years and quarters
+for (let year = 1; year <= years; year++) {
+  for (let quarter = 1; quarter <= 4; quarter++) {
+    quarters.push(`Year ${year}, Quarter ${quarter}`);
+  }
+}
+
+// Display the quarters
+quarters.forEach((quarter, index) => {
+  console.log(`Quarter ${index + 1}: ${quarter}`);
+});
+
+</script>
+</html>

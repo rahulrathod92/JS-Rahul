@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+</head>
+
+<body>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    patternFun();
+    function patternFun() {
+        let num = 10;
+        let string = "";
+        for (i = 2; i <= num; i++) {
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+
+                    break;
+                }
+
+            }
+            if (i == j) {
+
+                string = string + j;
+            }
+            string = string + "<br>";
+
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+
+</script>
+
+</html>

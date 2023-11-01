@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+
+<body>
+    <input type="text" value="111" id="uservalue">
+    <button onclick="isPalindrome()">click</button>
+    <p id="answer"></p>
+</body>
+<script>
+    function isPalindrome() {
+        let string = document.getElementById("uservalue").value;
+        let len = string.length;
+        let msg = "is palindrome";
+        for (i = 0; i < len / 2; i++) {
+            if (string[i] != string[len - 1 - i]) {
+                msg = "is not palindrome"
+            }
+        }
+        console.log(msg)
+    }
+</script>
+
+</html>

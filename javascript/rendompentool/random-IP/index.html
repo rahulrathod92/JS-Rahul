@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="ip.js"></script>
+    <title>random_ip </title>
+</head>
+
+<body>
+
+    <article class="message">
+        <div class="message-header">
+            <p>random ip generator</p>
+        </div>
+        <div class="message-body has-background-dark">
+            <div class="">
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column">
+                                <div>
+                                    <textarea name="" class="textarea" id="answer" cols="30" rows="13"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column has-background-light	">
+                                <div class="">
+                                    <label class="label ">Random ip generator options</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="title is-5 has-text-primary-light	">IPv4 Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="start" value="0.0.0.0">
+                                </div>
+                                <span class="subtitle is-6 has-text-info">Start at this IP address</span>
+                            </div>
+                        </div>
+                        <!-- columns end -->
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="end" value="255.255.255.255">
+                                </div>
+                                <span class="subtitle is-6 has-text-info">End at this IP address</span>
+                            </div>
+                        </div>
+                        <!-- columns end -->
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="count" value="15">
+                                </div>
+                                <span class="subtitle is-6 has-text-info">How many IPv4s to generate?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="buttons">
+                            <button class="button is-info is-fullwidth" onclick="ipgenerator()">IP generator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+
+
+</body>
+
+</html>

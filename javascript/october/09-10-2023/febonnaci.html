@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>febonacci</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <div>
+        <button onclick="febonacciFun()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function febonacciFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let num1 = 0;
+        let num2 = 1;
+        let total = 0;
+        for (i = 1; i <= num; i++) {
+            total = num1 + num2;
+            num1 = num2;
+            num2 = total;
+        }
+        console.log(total)
+    }
+</script>
+
+</html>

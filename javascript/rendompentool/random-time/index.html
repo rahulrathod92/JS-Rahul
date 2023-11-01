@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="time.js"></script>
+    <title>random|macs|generator</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random macs generator</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea" id="answer" cols="50" rows="15"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <h1 class="title is-size-5 has-text-white">Clock Time Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input is-small" id="count" value="10">
+                                    <p class="subtitle is-size-7 has-text-info">How many times to generate?</p>
+                                </div>
+                                <div>
+                                    <input type="text" class="input is-small mt-3" id="custom-format" value="hh:mm:ss (h:m:s)">
+                                   
+                                    <span class="subtitle is-7 has-text-info">Custom time format<br>Use: hh h mm m ss s</span>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="select">
+                                    <select class="input is-small" id="format" name="option-group" required="">
+                                        <optgroup label="Time Output Format">
+                                            <option selected="" value="hh-mm-ss">hh:mm:ss</option>
+                                            <option value="h-m-s">h:m:s</option>
+                                            <option value="custom">Custom time format</option>
+                                        </optgroup>
+                                    </select></div>
+                                <p class="subtitle is-size-7 has-text-info">Output format of random times</p>
+                            </div>
+                        </div>
+                        <h1 class="title is-6 has-text-white">Clock Ranges</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input class="input is-small" id="start" name="option-group" placeholder="Start time" required="" type="text" value="00:00:00">
+                                <div>
+                                    <p class="subtitle is-7 has-text-info">start time</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <input class="input is-small" id="end" name="option-group" placeholder="Start time" required="" type="text" value="23:59:59">
+                                <div>
+                                    <p class="subtitle is-7 has-text-info">end time</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button is-rounded" onclick="timeFun()">generate</button>
+                                    <button class="button is-rounded">future Button</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        <!-- blanck space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

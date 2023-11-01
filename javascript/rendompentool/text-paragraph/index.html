@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="text.js"></script>
+    <title>Text-paragraphs-shuffler-options</title>
+</head>
+
+<body>
+    <div class="container is-fluid">
+
+        <article class="message">
+            <div class="message-header">
+                <p>Text paragraphs shuffler options</p>
+            </div>
+            <div class="message-body has-background-dark">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">paragraphs</span>
+                                    <textarea name="" class="textarea" id="inputteaxtarea" cols="30" rows="15">I see trees of green, red roses too
+I see them bloom for me and you
+And I think to myself what a wonderful world
+
+I see skies of blue and clouds of white
+The bright blessed day, the dark sacred night
+And I think to myself what a wonderful world
+                                    
+The colors of the rainbow, so pretty in the sky
+Also on the faces of people going by
+I see friends shaking hands, saying how do you do
+They're only saying I love you
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">shuffled paragraphs</span>
+                                    <textarea name="" class="textarea" id="answer" cols="30" rows="15"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column  is-half is-offset-one-quarter">
+                                <div class="buttons ml-6 ">
+                                    <button class="button is-link is-outlined has-text-white"
+                                        onclick="textParagraphBtnFun()">Reshuffle paragraphs</button>
+                                    <button class="button is-link is-outlined has-text-white">furure button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="columns">
+                            <div class="column has-background-white">
+                                <label class="label has-text-info">Text paragraphs shuffler options</label>
+                            </div>
+                        </div>
+                        <span class="label has-text-white">Paragraph Grouping</span>
+                        <div class="columns">
+                            <div class="column is-8">
+                                <div>
+                                    <input type="text" class="input" name="" id="shuffle-group-size" value="1">
+                                    <span class="subtitle is-7 has-text-info">Merge several paragraphs in<br>buckets and
+                                        rearrange them<br>together.</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <span class="label has-text-white">Space Clearing</span>
+                        <div class="columns">
+                            <div class="column">
+                                <div>
+                                    <label class="checkbox has-text-white is-size-4">
+                                        <input type="checkbox" id="trim-lines">
+                                        Trim Data
+                                    </label>
+                                </div>
+                                <div>
+                                    <span class="subtitle has-text-info is-size-6">Delete trailing and leading<br>whitespace
+                                        in each line.</span>
+                                </div>
+                                <div>
+                                    <span class="subtitle has-text-white is-6"> 	
+                                       ? Line trimming happens before<br>text is split into paragraphs. All<br>empty lines with just whitespace<br>will create new paragraphs!</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <span class="label has-text-white">Сopy Removing</span>
+                        <div class="columns">
+                            <div class="column">
+                                <label class="checkbox has-text-white is-size-4">
+                                    <input type="checkbox" id="skip-duplicates">
+                                    Get Unique Paragraphs
+                                  </label>
+                                  <div>
+                                    <span class="subtitle has-text-info is-6">Delete paragraphs that are<br>copies of other paragraphs.</span>
+                                  </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+
+</html>

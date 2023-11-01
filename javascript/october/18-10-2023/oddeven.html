@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddevenfunction</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="drawPattern()">click</button>
+        <p id="answer"></p>
+    </div>
+    <script>
+        var str = "";
+        function drawPattern() {
+            let counter = 1
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= i; j++) {
+                    if (counter % 2 != 0) {
+                        // odd(counter)
+                        odd()
+                    } else {
+                        str = str + even(counter)
+
+                    }
+                    counter++;
+
+                }
+                str = str + "<br>";
+            }
+            document.getElementById("answer").innerHTML = str;
+        }
+        let val = 1;
+        function odd(valOdd) {
+            val = val + 5
+            // alert("Odd")
+            if (valOdd % 2 != 0) {
+
+                str = str + val
+                document.getElementById("answer").innerHTML = str;
+
+            }
+        }
+
+
+        function even(valEven) {
+            // alert("Even")
+            if (valEven % 2 == 0) {
+                return valEven;
+            }
+        }
+    </script>
+</body>
+
+</html>

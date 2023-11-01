@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>own-name</title>
+</head>
+
+<body>
+    <input type="text" name="" id="username">
+    <button onclick="ownName()">click</button>
+    <p id="answer"></p>
+</body>
+<script>
+    function ownName() {
+        let name = document.getElementById("username").value;
+        document.getElementById("answer").innerHTML = "&nbsp;"+name;
+    }
+</script>
+
+</html>

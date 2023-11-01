@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="5">
+        <button onclick="primeFun()">click</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function isPrime(n) {
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    // console.log(isPrime(5));
+
+    function getMeNextPrime(n) {
+
+        for (let i = n + 1; ; i++) {
+            if (isPrime(i) == true) {
+                // console.log(i);
+                return i;
+                break;
+            }
+        }
+    }
+
+    function getMePrePrime(n) {
+
+        for (let i = n - 1; ; i--) {
+            if (isPrime(i) == true) {
+                // console.log(i);
+                return i;
+                break;
+            }
+        }
+    }
+
+    function getMeNthPrime(n){
+
+        let counter = 0;
+        for(let i =2; ; i++)
+        {
+            if(isPrime(i) == true)
+            {
+                counter++;
+            }
+            if(counter == n)
+            {
+                console.log(i);
+                break;
+            }
+        }
+    }
+    console.log(getMeNthPrime(5));
+
+    function patternPrime() {
+        let str = ""
+        let n = 10;
+        let ans = 260;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                ans = getMePrePrime(ans);
+                str = str + ans + " ";
+            }
+            str = str + "<br>";
+        }
+        document.getElementById("answer").innerHTML = str;
+    }
+    patternPrime();
+</script>
+
+</html>

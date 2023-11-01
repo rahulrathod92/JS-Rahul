@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label for="">principal</label>
+  <input type="text" name="" id="fdamount" value="1000">
+  <label for="">time</label>
+  <input type="text" name="" id="fdPeriod" value="5">
+  <label for="">rate</label>
+  <input type="text" name="" id="interestRate" value="10">
+  <button onclick="fdQuarterly()">Quarterly</button>
+</body>
+<p id="answer"></p>
+<script>
+  function fdQuarterly() {
+    let principal = parseInt(document.getElementById("fdamount").value);
+    let time = parseInt(document.getElementById("fdPeriod").value);
+     
+    let interestRate = parseInt(document.getElementById("interestRate").value);
+    let quarterlyN =  4;
+    let string = "<table class='table is-bordered'><th>Year</th><th>Opening Balance (₹)</th><th>Interest Earned (₹)</th><th>Closing Balance (₹)</th><tr>";
+    // console.log(fdamount,fdPeriod,interestRate)
+    let showamount = 0;
+    let amount = 0;;
+    interestRate = interestRate / 100;
+
+    for (i = 1; i <= time; i++) {
+      showamount = principal;
+      amount = Math.floor(principal * Math.pow(1 + interestRate / quarterlyN, quarterlyN * time));
+      principal = principal + amount;
+      console.log("principle",principal)
+
+      string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + amount + "%" + "</td>" + "<td>" + principal + "</td>" + "</tr>";
+    }
+    string = string + "</tr></table>";
+    document.getElementById("answer").innerHTML = string;
+
+  }
+
+
+
+
+  // r = r / 100;
+  // const A = P * Math.pow(1 + r / n, n * t);
+</script>
+
+</html>

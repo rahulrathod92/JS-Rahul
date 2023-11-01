@@ -6,35 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="/rendompentool/BigNumber.js"></script>
-    <script src="binaries.js"></script>
-
-    <title>random|binaries</title>
+    <script src="guid.js"></script>
+    <title>random|guid</title>
 </head>
 
 <body>
     <div class="container is-fluid mt-5">
         <article class="message is-dark">
             <div class="message-header">
-                <p>random binaries</p>
+                <p>random guid generate</p>
             </div>
             <div class="message-body has-background-black">
                 <div class="columns">
                     <div class="column is-4">
-                        <h1 class="title is-size-5 has-text-white">Binary Options</h1>
+                        <h1 class="title is-size-5 has-text-white">GUID Options</h1>
                         <div class="columns">
                             <div class="column is-6">
-                                <input type="text" class="input is-small" id="length" value="16">
-                                <p class="subtitle is-size-6 has-text-info">The length of binary numbers</p>
+                                <input type="text" class="input is-small" id="count" value="15" oninput="guidFun()">
+                                <p class="subtitle is-size-6 has-text-info">How many GUIDs to generate?</p>
                             </div>
-                            <div class="column is-6">
-                                <input type="text" class="input is-small" id="count" value="10">
-                                <p class="subtitle is-size-6 has-text-info">How many binary numbers to generate?</p>
-                            </div>
+                           
                         </div>
                         <div class="columns">
                             <div class="column">
                                 <div class="buttons">
-                                    <button class="button is-rounded" onclick="binariesFun()">generate</button>
+                                    <button class="button is-rounded" onclick="guidFun()">generate</button>
                                     <button class="button is-rounded">future Button</button>
                                 </div>
 

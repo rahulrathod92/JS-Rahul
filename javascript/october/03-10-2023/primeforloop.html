@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime|forloop</title>
+</head>
+
+<body>
+    <input type="text" value="5" id="uservalue">
+    <button onclick="isPrime()">check</button>
+    <p id="answer"></p>
+</body>
+<script>
+    function isPrime() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let isPrime = true;
+        let string = "";
+        if (num === 1) {
+            string = string + "1 is neigther prime nor composite";
+        } else if (num > 1) {
+            for (i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                string = string + num+" = "+ "is a prime number";
+            } else {
+                string = string +num+" = "+ "not a prime number"; 
+            }
+        }
+        document.getElementById("answer").innerHTML = string;
+
+    }
+</script>
+
+</html>

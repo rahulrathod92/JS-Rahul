@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="digitpair.js"></script>
+    <title>random|digit|pair|generator</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random digit pair generator</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea" id="answer" cols="50" rows="15"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <h1 class="title is-size-5 has-text-white">Count and Separator</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input is-small" id="count" value="10">
+                                    <span class="subtitle is-7 has-text-info">Print this many digit pairs.</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mt-3" id="allow-repetitions" value="" checked>
+                                    <span class="title is-6 has-text-white">Allow Repeated Pairs</span><br>
+                                    <span class="subtitle is-7 has-text-info">The same digit pair can be<br>picked two
+                                        or more times.</span>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="separator" value=",">
+                                <span class="subtitle is-7 has-text-info">Put this character between digit<br>pairs. (\n
+                                    means a new line.)</span>
+                            </div>
+                        </div>
+                        <h1 class="title is-6 has-text-white">First Digit Filter</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="first-digit-options" value="2,3"
+                                    name="option-group" >
+                                <span class="subtitle is-7 has-text-info">Don't allow these (comma-<br>separated) digits to
+                                    appear<br>in the first position of<br>the pair.</span>
+                            </div>
+                        </div>
+                        <h1 class="title is-6 has-text-white">Second Digit Filter</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="second-digit-options" value="1">
+                                <span class="subtitle is-7 has-text-info">Don't allow these (comma-<br>separated) digits to appear<br>in the second position of<br>the pair.</span>
+                            </div>
+                           
+                        </div>
+                       
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button is-rounded" onclick="digitPairFun()">generate</button>
+                                    <button class="button is-rounded">future Button</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        <!-- blanck space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

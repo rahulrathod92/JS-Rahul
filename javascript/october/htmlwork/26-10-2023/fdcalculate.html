@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>fd_calculator</title>
+</head>
+
+<body>
+    <div class="container box  mt-5">
+        <h1 class="title is-3">Fixed Deposit Calculator</h1>
+        <div class="columns">
+            <div class="column is-8">
+                <div class="columns">
+                    <div class="column is-6">
+                        <div>
+                            <span>FD Amount (Rs.)</span>
+                            <input type="text" class="input" name="" id="fdamount" value="1000">
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <h1>FD Period</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="fdPeriod" value="5">
+                                </div>
+                            </div>
+                            <div class="column is-6">
+
+                                <div class="select">
+                                    <select id="myselected" onchange="fdGenerateFun()">
+                                        <option value="year">years</option>
+                                        <option value="month">month</option>
+                                        <option value="day">day</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-4">
+                        <h1>Interest (%)</h1>
+                        <div>
+                            <input type="text" class="input" name="" id="interestRate" value="10">
+                        </div>
+                    </div>
+                    <div class="column is-8">
+                        <h1>Compounding Frequency</h1>
+                        <div class="select is-fullwidth">
+                            <select class="">
+                                <option>Monthly</option>
+                                <option>Quarterly</option>
+                                <option value="">Half Yearly</option>
+                                <option selected value="">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div>
+                            <button class="button is-fullwidth is-medium is-dark"
+                                onclick="fdGenerateFun()">Calculator</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="answer">
+
+                </div>
+            </div>
+
+            <div class="column is-4">
+                <!-- blank space -->
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function fdGenerateFun() {
+        let myselected = document.getElementById("myselected").value;
+        if (myselected === 'year') {
+            fdYear();
+        } else if (myselected === 'month') {
+            fdMonth();
+        } else if (myselected === 'day') {
+            fdDay();
+        }
+    }
+
+
+    function fdYear() {
+        let fdamount = parseInt(document.getElementById("fdamount").value);
+        let fdPeriod = parseInt(document.getElementById("fdPeriod").value);
+        let interestRate = parseInt(document.getElementById("interestRate").value);
+        let string = "<table class='table is-bordered'><th>Year</th><th>Opening Balance (₹)</th><th>Interest Earned (₹)</th><th>Closing Balance (₹)</th><tr>";
+        // console.log(fdamount,fdPeriod,interestRate)
+        let showamount = 0;
+        let totalinterest;
+        for (i = 1; i <= fdPeriod; i++) {
+            showamount = fdamount;
+            totalinterest = Math.floor((fdamount * interestRate) / 100);
+            fdamount = fdamount + totalinterest;
+            // console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+
+            string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + totalinterest +"%"+ "</td>" + "<td>" + fdamount + "</td>" + "</tr>";
+        }
+        string = string + "</tr></table>";
+        document.getElementById("answer").innerHTML = string;
+
+    }
+
+
+    function fdMonth() {
+        let fdamount = parseInt(document.getElementById("fdamount").value);
+        let fdPeriod = parseInt(document.getElementById("fdPeriod").value);
+        let interestRate = parseInt(document.getElementById("interestRate").value);
+        let string = "<table class='table is-bordered'><th>Year</th><th>Opening Balance (₹)</th><th>Interest Earned (₹)</th><th>Closing Balance (₹)</th><tr>";
+        // console.log(fdamount,fdPeriod,interestRate)
+        let showamount = 0;
+        let totalinterest;
+        for (i = 1; i <= fdPeriod / 12; i++) {
+            showamount = fdamount;
+            totalinterest = Math.floor((fdamount * interestRate) / 100);
+            fdamount = fdamount + totalinterest;
+            // console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+
+            string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + totalinterest + "</td>" + "<td>" + fdamount + "</td>" + "</tr>";
+        }
+        string = string + "</tr></table>";
+        document.getElementById("answer").innerHTML = string;
+
+    }
+    function fdDay() {
+        let fdamount = parseInt(document.getElementById("fdamount").value);
+        let fdPeriod = parseInt(document.getElementById("fdPeriod").value);
+        let interestRate = parseInt(document.getElementById("interestRate").value);
+        let string = "<table class='table is-bordered'><th>Year</th><th>Opening Balance (₹)</th><th>Interest Earned (₹)</th><th>Closing Balance (₹)</th><tr>";
+        // console.log(fdamount,fdPeriod,interestRate)
+        let showamount = 0;
+        let totalinterest;
+        for (i = 1; i <= fdPeriod / 365; i++) {
+            showamount = fdamount;
+            totalinterest = Math.floor((fdamount * interestRate) / 100);
+            fdamount = fdamount + totalinterest;
+            // console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+
+            string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + totalinterest + "</td>" + "<td>" + fdamount + "</td>" + "</tr>";
+        }
+        string = string + "</tr></table>";
+        document.getElementById("answer").innerHTML = string;
+
+    }
+
+
+
+
+
+</script>
+
+</html>

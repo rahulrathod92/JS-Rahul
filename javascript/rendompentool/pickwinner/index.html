@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="pickwinner.js"></script>
+    <title>shuffle-words</title>
+</head>
+
+<body>
+    <div class="container is-fluid">
+
+        <article class="message">
+            <div class="message-header">
+                <p>word shuffler</p>
+            </div>
+            <div class="message-body has-background-dark">
+                <div class="columns">
+                    <div class="column is-8">
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">participants</span>
+                                   <textarea name="" class="textarea" id="inputteaxtarea" cols="30" rows="15">@India_001
+@Australia_02
+@Newzealand_03
+@WestIndies_04
+@Netherlands_05
+@Afghanistan_06
+@Pakistan_07
+@England_08
+@Bangladesh_09
+@SouthAfrica_10
+@Srilanka_11
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <span class="label has-text-white">winners</span>
+                                    <textarea name="" class="textarea" id="answer" cols="30" rows="15"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column  is-half is-offset-one-quarter">
+                                <div class="buttons ml-6 ">
+                                    <button class="button is-link is-outlined has-text-white" onclick="pickWinnerBtnFun()">Pick a Winner</button>
+                                    <button class="button is-link is-outlined has-text-white">furure button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="columns">
+                            <div class="column has-background-white">
+                                <label class="label has-text-info">Random winner picker options</label>
+                            </div>
+                        </div>
+                        <span class="label has-text-white">Pick Amount</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="count" value="1">
+                                    <span class="subtitle is-7 has-text-info ">Enter how many winners to pick<br>from all the given participants.</span>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="with-repetitions">
+                                       <span class="has-text-white">Allow the same participants to be</span>
+                                      </label>
+                                      <span class="subtitle is-7 has-text-info">Allow the same participants to be<br>selected more than one time.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="label has-text-white">Participant Separator</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input" name="" id="input-separator" value="\n">
+                                    <span class="subtitle is-7 has-text-info">Enter the symbol that separates<br>all the list of participants.</span>
+                                   
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <span class="label has-text-white">Winner Separator</span>
+                        <div class="columns">
+                            <div class="column is-6">
+                                    <input type="text" class="input" id="output-separator" value="\n"> 
+                                    <span class="has-text-info subtitle is-7">Enter the symbol that separates<br>all the picked winners.</span>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply|two|Floating-Point|Numbers</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="3.4" id="NumbersA">
+        <input type="text" value="5.7" id="NumbersB">
+    </div>
+    <div>
+
+        <button onclick="multiplyFun()">click</button>
+    </div>
+</body>
+<script>
+    function multiplyFun(){
+        let NumbersA = parseFloat(document.getElementById("NumbersA").value);
+        let NumbersB = parseFloat(document.getElementById("NumbersB").value);
+        let total=0;
+        total = NumbersA*NumbersB;
+        console.log(NumbersA,NumbersB,total)
+    }
+</script>
+</html>

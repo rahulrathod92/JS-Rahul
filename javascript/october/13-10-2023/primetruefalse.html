@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime|true|false</title>
+</head>
+
+<body>
+    <div>
+
+        <input type="text" value="5" id="uservalue">
+        <button onclick="isThisNumberPrime()">click</button>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function isThisNumberPrime() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let answer = isPrime(num)
+        console.log(answer)
+        document.getElementById("answer").innerHTML = answer;
+    }
+    function isPrime(n) {
+        let isPrime = true;
+        let string = "";
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            string = string + "true";
+        } else {
+            string = string + "false";
+        }
+        return string;
+    }
+</script>
+
+</html>
+
+
+
+<!-- function isPrime(num) {
+    if (num <= 1) {
+      return false;
+    }
+    if (num <= 3) {
+      return true;
+    }
+    if (num % 2 === 0 || num % 3 === 0) {
+      return false;
+    }
+    for (let i = 5; i * i <= num; i += 6) {
+      if (num % i === 0 || num % (i + 2) === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+   -->

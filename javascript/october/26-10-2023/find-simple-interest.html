@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Simple Interest</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="uservalue" value="100">
+        <input type="text" name="" id="interestValue" value="10">
+    </div>
+    <div>
+        <button onclick="simpleInterestFun()">click</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function simpleInterestFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let interestvalue = parseInt(document.getElementById("interestValue").value);
+        let total = num * interestvalue /100;
+        console.log(total)
+        document.getElementById("answer").innerHTML = "Ans"+":-> "+total;
+        
+    }
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get-me-the-n-the-prime-number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="5" id="uservalue">
+        <button onclick="nNumberPrime()">click</button>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function nNumberPrime() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let answer = isPrime(num);
+        document.getElementById("answer").innerHTML = answer;
+    }
+        
+    function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  if (num <= 3) {
+    return true;
+  }
+  if (num % 2 === 0 || num % 3 === 0) {
+    return false;
+  }
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function findNthPrime(n) {
+  if (n === 1) {
+    return 2;
+  }
+
+  let count = 1;
+  let num = 3;
+
+  while (count < n) {
+    if (isPrime(num)) {
+      count++;
+    }
+    if (count < n) {
+      num += 2; // Check only odd numbers
+    }
+  }
+
+  return num;
+}
+
+const n = 5; // Change this to find a different n-th prime
+const nthPrime = findNthPrime(n);
+console.log(`The ${n}-th prime number is ${nthPrime}`);
+
+</script>
+
+</html>

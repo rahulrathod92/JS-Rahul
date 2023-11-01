@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fristprime|secoundfebonacci</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="uservalue" value="10">
+    </div>
+    <div>
+        <button onclick="primeFeboFun()">click</button>
+    </div>
+    <p id="answer"></p>
+    <p id="answerfibo"></p>
+</body>
+<script>
+    function primeFeboFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let ansprime = isPrime(num);
+        console.log(ansprime)
+        document.getElementById("answer").innerHTML = ansprime;
+
+        let feboNumber = feboFun(num)
+        document.getElementById("answerfibo").innerHTML = feboNumber;
+
+        let printserise = oddEven(ansprime, feboNumber)
+    }
+    function isPrime(numA) {
+        let string = "";
+        for (i = 2; i <= numA; i++) {
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    break;
+                }
+            }
+            if (i == j) {
+                string = string + i + ",";
+            }
+        }
+        return string;
+    }
+
+    function feboFun(numB) {
+        let stringfebo = "";
+        let febonumA = 0;
+        let febonumB = 1;
+        let febototal;
+        for (i = 1; i <= numB; i++) {
+           
+                febototal = febonumA + febonumB;
+                febonumA = febonumB;
+                febonumB = febototal;
+                console.log(i, febototal)
+                stringfebo = stringfebo + febototal + ",";
+            
+        }
+        return stringfebo;
+    }
+
+
+</script>
+
+</html>

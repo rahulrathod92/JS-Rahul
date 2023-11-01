@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="fdamount">
+    <input type="text" name="" id="fdPeriod">
+    <input type="text" name="" id="interestRate" value="10.3">
+    <input type="text" name="" id="">
+</body>
+<script>
+     function fdYear() {
+        let fdamount = parseInt(document.getElementById("fdamount").value);
+        let fdPeriod = parseInt(document.getElementById("fdPeriod").value);
+        let interestRate = parseInt(document.getElementById("interestRate").value);
+        let string = "<table class='table is-bordered'><th>Year</th><th>Opening Balance (₹)</th><th>Interest Earned (₹)</th><th>Closing Balance (₹)</th><tr>";
+        // console.log(fdamount,fdPeriod,interestRate)
+        let showamount = 0;
+        let totalinterest;
+        for (i = 1; i <= fdPeriod; i++) {
+            showamount = fdamount;
+            totalinterest = Math.floor((fdamount * interestRate) / 100);
+            fdamount = fdamount + totalinterest;
+            // console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+
+            string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + totalinterest + "</td>" + "<td>" + fdamount + "</td>" + "</tr>";
+        }
+        string = string + "</tr></table>";
+        document.getElementById("answer").innerHTML = string;
+
+    }
+
+
+    function compoundInterest(P, r, n, t) {
+  // Convert the annual interest rate to a decimal
+  r = r / 100;
+
+  // Calculate the future value
+  const A = P * Math.pow(1 + r / n , n * t);
+ 
+
+  return A;
+}
+
+// Example usage:
+const principal = 1000; // Initial amount
+const rate = 10; // 5% annual interest rate
+const compoundingFrequency = 4; // Quarterly compounding
+const years = 5;
+
+const futureValue = compoundInterest(principal, rate, compoundingFrequency, years);
+console.log('Future Value:', Math.floor(futureValue) );
+
+
+
+
+	// let principal = 1000, rate = 10,
+	// 	time = 5;
+
+	// /* Calculate compound interest */
+	// let A = principal *
+	// 	(Math.pow((1 + rate / 100), time));
+	// let CI = A - principal;
+
+	// console.log("Compound interest is " + CI);
+
+
+</script>
+</html>

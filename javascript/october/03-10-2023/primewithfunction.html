@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime|function</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <button onclick="primeFun()">primeFun</button>
+    <p id="answer"></p>
+</body>
+<script>
+    function primeFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let answer = isPrime(num);
+        document.getElementById("answer").innerHTML= answer;
+    }
+    function isPrime(num) {
+        let isPrime = true;
+        let string = "";
+        if (num === 1) {
+            string = string + "1 is neigther prime nor composite";
+        } else if (num > 1) {
+            for (i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                string = string + "is prime number";
+            } else {
+                string = string + "is not prime";
+            }
+        }
+        return string;
+    }
+</script>
+
+</html>

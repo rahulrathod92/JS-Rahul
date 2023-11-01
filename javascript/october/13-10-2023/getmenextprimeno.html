@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get-me-next-prime-number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="2" id="uservalue">
+    </div>
+    <div>
+        <button onclick="getMenextPrime()">click</button>
+    </div>
+    <p id="answer"></p>
+    <p id="answerA"> </p>
+</body>
+<script>
+    function getMenextPrime() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let answer = nextPrimeNum(num);
+        document.getElementById("answer").innerHTML = answer;
+    }
+    function nextPrimeNum(num) {
+        let string = "";
+        for (i = num + 1; ; i++) {
+            let isPrime = true;
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                string = string + "next prime number" + "&nbsp;" + "=" + "&nbsp;" + i;
+                return string;
+            }
+        }
+    }
+
+
+</script>
+
+</html>

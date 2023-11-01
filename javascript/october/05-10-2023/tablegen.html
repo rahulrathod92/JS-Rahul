@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>tablegen</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="10" id="uservalue">
+    </div>
+    <div>
+        <button onclick="tablegen()">click</button>
+    </div><br>
+    <div>
+        <button onclick="rightBtn()">right</button>
+        <button>left</button>
+        <button>up</button>
+        <button>down</button>
+    </div><br>
+    <p id="answer"></p>
+</body>
+<script>
+    function tablegen() {
+        let tablevalue = parseInt(document.getElementById("uservalue").value);
+        let string = "<table class='table is-bordered'><tr>";
+        for (i = 1; i <= tablevalue; i++) {
+            for (j = 1; j <= tablevalue; j++) {
+                if (i == 1 && j == 1) {
+
+                    string = string + "<td>" + "*" + "</td>";
+                } else {
+                    string = string + "<td>" + " " + "</td>";
+                }
+            }
+            string = string + "</tr>";
+        }
+        string = string + "</table>";
+        document.getElementById("answer").innerHTML = string;
+    }
+    function rightBtn() {
+        
+    }
+</script>
+
+</html>

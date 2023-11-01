@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ascii value</title>
+</head>
+<body>
+    <div>
+        <input type="text" value="a" id="uservalue">
+    </div>
+    <div>
+        <button onclick="asciiFun()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function asciiFun(){
+        let text = document.getElementById("uservalue").value;
+         let char = text.charCodeAt(0)
+         console.log(char)
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add-two-number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="first-number">
+        <input type="text" name="" id="secound-number">
+    </div>
+    <div>
+        <button onclick="addTwonumber()">add-two-number</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function addTwonumber() {
+        let firstnumber = parseInt(document.getElementById("first-number").value);
+        let secoundnumber = parseInt(document.getElementById("secound-number").value);
+        let total = 0;
+        total = firstnumber + secoundnumber;
+        document.getElementById("answer").innerHTML = total;
+
+    }
+</script>
+
+</html>

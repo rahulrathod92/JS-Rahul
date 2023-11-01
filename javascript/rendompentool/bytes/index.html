@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="byt.js"></script>
+    <title>random|bytes|generator</title>
+</head>
+
+<body>
+    <div class="main">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>Random bytes</p>
+            </div>
+            <div class="message-body has-background-dark">
+                <div class="columns">
+                    <div class="column is-7">
+                        <div class="">
+                            <textarea class="textarea" id="answer" cols="70" rows="15"></textarea>
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <h1 class="title has-text-white is-5">Bytes Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input is-small" name="" id="count" value="512" oninput="bytFun()">
+                                    <span class="subtitle is-7 has-text-info">How many bytes to generate?</span>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="select is-small" title="">
+                                    <div class="select-wrapper">
+                                    <select class="input"  id="format" name="option-group" required="">
+                                    <optgroup label="Byte Output Format">
+                                    <option selected="" value="hex">Hexadecimal</option>
+                                    <option value="bin">Binary</option>
+                                    <option value="oct">Octal</option>
+                                    <option value="dec">Decimal</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <span class="subtitle is-7 has-text-info">Output format of random bytes</span></div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <button class="button" onclick="bytFun()">Generate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        3
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

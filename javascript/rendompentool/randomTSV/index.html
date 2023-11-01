@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<script src="tsv.js"></script>
+    <title>random|tsv|generator</title>
+</head>
+
+<body>
+    <div class="container is-fluid mt-5">
+        <article class="message is-dark">
+            <div class="message-header">
+                <p>random tsv generator</p>
+            </div>
+            <div class="message-body has-background-black">
+                <div class="columns">
+
+                    <div class="column is-6">
+                        <div class="columns">
+                            <div class="column">
+                                <textarea class="textarea" id="answer" cols="50" rows="15"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <h1 class="title is-size-5 has-text-white">TSV Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div>
+                                    <input type="text" class="input is-small" id="cols" value="6">
+                                    <p class="subtitle is-size-6 has-text-info">How many columns to generate?</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mt-3" id="quote" value="">
+                                    <span class="title is-6 has-text-white">Quote TSV fields</span><br>
+                                    <p class="subtitle is-size-7 has-text-info ml-3"> Quote TSV fields</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="rows" value="6">
+                                <p class="subtitle is-size-6 has-text-info">How many rows to generate?</p>
+                            </div>
+                        </div>
+                        <h1 class="title is-6 has-text-white">Generator Options</h1>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="radio" class="" id="" value="english-strings" name="option-group" checked>
+                                <span class="title is-6 has-text-white">Use random English words</span>
+                                <div>
+                                    <p class="subtitle is-7 has-text-info">Use random English words for TSV fields</p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <input type="radio" class="" id="" value="random-strings" name="option-group">
+                                <span class="title is-7 has-text-white">Use random English words</span>
+                                <div>
+                                    <p class="subtitle is-7 has-text-info">Generate random strings for TSV fields</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <input type="text" class="input is-small" id="max-string-length" value="10">
+                                <span class="subtitle is-7 has-text-info">Maximum random string length?<br>(Only works
+                                    with random strings)</span>
+                            </div>
+                            <div class="column is-6">
+                                <div>
+                                    <textarea class="textarea" id="string-alphabet"placeholder="String character set" required=""
+                                        style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 166px;"> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</textarea>
+                                </div>
+                                <div>
+                                    <span class="subtitle is-7 has-text-info">Character set to use with random
+                                        strings</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button is-rounded" onclick="tsvFun()">generate</button>
+                                    <button class="button is-rounded">future Button</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        <!-- blanck space -->
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

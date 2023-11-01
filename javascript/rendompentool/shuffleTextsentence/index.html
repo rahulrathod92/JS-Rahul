@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="lbry.js"></script>
+    <script src="shuffle.js"></script>
+    <title>shuffle|text-sentence</title>
+</head>
+
+<body>
+    <article class="message is-dark">
+        <div class="message-header">
+            <p>Generate Random shuffle text Sentence</p>
+        </div>
+        <div class="message-body has-background-black">
+            <div class="columns">
+                <div class="column is-5">
+                    <div class="columns">
+                        <div class="column">
+                            <label class="label"><span class="title is-5 has-text-white">sentences</span>
+                            </label>
+
+                            <div>
+                                <textarea class="textarea"  id="inputTextarea" cols="10" rows="13">The world awakens in the morning light. Birds chirp and sing. The sun starts to rise. Dew drops glitter on the grass. Flowers open their petals
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-5">
+                    <div class="columns">
+                        <div class="column">
+                            <label class="label"><span class="title is-5 has-text-white">shuffled sentences</span>
+                            </label>
+                            <div>
+                                <textarea class="textarea" id="outputTextarea" cols="10" rows="13"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <!-- blank space -->
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-5">
+                    <div class="columns">
+                        <div class="column is-6">
+                            <label class="label">
+                                <span class="title is-6 has-text-white">Groups of Sentences</span>
+                            </label>
+                            <div>
+                                <input type="text" class="input is-small" name="" id="shuffle-group-size" value="1">
+                            </div>
+                            <span class="subtitle is-7 has-text-info">Combine sentences into<br>groups of this length,
+                                and<br>shuffle multi-sentence groups.</span>
+                        </div>
+                        <div class="column is-6">
+                            <div>
+                                <input type="checkbox" name="" id="skip-duplicates">
+                                <span class="title is-6 has-text-white"> Remove Sentence Copies</span>
+                            </div>
+                            <span class="subtitle is-7 has-text-info">Get rid of repeated sentence<br>copies in the
+                                shuffled<br>output list.</span>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column">
+                            <label class="label">
+                                <span class="title is-6 has-text-white">Sentence Format</span>
+                            </label>
+                            <div>
+                                <input type="checkbox" name="" id="one-sentence-per-line">
+                                <span class="title is-6 has-text-white">Vertical Sentence Format</span>
+                            </div>
+                            <div>
+                                <span class="subtitle is-7 has-text-info">Output the shuffled<br>sentences as a
+                                    vertical<br>list with
+                                    one sentence<br>per line.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column is-5">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="buttons">
+                                <button class="button" onclick="shffleFun()">Reshuffle sentences</button>
+                                <button class="button">Future button</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <!-- black space -->
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>

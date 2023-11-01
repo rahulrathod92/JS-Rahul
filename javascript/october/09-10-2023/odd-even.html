@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oddEven</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <div>
+        <button onclick="oddEvenFun()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function oddEvenFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let string = "";
+
+        if (num % 2 == 0) {
+            string = string + "even";
+        } else {
+            string = string + "odd";
+        }
+        console.log(string)
+    }
+
+</script>
+
+</html>

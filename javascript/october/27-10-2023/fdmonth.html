@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fd month</title>
+</head>
+
+<body>
+    <h1>FD Month</h1>
+    <div>
+        <input type="text" name="" id="fdamount" placeholder="FD Amount" value="1000">
+        <input type="text" name="" id="fdinterestrate" placeholder="FD interest Rate %" value="10">
+        <input type="text" name="" id="fdtime" placeholder="FD Time month" value="60">
+    </div>
+    <div>
+        <button onclick="fdcalculate()">Calculator</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+
+    </div>
+</body>
+<script>
+
+
+
+    function fdcalculate() {
+        let fdamount = parseInt(document.getElementById("fdamount").value);
+        let fdinterestrate = parseInt(document.getElementById("fdinterestrate").value);
+        let fdtime = parseInt(document.getElementById("fdtime").value);
+        let sum = 0;
+        let new1 = 0;
+        let interest;
+        for (i = 1; i <= fdtime / 12; i++) {
+            new1 = fdamount;
+            interest = Math.floor((fdamount * fdinterestrate) / 100);
+            fdamount = fdamount + interest;
+
+            console.log("new1:->", new1, "interest:->", interest, "fdamount:->", fdamount)
+
+        }
+    }
+</script>
+
+</html>

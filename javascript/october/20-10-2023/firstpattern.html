@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern program</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="star()">star</button>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    let string = "";
+    function star() {
+        let num = 10;
+        for (i = 1; i <= num; i++) {
+            for (k = 1; k <= num - i; k++) {
+                string = string + "&nbsp";
+            }
+            for (j = 1; j <= i; j++) {
+
+                if (i %j != 0) {
+                    oddnum()
+                }
+            }
+            string = string + "<br>";
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+    function oddnum(oddNumStar) {
+
+        if (oddNumStar % 2 != 0) {
+        }
+        return oddNumStar;
+    }
+</script>
+
+</html>
