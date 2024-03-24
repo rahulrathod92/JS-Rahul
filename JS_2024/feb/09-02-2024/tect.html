@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h3>Arrays</h3>
+  </body>
+  <script>
+    let heroes = [
+      "ironman",
+      "thor",
+      "hulk",
+      "shaktiman",
+      "spiderman",
+      "antman",
+      "batman",
+    ];
+    for (let i = 0; i < heroes.length; i++) {
+      console.log(i, heroes[i]);
+    }
+
+    let cities = ["ahmedabad", "pune", "delhi", "mumbai", "rajkot", "surat"];
+    for (let city of cities) {
+      console.log(city.toUpperCase());
+    }
+
+    let mark = [85, 97, 44, 37, 76, 60];
+    let sum = 0;
+    for (let i = 0; i < mark; i++) {
+      sum = sum +mark[i];
+      console.log(sum);
+    }
+  </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal’s-Triangle-Pattern</title>
+</head>
+
+<body>
+    <p id="answer"></p>
+</body>
+<script>
+    starpattern()
+    function starpattern() {
+        let num = 4;
+        let string = "";
+        for (i = 1; i <= num; i++) {
+            for (k = 0; k < num - i; k++) {
+                string = string + "&nbsp;";
+            }
+            let C = 1;
+            for (j = 1; j <= i; j++) {
+                string = string + C;
+                C = C * (i - j) / j;
+            }
+            string = string + "<br>";
+
+        }
+        document.getElementById("answer").innerHTML = string;
+        console.table(string, j)
+    }
+
+</script>
+</html>

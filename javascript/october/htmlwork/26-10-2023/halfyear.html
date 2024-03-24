@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <input type="text" name="" id="fdamount">
-    <input type="text" name="" id="fdPeriod">
-    <input type="text" name="" id="interestRate" value="10.3">
+    <input type="text" name="" id="fdamount" value="1000">
+    <input type="text" name="" id="fdPeriod" value="5">
+    <input type="text" name="" id="interestRate" value="10">
     <input type="text" name="" id="">
+    <button onclick="halfyear()">halfyear</button>
+    <div>
+        <p id="answer"></p>
+    </div>
 </body>
 <script>
-     function fdYear() {
+    function halfyear() {
+
         let fdamount = parseInt(document.getElementById("fdamount").value);
         let fdPeriod = parseInt(document.getElementById("fdPeriod").value);
         let interestRate = parseInt(document.getElementById("interestRate").value);
@@ -20,11 +27,12 @@
         // console.log(fdamount,fdPeriod,interestRate)
         let showamount = 0;
         let totalinterest;
+
         for (i = 1; i <= fdPeriod; i++) {
             showamount = fdamount;
-            totalinterest = Math.floor((fdamount * interestRate) / 100);
-            fdamount = fdamount + totalinterest;
-            // console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+            totalinterest = fdamount,[1 + (interestRate / 2) / 100], fdPeriod
+            console.log("showamount:->", showamount, "totalinterest:->", totalinterest, "fdamount:->", fdamount)
+            // fdamount = fdamount + totalinterest;
 
             string = string + "<tr><td>" + i + "</td>" + "<td>" + showamount + "</td>" + "<td>" + totalinterest + "</td>" + "<td>" + fdamount + "</td>" + "</tr>";
         }
@@ -33,40 +41,32 @@
 
     }
 
-
-    function compoundInterest(P, r, n, t) {
-  // Convert the annual interest rate to a decimal
-  r = r / 100;
+    function calculateFutureValue(P, r, n, t) {
+  // P is the principal amount
+  // r is the annual interest rate (expressed as a decimal)
+  // n is the number of times interest is compounded per year
+  // t is the number of years
 
   // Calculate the future value
-  const A = P * Math.pow(1 + r / n , n * t);
- 
+  const A = P * Math.pow(1 + (r / (n * 2)), 2 * n * t);
 
   return A;
 }
 
-// Example usage:
-const principal = 1000; // Initial amount
-const rate = 10; // 5% annual interest rate
-const compoundingFrequency = 4; // Quarterly compounding
-const years = 5;
+// Example values
+const principalAmount = 1000; // Initial principal amount
+const annualInterestRate = 0.10; // Annual interest rate (5% as a decimal)
+const compoundingFrequency = 2; // Compounded semi-annually
+const years = 5; // Number of years
 
-const futureValue = compoundInterest(principal, rate, compoundingFrequency, years);
-console.log('Future Value:', Math.floor(futureValue) );
+// Calculate the future value
+const futureValue = calculateFutureValue(principalAmount, annualInterestRate, compoundingFrequency, years);
 
+// Display the result
+console.log(`The future value of the FD is: ${futureValue.toFixed(2)}`);
 
-
-
-	// let principal = 1000, rate = 10,
-	// 	time = 5;
-
-	// /* Calculate compound interest */
-	// let A = principal *
-	// 	(Math.pow((1 + rate / 100), time));
-	// let CI = A - principal;
-
-	// console.log("Compound interest is " + CI);
 
 
 </script>
+
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hollowhourglasspattern</title>
+</head>
+
+<body>
+    <p id="answer"></p>
+</body>
+<script>
+    starpattern();
+    function starpattern() {
+        let num = 4;
+        let string = "";
+        for (i = num; i >= 1; --i) {
+            for (k = 1; k <= num - i; k++) {
+                string = string + "&nbsp;";
+            }
+            for (j = 0; j < i; j++) {
+                if (i == num) {
+                    string = string + "*";
+                }
+                else if (j == 0 || j == i - 1) {
+                    string = string + "*";
+                } else {
+                    string = string + "&nbsp;&nbsp;"
+                }
+            }
+            string = string + "<br>";
+
+        }
+        for (i = 2; i <= num; i++) {
+            for (k = 1; k <= num - i; k++) {
+                string = string + "&nbsp;";
+            }
+            for (j = 0; j < i; j++) {
+                if (i == num) {
+                    string = string + "*";
+                }
+                else if (j == 0 || j == i - 1) {
+                    string = string + "*";
+                } else {
+                    string = string + "&nbsp;&nbsp;"
+                }
+            }
+            string = string + "<br>";
+
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+</script>
+
+</html>

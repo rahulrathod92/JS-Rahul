@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hallowsquare</title>
+</head>
+
+<body>
+    <p id="answer"></p>
+</body>
+<script>
+    starpattern()
+    function starpattern() {
+        let num = 5;
+        let string = "";
+
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= num; j++) {
+                if (i == 1 || i == num || j == 1 || j == num) {
+
+                    string = string + "&nbsp;" + "*"
+                } else {
+                    string = string + "&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            string = string + "<br>"
+
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+</script>
+
+</html>

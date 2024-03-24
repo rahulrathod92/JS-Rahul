@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="inputValue">
+    </div>
+    <div>
+        <button onclick="one()">1</button>
+        <button onclick="two()">2</button>
+    </div>
+    <div>
+        <button onclick="plus()">+</button>
+        <button onclick="equalTo()">=</button>
+    </div>
+</body>
+<script>
+    
+    function one() {
+        let inputOne = 1;
+        document.getElementById("inputValue").value = inputOne;
+    }
+    function two() {
+        let inputTwo = 2;
+        document.getElementById("inputValue").value = inputTwo;
+    }
+    function plus() {
+        let plus = "+";
+        document.getElementById("inputValue").value = plus;
+    }
+    function equalTo() {
+        let equal = "=";
+        document.getElementById("inputValue").value = equal;
+    }
+</script>
+
+</html>

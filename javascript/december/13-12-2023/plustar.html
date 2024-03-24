@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plus-star</title>
+</head>
+
+<body>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    starpattern()
+    function starpattern() {
+        let n = 10;
+        let string = "";
+        for (let i = 1; i <= n; i++) {
+            if (i == ((n / 2) + 1)) {
+                for (let j = 1; j <= n; j++) {
+                    string = string + "+";
+                }
+
+            }
+            else {
+                for (let j = 1; j <= n / 2; j++) {
+                    string = string + "&nbsp;&nbsp;";
+                }
+                string = string +"+";
+            }
+            string = string + "<br>";
+        }
+        document.getElementById("answer").innerHTML = string;
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fectorial-pattern</title>
+</head>
+
+<body>
+    <h1>fectorial pattern </h1>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <div>
+        <button onclick="factorialPattern()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    // function fectorialFun() {
+    //     let num = document.getElementById("uservalue").value;
+    //     let total = 1;
+    //     let counter = 1;
+    //     let string = "";
+    //     for (i = 1; i <= num; i++) {
+    //         for (j = 1; j <= i; j++) {
+    //             total = total * counter;
+    //             string = string + "&nbsp" + total;
+    //             counter++;
+    //         }
+    //         string = string + "<br>";
+    //         // console.log(total)
+    //     }
+    //     document.getElementById("answer").innerHTML = string;
+    // }
+
+
+    function factorialPattern(){
+        let num = document.getElementById("uservalue").value;
+        let factNum = 1;
+        let string = "";
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+                string = string +"&nbsp;&nbsp;"+ getMeFactorialNum(factNum)
+                factNum++;
+            }
+            string = string + "<br>";
+            // console.log(total)
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+
+    function getMeFactorialNum(factNum)
+    {
+        let fact = 1;
+        for(let i =1; i<= factNum; i++)
+        {
+            fact = fact * i;
+        }
+
+        return fact;
+    }
+
+
+</script>
+
+</html>

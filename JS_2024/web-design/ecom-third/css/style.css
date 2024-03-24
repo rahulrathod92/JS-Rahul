@@ -1,0 +1,273 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+body {
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
+}
+section {
+    padding: 100px 0px;
+}
+@media (max-width: 1600px) {
+    section {
+        padding: 80px 0px;
+    }
+}
+/* typography */
+h1 {
+    font-size: 77px;
+    line-height: 87px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 700;
+}
+h2 {
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+h4 {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    color: #1137e0;
+}
+p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    color: #1f1f1fe7;
+}
+@media (max-width:992px) {
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+      
+    }  
+    h3 {
+        font-size: 25px;
+        line-height: 35px;
+       
+    } 
+    
+}
+/* end typography */
+/* header */
+header {
+    padding: 0px 100px;
+    background-color: #dbf4fe;
+}
+.navbar {
+    padding: 0px;
+}
+.navbar .nav-link {
+    padding: 15px 30px !important;
+    color: #333;
+    font-size: 15px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    height: auto;
+}
+@media (max-width: 767px) {
+    header {
+        padding: 0px 10px;
+    }
+}
+/* end Header */
+/* Banner */
+.theme-bg {
+    background-color: #dbf4fe;
+}
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner-text h1 {
+    font-size: 4.1vw;
+    line-height: calc(4.1vw + 10px);
+   
+}
+@media(max-width:767px){
+    .banner-text{
+        text-align: center;
+    }
+    .banner-text h1 {
+        margin: 0 auto 10px;
+        font-size: 25px;
+        line-height: 33px;
+    }
+}
+/* end Banner */
+
+/* modules-part-1 */
+.title-txt {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.title-txt p {
+    color: #3b8df3;
+    margin-bottom: 30px;
+}
+.box-module {
+    border: solid 1px #dbf4fe;
+    padding: 15px;
+    text-align: center;
+    min-height: 358px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-module h3 {
+    margin: 30px 0px;
+}
+.box-module i {
+    font-size: 45px;
+    color: #3b8df3;
+}
+.cta-module,
+.cta-module i {
+    font-size: 15px;
+    color: #1f1f1fe7;
+    text-decoration: none;
+}
+.cta-module {
+    margin-top: 35px;
+}
+.cta-module:hover {
+    text-decoration: none;
+    color: #1f1f1fe7;
+}
+/*end  modules-part-1  */
+/* about us */
+.about-bg {
+    background: #f4fcff;
+}
+/* end about us*/
+/* Testimonials-card */
+.Testimonials-card {
+    border: solid 2px #dbf4fe;
+    padding: 20px;
+    position: relative;
+}
+.quote-icon-left,
+.quote-icon-right {
+    position: absolute;
+    font-size: 45px;
+    color: #dbf4fe;
+}
+.quote-icon-left {
+    left: 20px;
+    top: 20px;
+}
+.quote-icon-right {
+    right: 20px;
+    bottom: 20px;
+}
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px;
+}
+.testimonial-row {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0px;
+    align-items: center;
+}
+.rating i {
+    color: yellow;
+    margin-bottom: 20px;
+}
+.testimonial-desc p {
+    font-style: italic;
+}
+.signature span {
+    display: block;
+    font-size: 13px;
+}
+.signature span:first-child {
+    font-weight: bold;
+}
+/* end Testimonials-card */
+/* footer */
+footer {
+    background: #2b333e;
+   
+}
+.footer-top {
+    padding: 80px 0px;
+}
+.footer-info {
+    padding: 30px 0px;
+    border: solid 1px #555c65;
+}
+.footer-info p {
+    font-size: 14px;
+    color: #dbf4fe;
+    margin-bottom: 0px;
+}
+footer .footer-heading{
+    font-size: 15px;
+    color: #dbf4fe;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+footer p{
+    color: #abadb0;
+}
+.footer-list{
+    padding: 0px;
+}
+.footer-list li{
+   margin-bottom: 15px;
+    display: block;
+}
+.footer-list li a{
+    color: #abadb0; 
+    text-decoration: none;
+}
+.social-media{
+    padding: 0px;
+}
+.social-media li{
+    display: inline-block;
+    margin-right: 15px;
+}
+.social-media a{
+    font-size: 15px;
+    color: white;
+    border: solid 1px white;
+    border-radius: 50%;
+   width: 40px;
+   line-height: 40px;
+   text-align: center;
+   height: 40px;
+   display: inline-block;
+}
+.social-media a:hover{
+    color: aqua;
+}
+@media(max-width:767px){
+    footer{
+        text-align: center;
+    }
+}
+/* end footer */

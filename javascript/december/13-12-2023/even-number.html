@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even-number</title>
+</head>
+
+<body>
+    <h1>Odd/Even number</h1>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    let num = 100;
+    let string = "";
+    for (i = 0; i <= num; i++) {
+        if (i % 2 == 0) {
+            string=string+"Even-------->"
+            string = string + i;
+            console.log(i)
+        }else{
+            string=string+"Odd------------------>"
+            string = string + i;
+        }
+        string=string+"<br>"
+        document.getElementById("answer").innerHTML = string;
+
+    }
+</script>
+
+</html>

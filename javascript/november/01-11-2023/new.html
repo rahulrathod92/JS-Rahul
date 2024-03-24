@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime pattern</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="number" value="5">
+    </div>
+    <button onclick="printprime()">click</button>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+
+    function printprime() {
+        let number = parseInt(document.getElementById("number").value);
+        let counter = 1;
+        let string = "";
+
+        for (let i = 2; ; i++) {
+            let isprime = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isprime = false;
+                    break;
+                }
+            }
+            if (isprime) {
+                counter++;
+                for (p = 1; p <= i; p++) {
+                    for (q = 1; q < p; q++) {
+                        string = string + i;
+                    }
+                    string = string + "<br>";
+                }
+
+            }
+
+            if (counter == number) {
+
+                break;
+            }
+
+
+
+
+        }
+
+        document.getElementById("answer").innerHTML = string;
+    }
+
+
+</script>
+
+</html>

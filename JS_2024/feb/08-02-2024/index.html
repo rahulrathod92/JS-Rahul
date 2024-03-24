@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+  </head>
+  <body>
+    <div>
+      <p id="answer"></p>
+      <p id="answer1"></p>
+    </div>
+  </body>
+  <script>
+    starPattern();
+    function starPattern() {
+      let num = 10;
+      let right = patternRight(num);
+    }
+    function patternRight(n) {
+      let string = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          string = string + "*";
+        }
+        for (let k = 1; k <= n - i; k++) {
+          string = string + "&nbsp";
+        }
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= n - i; j++) {
+            string = string + "R";
+          }
+        }
+        string = string + "<br>";
+      }
+
+      document.getElementById("answer").innerHTML = string;
+    }
+  </script>
+</html>

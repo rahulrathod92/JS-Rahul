@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sam-to-value</title>
+  </head>
+  <body>
+    <input type="text" value="10" id="firstvalue" />
+    <input type="text" value="50" id="secoundvalue" />
+    <button onclick="sumFun()">sum</button>
+    <p id="ans"></p>
+    <p id="total"></p>
+  </body>
+  <script>
+    function sumFun() {
+      let firstvalue = parseInt(document.getElementById("firstvalue").value);
+      let secoundvalue = parseInt(
+        document.getElementById("secoundvalue").value
+      );
+      let answer = FinalSum(firstvalue, secoundvalue);
+      document.getElementById("ans").innerHTML = answer;
+      console.log(answer);
+    }
+    function FinalSum(firstvalue, secoundvalue) {
+      let string = "";
+      let a = firstvalue;
+      let b = secoundvalue;
+      let total = 0;
+      total = a + b;
+      string = string +"Total"+"&nbsp;&nbsp=&nbsp"+ total;
+      document.getElementById("total").innerHTML = string;
+      if (total == 100) {
+        return true;
+      } else {
+        return false;
+      }
+      
+    }
+  </script>
+</html>

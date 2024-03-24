@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>give-me-next-palindrome</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="uservalue" value="5">
+    </div>
+    <div>
+        <button onclick="nextpalindromeA()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+ 
+    function nextpalindromeA() {
+        let currentNum = document.getElementById("uservalue").value;
+        // let answer = nextPalindrome(currentNum);
+        let string = "";
+        let palindrom = 0;
+        for (let i = 1; i <= currentNum; i++) {
+            for (let j = 1; j <= i; j++) {
+                palindrom = nextPalindrome(palindrom);
+                string = string +"&nbsp;"+ palindrom;
+                
+            }
+            string = string + "<br>";
+
+        }
+        document.getElementById("answer").innerHTML = string;
+        console.log(answer)
+    }
+
+    function nextPalindrome(currentNum) {
+        let nextNum = currentNum + 1;
+        for (let i = nextNum; ; i++) {
+            if (isPalindrome(i) == true) {
+                // nextNum++;
+                return i;
+                
+            }
+        }
+
+    }
+
+    function isPalindrome(n) {
+        let r;
+        let rev = 0;
+        let copy;
+        copy = n;
+        for (; n > 0;) {
+            r = n % 10;
+            rev = rev * 10 + r;
+            // console.log("rev->" + rev);
+            n = parseInt(n / 10);
+        }
+        if (copy == rev) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+</script>
+
+</html>

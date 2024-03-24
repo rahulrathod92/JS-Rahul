@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess-the-number-game</title>
+</head>
+
+<body>
+    <h1>guess the number game 1 to 20</h1>
+    <div>
+        <input type="text" name="" id="uservalue">
+    </div>
+    <div>
+        <button onclick="guessFun()">click</button>
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+    function guessFun() {
+        let gameNum = 7;
+        let string = " ";
+        let usernum = parseInt(document.getElementById("uservalue").value);
+        for (; ;) {
+            if (usernum != gameNum) {
+                usernum = "wrong number ,try again";
+                string = string + usernum;
+                // console.log("wrong number:->", string)
+                document.getElementById("answer").innerHTML = string;
+            } else {
+                string = string + "congratulations you are winner";
+                // console.log("congress:->", string)
+                document.getElementById("answer").innerHTML = string;
+
+            }
+            break;
+
+        }
+    }
+
+
+</script>
+
+</html>

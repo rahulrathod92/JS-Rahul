@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <style>
+        #counter {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <label for="textArea">Enter text:</label>
+    <textarea id="textArea" rows="4" cols="50" oninput="countCharacters()"></textarea>
+    <p id="counter">Characters: 0</p>
+
+    <script>
+        function countCharacters() {
+            var textArea = document.getElementById('textArea');
+            var counter = document.getElementById('counter');
+            var charCount = textArea.value.length;
+            counter.textContent = 'Characters: ' + charCount;
+        }
+    </script>
+</body>
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+</html>

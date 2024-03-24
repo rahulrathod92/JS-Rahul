@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithmetic-sequences</title>
+</head>
+
+<body>
+    <div>
+        <h1>(1) Arithmetic Sequences</h1>
+        <p id="answer"></p>
+    </div>
+    <div>
+        <h1>(2) Arithmetic Sequences</h1>
+        <p id="answerTwo"></p>
+    </div>
+</body>
+<script>
+    arithmeticSequences()
+    function arithmeticSequences() {
+        let string = "";
+        for (let i = 1; i <= 25; i = i + 3) {
+            string = string + i + ",";
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+
+    arithmeticSequencesTwo();
+    function arithmeticSequencesTwo(){
+        let string = "";
+        for (let i = 3; i <= 25; i = i + 5) {
+            string = string + i + ",";
+        }
+        document.getElementById("answerTwo").innerHTML = string;
+    }
+</script>
+
+</html>

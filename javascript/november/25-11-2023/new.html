@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var getPrimeNumber = function(n) {
+    if(n === 1) return "";
+    else if(n == 2) return 2;
+    else if(n == 3) return 3;
+    else { 
+        for(i=Math.floor(Math.sqrt(n)); i>=2; i--){
+            //console.log(i);//maybe another var in here? 
+            if(n%i !==0 && n%2 !==0 && n%3 !== 0)
+                return n; // 25/Math.sqrt(25) will be equal to zero this is what gives me 25 !!!   
+        } 
+    }
+};
+</script>
+</html>

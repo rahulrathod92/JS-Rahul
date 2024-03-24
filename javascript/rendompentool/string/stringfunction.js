@@ -1,6 +1,4 @@
 function stringfun() {
-
-
     var tool = this;
     var opts = parseOptions(tool);
     if (!opts)
@@ -9,7 +7,7 @@ function stringfun() {
     var output = [];
     for (var i = 0; i < opts.count; i++) {
         output.push(random_string(charset, opts.length));
-    }
+    } 
     let answer= output.join(opts.outputSep);
     document.getElementById("answer").value = answer;
 }

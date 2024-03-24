@@ -10,11 +10,27 @@
 <body>
     <div>
         <input type="text" name="" id="uservalue" value="5">
-        <button onclick="primeFun()">click</button>
+        <button onclick="patternPrime()">click</button>
     </div>
     <p id="answer"></p>
 </body>
 <script>
+    function patternPrime() {
+        let str = ""
+        let n = parseInt(document.getElementById("uservalue").value);
+        let ans = 260;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                ans = getMePrePrime(ans);
+                str = str + ans + " ";
+            }
+            str = str + "<br>";
+        }
+        document.getElementById("answer").innerHTML = str;
+    }
+
+
+
     function isPrime(n) {
         for (i = 2; i < n; i++) {
             if (n % i == 0) {
@@ -40,45 +56,30 @@
 
         for (let i = n - 1; ; i--) {
             if (isPrime(i) == true) {
-                // console.log(i);
+                console.log("i:->", i);
                 return i;
                 break;
             }
         }
     }
 
-    function getMeNthPrime(n){
+    function getMeNthPrime(n) {
 
         let counter = 0;
-        for(let i =2; ; i++)
-        {
-            if(isPrime(i) == true)
-            {
+        for (let i = 2; ; i++) {
+            if (isPrime(i) == true) {
                 counter++;
             }
-            if(counter == n)
-            {
+            if (counter == n) {
                 console.log(i);
                 break;
             }
         }
     }
-    console.log(getMeNthPrime(5));
+    // console.log(getMeNthPrime(5));
 
-    function patternPrime() {
-        let str = ""
-        let n = 10;
-        let ans = 260;
-        for (let i = 1; i <= n; i++) {
-            for (let j = 1; j <= i; j++) {
-                ans = getMePrePrime(ans);
-                str = str + ans + " ";
-            }
-            str = str + "<br>";
-        }
-        document.getElementById("answer").innerHTML = str;
-    }
-    patternPrime();
+
+
 </script>
 
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> horglasspattern</title>
+</head>
+
+<body>
+    <p id="answer"></p>
+</body>
+<script>
+    starpattern();
+    function starpattern() {
+        let num = 4;
+        let string = "";
+        for (i = num; i >= 1; --i) {
+            for (k = num; k >= i; --k) {
+                string = string + "&nbsp;";
+            }
+            for (j = 1; j <= i; j++) {
+                string = string +"&nbsp;"+ "*";
+            }
+            string = string + "<br>";
+        }
+        for (i = 2; i <= num; i++) {
+            for (k = num; k >= i; --k) {
+                string = string + "&nbsp;";
+            }
+            for (j = 1; j <= i; j++) {
+                string = string +"&nbsp;" +"*";
+            }
+            string = string + "<br>";
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+</script>
+
+</html>

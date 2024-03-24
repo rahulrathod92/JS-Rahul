@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime_sum</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="uservalue" value="10" />
+    </div>
+    <div>
+      <button onclick="primeFun()">click</button>
+    </div>
+    <div>
+      <p id="answerA"></p>
+      <p id="answer"></p>
+    </div>
+  </body>
+  <script>
+    function primeFun() {
+      let num = parseInt(document.getElementById("uservalue").value);
+      let checkPrime = nThNumber(num);
+      //   console.log(checkPrime)
+      document.getElementById("answer").innerHTML = checkPrime;
+    }
+
+    function isPrime(n) {
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function nThNumber(n) {
+      let string = "";
+      let sum = 0;
+      
+      for (let i = 2; i < n; i++) {
+        if (isPrime(i) == true) {
+            sum = sum + i;
+          if (i != 0) {
+            string = string + "" + i + "+";
+          } else {
+            string = string + i;
+          }
+        }
+    }
+    document.getElementById("answerA").innerHTML = string;
+    return sum;
+    }
+  </script>
+</html>

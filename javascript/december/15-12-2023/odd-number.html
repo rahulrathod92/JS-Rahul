@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd-even</title>
+</head>
+
+<body>
+    <h1> Check if a number is odd JavaScript</h1>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <div>
+
+        <button onclick="oddFun()">click</button>
+
+    </div>
+    <p id="answer"></p>
+</body>
+<script>
+
+    function oddFun() {
+        let n = Number(document.getElementById("uservalue").value);
+        let ans = oddPattern(n);
+        document.getElementById("answer").innerHTML = ans;
+    }
+
+    function oddPattern(n) {
+        let string = "";
+        let ans = n;
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= i; j++) {
+                ans = getMenextOdd(ans)
+                string = string + "&nbsp;" + ans;
+            }
+            string = string + "<br>";
+        }
+        return string;
+    }
+
+    function isOdd(n) {
+        if (n % 2 != 0) {
+            return true;
+        }
+        return false;
+    }
+
+    function getMenextOdd(n) {
+        for (let i = n + 1; ; i++) {
+            if (isOdd(i) == true) {
+                return i;
+
+            }
+        }
+    }
+    function getMePreviousNumber(n) {
+        for (let i = n - 1; ; --i) {
+            if (isOdd(i) == true) {
+                return i;
+            }
+        }
+    }
+
+
+    function getmeNthnumber(n) {
+        let counter = 0;
+
+        for (let i = 1; ; i++) {
+            if (isOdd(i) == true) {
+                counter++
+            }
+            if (counter == n) {
+
+                return i;
+            }
+        }
+    }
+
+</script>
+
+</html>

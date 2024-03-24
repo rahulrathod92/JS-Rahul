@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prime number</title>
+</head>
+
+<body>
+    <input type="text" name="" id="uservalue" value="5">
+    <button onclick="primeNumFun()">click</button>
+    <p id="answer"></p>
+</body>
+<script>
+    function primeNumFun() {
+        let num = parseInt(document.getElementById("uservalue").value);
+        let string = "";
+        let isPrime = true;
+        for (i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+
+        }
+        if (isPrime) {
+            string = string + "true";
+        } else {
+            string = string + "false";
+        }
+        document.getElementById("answer").innerHTML = string;
+    }
+    function tablefun(num) {
+        console.log(num)
+    }
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="prime-palindrome-number-table.js"></script>
+    <title>prime-palindrome-number-table</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="columns  is-mobile is-centered">
+            <div class="column is-half">
+                <div>
+                    <h1 class="title">Prime Palindrome Number </h1>
+                </div>
+                <div class="control mt-3">
+                    <input type="text" class="input is-focused" id="uservalue" value="10">
+                </div>
+                <div class="buttons mt-3">
+                    <button class="button is-info" onclick="generateTable()">Generate</button>
+                    <button class="button is-warning" onclick="generateTable();">Prime</button>
+                    <button class="button is-danger">Palindrome</button>
+                </div>
+            </div>
+        </div>
+       
+        <div class="columns">
+            <div class="column">
+                <div>
+                    <p class="title is-5">Generate Table</p>
+                    <p id="showtable"></p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

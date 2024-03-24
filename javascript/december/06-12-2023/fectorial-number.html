@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fectorial</title>
+</head>
+
+<body>
+    <h1>fectorial program</h1>
+    <div>
+        <input type="text" value="5" id="uservalue">
+    </div>
+    <div>
+        <button onclick="fectorialFun()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    fectorialFun()
+    function fectorialFun() {
+        let num = document.getElementById("uservalue").value;
+        let total = 1;
+        let result = "";
+        for (i = num; i >= 1; --i) {
+            total = total * i;
+            if (i != num) {
+                result = result + "&nbsp;" + "*" + "&nbsp;" + i;
+            } else {
+                result = result + i;
+            }
+
+        }
+        document.getElementById("answer").innerHTML = result +"&nbsp;"+ "=" +"&nbsp;"+total;
+
+    }
+</script>
+
+</html>

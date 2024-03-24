@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even-number</title>
+</head>
+
+<body>
+    <h1> Check if a number is even JavaScript</h1>
+    <div>
+        <input type="text" id="uservalue" value="6">
+    </div>
+    <div>
+        <button onclick="evenFun()">click</button>
+    </div>
+    <div>
+        <p id="answer"></p>
+    </div>
+</body>
+<script>
+    function evenFun() {
+        let n = parseInt(document.getElementById("uservalue").value);
+        let ans = getMeNthNumber(n);
+        console.log("ans:->", ans)
+        document.getElementById("answer").innerHTML = ans;
+    }
+    function isEven(n) {
+        if (n % 2 == 0) {
+            return true;
+        }
+    }
+
+    function getNextEven(n) {
+        for (let i = n + 1; ; i++) {
+            if (isEven(i) == true) {
+                return i;
+            }
+        }
+    }
+
+    function getMePreviousEvenNumber(n) {
+        for (let i = n - 1; ; --i) {
+            if (isEven(i) == true) {
+                return i;
+            }
+        }
+    }
+    function getMeNthNumber(n) {
+        let counter = 2;
+        for (let i = n; ; i++) {
+            if (isEven(i) == true) {
+                counter++;
+            }
+            if (counter === n) {
+                return i;
+            }
+        }
+    }
+</script>
+
+</html>
