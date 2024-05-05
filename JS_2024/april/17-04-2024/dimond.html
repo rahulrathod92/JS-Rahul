@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="answer"></p>
+  </body>
+  <script>
+    function printDiamondStarPattern(rows) {
+    // Upper half of the diamond including the middle row
+    for (let i = 1; i <= rows; i++) {
+        let pattern = '';
+        // Spaces
+        for (let j = 1; j <= rows - i; j++) {
+            pattern += ' ';
+        }
+        // Stars
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            pattern += '*';
+        }
+        console.log(pattern);
+    }
+
+    // Lower half of the diamond (excluding the middle row)
+    for (let i = rows - 1; i >= 1; i--) {
+        let pattern = '';
+        // Spaces
+        for (let j = 1; j <= rows - i; j++) {
+            pattern += ' ';
+        }
+        // Stars
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            pattern += '*';
+        }
+        console.log(pattern);
+    }
+}
+
+// Example usage: Printing a diamond with 5 rows
+printDiamondStarPattern(5);
+
+  </script>
+</html>

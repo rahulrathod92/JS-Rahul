@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>febonacci_pyramid</title>
+  </head>
+  <body>
+    <h1>Febonacci Pyramid</h1>
+    <input type="text" name="" id="value1" value="5" />
+    <button onclick="feboFunction()">Febonacci</button>
+    <br />
+    <p id="answer"></p>
+  </body>
+  <script>
+    function feboFunction() {
+      let a = parseInt(document.getElementById("value1").value);
+      let next = 0;
+      let c = 0;
+      let d = 1;
+      let string = "";
+      for (i = 1; i <= a; i++) {
+        for (j = 0; j < i; j++) {
+          next = c + d;
+          c = d;
+          d = next;
+          string=string+" "+next;
+        }
+        string=string+"<br>";
+      }
+      document.getElementById("answer").innerHTML = string;
+    }
+
+  </script>
+  <h1>thank you</h1>
+</html>

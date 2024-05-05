@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <div>
-        <p id="star"></p>
-    </div>
-    <script>
-        let n = 4;
-        let counter = 1;
-        let string = "";
-        for (let i = 0; i < n; i++) {
-            string = string + " ";
-            for (let j = 0; j < n; j++) {
-                if (i === 0 || i === n - 1 || j === 0 || j === n - 1) {
-                    counter=counter+1;
-                    string = string + counter;
-                } else {
-                    string = string +" &nbsp";
-                }
-            }
-            string = string + "<br>";
-            document.getElementById("star").innerHTML = string;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number|square|pattern</title>
+  </head>
+  <body>
+    <h1>number square pattern</h1>
+    <p id="answer"></p>
+    <h1>thank you for watching</h1>
+  </body>
+  <script>
+    let n = 4;
+    let counter = 0;
+    let string = "";
+    for (let i = 0; i < n; i++) {
+      string = string + " ";
+      for (let j = 0; j < n; j++) {
+        if (i === 0 || i === n - 1 || j === 0 || j === n - 1) {
+          string = string + "&nbsp" + counter;
+          counter = counter + 1;
+        } else {
+          string = string + "&nbsp;&nbsp ";
         }
-    </script>
-</body>
-
+      }
+      string = string + "<br>";
+      document.getElementById("answer").innerHTML = string;
+    }
+  </script>
 </html>

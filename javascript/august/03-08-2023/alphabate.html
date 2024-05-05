@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function printAlphabetPattern(alphabet) {
+    const alphabetPatterns = {
+        A: ["  *  ", " * * ", "*****", "*   *", "*   *"],
+        B: ["**** ", "*   *", "**** ", "*   *", "**** "],
+        C: [" ****", "*    ", "*    ", "*    ", " ****"],
+        D: ["**** ", "*   *", "*   *", "*   *", "**** "],
+        E: ["*****", "*    ", "*****", "*    ", "*****"],
+        F: ["*****", "*    ", "*****", "*    ", "*    "],
+        G:["*****","* ","*","******",]
+        // Add more patterns for other alphabets if needed
+    };
+
+    const pattern = alphabetPatterns[alphabet.toUpperCase()];
+    if (!pattern) {
+        console.log("Alphabet pattern not found!");
+        return;
+    }
+
+    for (let i = 0; i < pattern.length; i++) {
+        console.log(pattern[i]);
+    }
+}
+
+// Test the function
+printAlphabetPattern('G');
+
+</script>
+</html>

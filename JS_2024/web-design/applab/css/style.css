@@ -1,27 +1,11 @@
-/* Global  */
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-body{
-    font-size: 14px;
-    
+.navbar{
+    height: 60px;
+    background-color: rgba(241, 193, 32, 0.568);
 }
-/* end Global */
-/* Typeography */
-h1{
-
+.nav-log{
+    height: ;
 }
-h2{
-
-}
-h3{
-
-}
-h4{
-
-}
-p{
-    
-}
-/* End Typeography */

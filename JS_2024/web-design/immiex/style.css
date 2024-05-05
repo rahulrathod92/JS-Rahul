@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.headcolor{
+    color:#575757;
+    font-size: 14px roboto;
+}
+a{
+    text-decoration: none;
+    color:#575757;
+    font-size: 14px roboto;
+}
+.navbar-nav > li{
+    padding-left:14px;
+    padding-right:14px;
+  }
