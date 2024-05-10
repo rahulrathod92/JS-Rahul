@@ -11,6 +11,16 @@
     font-size: 14px;
 }
 .btncolor{
-    background-color: #ff4800;
+    background-color: #ff4500;
 }
 
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  h6{
+    color: grey;
+  }
+  .vwcolor{
+    color: #0d6efd;
+  }
