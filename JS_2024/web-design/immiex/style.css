@@ -24,3 +24,71 @@
   .vwcolor{
     color: #0d6efd;
   }
+  /*statue of unity images  */
+  .containerimg {
+    position: relative;
+    text-align: center;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left:50%;
+   transform: translate(-50%, -50%);
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+     width: 100%;
+    /* padding: 20px; */
+  }
+  .text-large {
+    font-size: 60px;
+  }
+
+  /* hover tab */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    display: none;
+  }
+  
+  /* Clear floats after the tab */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+  /* background images */
+  .bgimage{
+    background: url(./img/bldng.jpg) no-repeat center; 
+    background-size: cover;
+    height:100vh;
+    position: relative;
+    
+    
+  }
+
+  .transbox {
+    background-color: #ffffff;
+    border: 1px solid black;
+     opacity: 25;
+  }
+  
+  .transboxcol  {
+        color: #000000;
+        
+  }
