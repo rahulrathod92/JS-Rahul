@@ -76,19 +76,15 @@
   .bgimage{
     background: url(./img/bldng.jpg) no-repeat center; 
     background-size: cover;
-    height:100vh;
+    /* height: 100vh; */
     position: relative;
-    
-    
   }
 
   .transbox {
-    background-color: #ffffff;
-    border: 1px solid black;
-     opacity: 25;
-  }
+    background: rgba(11, 2, 66, 0.3);
+}
   
   .transboxcol  {
-        color: #000000;
+        color: #0e0e0e;
         
   }
