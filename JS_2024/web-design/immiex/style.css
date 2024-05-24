@@ -102,7 +102,6 @@
       align-items: center; 
       justify-content: center; 
       min-height: 100vh; 
-      padding: 0 35px; 
       background: rgb(228, 220, 220); 
         }
 
@@ -230,4 +229,12 @@
     
       } 
     }
-    
+    /*request form section */
+    .requestform{
+      background: url(./img/requestform.jpg) no-repeat center; 
+      display: flex;
+    background-size: cover;
+     height: 100vh;
+    position: relative; 
+    opacity: 50;
+    }
